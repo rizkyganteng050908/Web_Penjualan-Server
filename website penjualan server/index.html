@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RizkyWeb - Jasa Pembuatan Website Terlengkap</title>
+<title>RizkyWeb - Jasa Pembuatan Website Terlengkap & Interaktif</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
@@ -59,7 +59,7 @@ nav {
 
 nav ul {
     display: flex;
-    gap: 30px;
+    gap: 25px;
     list-style: none;
     font-size: 15px;
     font-weight: 500;
@@ -172,7 +172,7 @@ h1 span {
     50% { transform: translateY(-15px); }
 }
 
-/* Sections */
+/* Section General */
 section {
     padding: 80px 8%;
     max-width: 1400px;
@@ -181,7 +181,7 @@ section {
 
 .heading {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
 .heading h2 {
@@ -195,7 +195,7 @@ section {
     font-size: 15px;
 }
 
-/* Cards & Grids */
+/* Keunggulan & Layanan */
 .features, .services {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -234,7 +234,134 @@ section {
     line-height: 1.7;
 }
 
-/* Pricing Grid - Grid 3 atau 4 kolom */
+/* Fitur Interaktif 1: Kalkulator Estimasi Biaya */
+.calculator-box {
+    background: #0d213a;
+    border: 1px solid #1c3b5d;
+    border-radius: 24px;
+    padding: 40px;
+    margin-bottom: 60px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.calc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.calc-group label {
+    display: block;
+    font-size: 14px;
+    color: #35a7ff;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.calc-group select, .calc-group input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    background: #061426;
+    border: 1px solid #1c3b5d;
+    color: #fff;
+    border-radius: 10px;
+    outline: none;
+    font-family: inherit;
+}
+
+.calc-checkboxes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.calc-checkboxes label {
+    color: #c1d0e2;
+    font-size: 13.5px;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.calc-result {
+    margin-top: 30px;
+    padding: 20px;
+    background: rgba(33, 156, 255, 0.1);
+    border: 1px solid rgba(33, 156, 255, 0.3);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.calc-total {
+    font-size: 28px;
+    font-weight: 800;
+    color: #219cff;
+}
+
+/* Controls Filter Paket */
+.pricing-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.search-box {
+    width: 100%;
+    max-width: 500px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 14px 20px;
+    background: #0b1c35;
+    border: 1px solid #1c3b5d;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.search-box input:focus {
+    border-color: #168cff;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.filter-btn {
+    padding: 8px 18px;
+    background: #0b1c35;
+    border: 1px solid #1c3b5d;
+    color: #aebdd1;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background: #168cff;
+    color: white;
+    border-color: #168cff;
+}
+
+/* Pricing Grid */
 .prices {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -307,6 +434,60 @@ section {
     gap: 8px;
 }
 
+.card-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-sm {
+    padding: 8px 12px;
+    font-size: 12px;
+    border-radius: 8px;
+}
+
+/* FAQ Accordion Section */
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.faq-item {
+    background: #0d213a;
+    border: 1px solid #1c3b5d;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 18px 22px;
+    background: transparent;
+    border: 0;
+    color: #fff;
+    font-weight: 600;
+    font-size: 15px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.faq-answer {
+    padding: 0 22px 18px;
+    color: #aebdd1;
+    font-size: 14px;
+    line-height: 1.7;
+    display: none;
+}
+
+.faq-answer.show {
+    display: block;
+}
+
 /* Contact CTA */
 .contact-wrapper {
     background: linear-gradient(135deg, #093c75, #102541);
@@ -367,7 +548,7 @@ footer {
     transform: scale(1.1);
 }
 
-/* Modal */
+/* Modal Form */
 .modal {
     display: none;
     position: fixed;
@@ -452,6 +633,9 @@ textarea {
     .prices {
         grid-template-columns: 1fr;
     }
+    .calculator-box {
+        padding: 25px;
+    }
 }
 </style>
 </head>
@@ -462,9 +646,10 @@ textarea {
     <a href="#" class="logo">⚡ RizkyWeb</a>
     <ul>
         <li><a href="#beranda">Beranda</a></li>
-        <li><a href="#keunggulan">Keunggulan</a></li>
+        <li><a href="#kalkulator">Hitung Biaya</a></li>
         <li><a href="#layanan">Layanan</a></li>
-        <li><a href="#paket">Pilihan Paket</a></li>
+        <li><a href="#paket">Paket</a></li>
+        <li><a href="#faq">FAQ</a></li>
         <li><a href="#kontak">Kontak</a></li>
     </ul>
     <button class="btn" onclick="openChat('Halo RizkyWeb, saya ingin berkonsultasi.')">Chat WA</button>
@@ -475,43 +660,63 @@ textarea {
     <div class="hero-content">
         <span class="badge">JASA PEMBUATAN WEBSITE</span>
         <h1>Bangun Website <span>Profesional</span> & Modern</h1>
-        <p>Solusi website lengkap, cepat, dan responsif. Menyediakan 12 pilihan paket terbaik untuk personal, UMKM, instansi, hingga perusahaan skala besar.</p>
+        <p>Solusi pembuatan website interaktif, responsif, dan fleksibel. Hitung estimasi harga secara mandiri atau pilih dari 12 pilihan paket terbaik kami.</p>
         <div class="hero-btn-group">
-            <button class="btn" onclick="openChat('Halo RizkyWeb, saya ingin konsultasi gratis.')">💬 Konsultasi Gratis</button>
-            <a class="btn btn-outline" href="#paket">Pilih Paket</a>
+            <a class="btn" href="#kalkulator">🧮 Hitung Biaya Custom</a>
+            <a class="btn btn-outline" href="#paket">Lihat Paket</a>
         </div>
     </div>
     <div class="hero-art">💻</div>
 </section>
 
-<section id="keunggulan">
+<!-- FITUR REKOMENDASI 1: KALKULATOR ESTIMASI HARGA CUSTOM INTERAKTIF -->
+<section id="kalkulator">
     <div class="heading">
-        <h2>Kenapa Memilih Kami?</h2>
-        <p>Kami memberikan hasil kerja terbaik dengan standar web modern.</p>
+        <h2>🧮 Kalkulator Estimasi Harga</h2>
+        <p>Hitung kisaran biaya website impian Anda sesuai dengan fitur spesifik yang Anda butuhkan secara langsung!</p>
     </div>
-    <div class="features">
-        <div class="card">
-            <div class="icon">🚀</div>
-            <h3>Desain Modern & Fast</h3>
-            <p>Tampilan elegan, estetik, serta dioptimalkan agar loading sangat cepat di HP maupun Desktop.</p>
+    <div class="calculator-box">
+        <div class="calc-grid">
+            <div class="calc-group">
+                <label for="calcType">Tipe Website</label>
+                <select id="calcType" onchange="calculatePrice()">
+                    <option value="150000">Pelajar / Portfolio Basic (Rp150rb)</option>
+                    <option value="500000">Landing Page Iklan (Rp500rb)</option>
+                    <option value="850000" selected>Company Profile / UMKM (Rp850rb)</option>
+                    <option value="2500000">Toko Online / E-Commerce (Rp2.5jt)</option>
+                    <option value="3500000">Web Sekolah / Portal (Rp3.5jt)</option>
+                </select>
+            </div>
+            
+            <div class="calc-group">
+                <label for="calcPages">Jumlah Halaman (+Rp50rb/hal)</label>
+                <input type="number" id="calcPages" value="3" min="1" max="30" onchange="calculatePrice()" onkeyup="calculatePrice()">
+            </div>
+
+            <div class="calc-group">
+                <label>Fitur Tambahan (Add-Ons)</label>
+                <div class="calc-checkboxes">
+                    <label><input type="checkbox" id="addSeo" value="200000" onchange="calculatePrice()"> Optimasi SEO Dasar (+200rb)</label>
+                    <label><input type="checkbox" id="addPayment" value="500000" onchange="calculatePrice()"> Payment Gateway Auto (+500rb)</label>
+                    <label><input type="checkbox" id="addMultiLang" value="300000" onchange="calculatePrice()"> Multi Bahasa (+300rb)</label>
+                </div>
+            </div>
         </div>
-        <div class="card">
-            <div class="icon">📱</div>
-            <h3>Mobile Responsive</h3>
-            <p>Website otomatis menyesuaikan ukuran layar pengunjung agar tetap nyaman diakses dari mana saja.</p>
-        </div>
-        <div class="card">
-            <div class="icon">🛠️</div>
-            <h3>Garansi & Support</h3>
-            <p>Bantuan teknis siap membantu jika Anda mengalami kendala atau membutuhkan penyesuaian.</p>
+
+        <div class="calc-result">
+            <div>
+                <span style="color:#aebdd1; font-size:13px;">Estimasi Total Biaya:</span>
+                <div class="calc-total" id="totalDisplay">Rp1.000.000</div>
+            </div>
+            <button class="btn" onclick="orderFromCalc()">💬 Pesan Sesuai Hitungan Ini</button>
         </div>
     </div>
 </section>
 
 <section id="layanan" style="background: rgba(11, 28, 53, 0.3);">
     <div class="heading">
-        <h2>Layanan Kami</h2>
-        <p>Berbagai jenis sistem web yang dapat disesuaikan dengan kebutuhan Anda.</p>
+        <h2>Layanan Utama Kami</h2>
+        <p>Pilihan variasi layanan dengan pengerjaan standar tinggi.</p>
     </div>
     <div class="services">
         <div class="card"><div class="icon">🌐</div><h3>Company Profile</h3><p>Website branding untuk perusahaan, bisnis lokal, dan profil usaha.</p></div>
@@ -523,16 +728,30 @@ textarea {
     </div>
 </section>
 
-<!-- SECTION 12 PAKET LENGKAP -->
+<!-- SECTION PAKET DENGAN FITUR PENCARIAN DAN FILTER KLIK -->
 <section id="paket">
     <div class="heading">
         <h2>12 Pilihan Paket Website</h2>
-        <p>Temukan paket yang paling spesifik dan pas sesuai dengan budget serta jenis kebutuhan Anda.</p>
+        <p>Gunakan pencarian atau filter tombol di bawah untuk menyaring paket sesuai kebutuhan Anda.</p>
     </div>
-    <div class="prices">
+
+    <!-- PENCARIAN DAN FILTER INTERAKTIF -->
+    <div class="pricing-controls">
+        <div class="search-box">
+            <input type="text" id="searchInput" onkeyup="filterPaket()" placeholder="🔍 Cari nama paket (contoh: Toko Online, Sekolah, Resto)...">
+        </div>
+        <div class="filter-buttons">
+            <button class="filter-btn active" onclick="setCategory('all', this)">Semua Paket</button>
+            <button class="filter-btn" onclick="setCategory('pemula', this)">Pelajar / Pemula</button>
+            <button class="filter-btn" onclick="setCategory('bisnis', this)">Bisnis & UMKM</button>
+            <button class="filter-btn" onclick="setCategory('spesialis', this)">Spesialis & Custom</button>
+        </div>
+    </div>
+
+    <div class="prices" id="priceGrid">
         
         <!-- Paket 1 -->
-        <div class="price-card">
+        <div class="price-card" data-category="pemula" data-title="Pelajar / Tugas 🎓">
             <div>
                 <h3>1. Pelajar / Tugas 🎓</h3>
                 <p style="color:#8fa7c2; font-size:13px;">Khusus Tugas Sekolah & Praktikum</p>
@@ -545,11 +764,14 @@ textarea {
                 <li>✅ Integrasi Sosmed & Kontak</li>
                 <li>✅ Revisi 1x</li>
             </ul>
-            <button class="btn btn-outline" onclick="openChat('Halo RizkyWeb, saya berminat dengan Paket 1. Pelajar (Rp150rb).')">Pesan Paket</button>
+            <div class="card-actions">
+                <button class="btn style="width:100%" onclick="selectPackage('1. Paket Pelajar / Tugas (Rp150.000)')">Pesan</button>
+                <button class="btn btn-outline btn-sm" onclick="copyPackage('Paket Pelajar / Tugas - Rp150.000')">📋</button>
+            </div>
         </div>
 
         <!-- Paket 2 -->
-        <div class="price-card">
+        <div class="price-card" data-category="pemula" data-title="Portofolio Personal 🖼️">
             <div>
                 <h3>2. Portofolio Personal 🖼️</h3>
                 <p style="color:#8fa7c2; font-size:13px;">Freelancer, Desainer & CV Online</p>
@@ -562,11 +784,14 @@ textarea {
                 <li>✅ Tombol Download CV / PDF</li>
                 <li>✅ Revisi 1x</li>
             </ul>
-            <button class="btn btn-outline" onclick="openChat('Halo RizkyWeb, saya berminat dengan Paket 2. Portofolio (Rp300rb).')">Pesan Paket</button>
+            <div class="card-actions">
+                <button class="btn style="width:100%" onclick="selectPackage('2. Paket Portofolio Personal (Rp300.000)')">Pesan</button>
+                <button class="btn btn-outline btn-sm" onclick="copyPackage('Paket Portofolio Personal - Rp300.000')">📋</button>
+            </div>
         </div>
 
         <!-- Paket 3 -->
-        <div class="price-card">
+        <div class="price-card" data-category="pemula" data-title="Landing Page Sales 🚀">
             <div>
                 <h3>3. Landing Page Sales 🚀</h3>
                 <p style="color:#8fa7c2; font-size:13px;">Fokus Iklan Google / Meta Ads</p>
@@ -580,11 +805,14 @@ textarea {
                 <li>✅ Form Penjualan / Lead</li>
                 <li>✅ Revisi 2x</li>
             </ul>
-            <button class="btn btn-outline" onclick="openChat('Halo RizkyWeb, saya berminat dengan Paket 3. Landing Page (Rp500rb).')">Pesan Paket</button>
+            <div class="card-actions">
+                <button class="btn style="width:100%" onclick="selectPackage('3. Paket Landing Page Sales (Rp500.000)')">Pesan</button>
+                <button class="btn btn-outline btn-sm" onclick="copyPackage('Paket Landing Page Sales - Rp500.000')">📋</button>
+            </div>
         </div>
 
         <!-- Paket 4 -->
-        <div class="price-card">
+        <div class="price-card" data-category="spesialis" data-title="Kuliner & Resto 🍽️">
             <div>
                 <h3>4. Kuliner & Resto 🍽️</h3>
                 <p style="color:#8fa7c2; font-size:13px;">Restoran, Kafe & Menu QR</p>
@@ -598,11 +826,14 @@ textarea {
                 <li>✅ Free SSL & Domain (1 Thn)</li>
                 <li>✅ Revisi 2x</li>
             </ul>
-            <button class="btn btn-outline" onclick="openChat('Halo RizkyWeb, saya berminat dengan Paket 4. Resto & Kuliner (Rp750rb).')">Pesan Paket</button>
+            <div class="card-actions">
+                <button class="btn style="width:100%" onclick="selectPackage('4. Paket Kuliner & Resto (Rp750.000)')">Pesan</button>
+                <button class="btn btn-outline btn-sm" onclick="copyPackage('Paket Kuliner & Resto - Rp750.000')">📋</button>
+            </div>
         </div>
 
         <!-- Paket 5 -->
-        <div class="price-card">
+        <div class="price-card" data-category="bisnis" data-title="Standar UMKM 🏪">
             <div>
                 <h3>5. Standar UMKM 🏪</h3>
                 <p style="color:#8fa7c2; font-size:13px;">Profil Usaha & Katalog Lokal</p>
@@ -616,11 +847,14 @@ textarea {
                 <li>✅ Tombol WA Integration</li>
                 <li>✅ Revisi 2x</li>
             </ul>
-            <button class="btn btn-outline" onclick="openChat('Halo RizkyWeb, saya berminat dengan Paket 5. Standar UMKM (Rp950rb).')">Pesan Paket</button>
+            <div class="card-actions">
+                <button class="btn style="width:100%" onclick="selectPackage('5. Paket Standar UMKM (Rp950.000)')">Pesan</button>
+                <button class="btn btn-outline btn-sm" onclick="copyPackage('Paket Standar UMKM - Rp950.000')">📋</button>
+            </div>
         </div>
 
         <!-- Paket 6 -->
-        <div class="price-card popular">
+        <div class="price-card popular" data-category="bisnis" data-title="Company Profile 🏢">
             <span class="popular-badge">Paling Populer</span>
             <div>
                 <h3>6. Company Profile 🏢</h3>
@@ -636,11 +870,14 @@ textarea {
                 <li>✅ Fitur Blog / Artikel</li>
                 <li>✅ Garansi Maintenance 1 Bln</li>
             </ul>
-            <button class="btn" onclick="openChat('Halo RizkyWeb, saya berminat dengan Paket 6. Company Profile (Rp1.8jt).')">Pesan Paket</button>
+            <div class="card-actions">
+                <button class="btn style="width:100%" onclick="selectPackage('6. Paket Company Profile (Rp1.800.000)')">Pesan</button>
+                <button class="btn btn-outline btn-sm" onclick="copyPackage('Paket Company Profile - Rp1.800.000')">📋</button>
+            </div>
         </div>
 
         <!-- Paket 7 -->
-        <div class="price-card">
+        <div class="price-card" data-category="spesialis" data-title="Web Properti 🏡">
             <div>
                 <h3>7. Web Properti 🏡</h3>
                 <p style="color:#8fa7c2; font-size:13px;">Agency, Agent & Listing Rumah</p>
@@ -654,11 +891,14 @@ textarea {
                 <li>✅ Domain .com + Hosting (1 Thn)</li>
                 <li>✅ Support Teknis 1 Bulan</li>
             </ul>
-            <button class="btn btn-outline" onclick="openChat('Halo RizkyWeb, saya berminat dengan Paket 7. Web Properti (Rp2.2jt).')">Pesan Paket</button>
+            <div class="card-actions">
+                <button class="btn style="width:100%" onclick="selectPackage('7. Paket Web Properti (Rp2.200.000)')">Pesan</button>
+                <button class="btn btn-outline btn-sm" onclick="copyPackage('Paket Web Properti - Rp2.200.000')">📋</button>
+            </div>
         </div>
 
         <!-- Paket 8 -->
-        <div class="price-card">
+        <div class="price-card" data-category="bisnis" data-title="Toko Online 🛒">
             <div>
                 <h3>8. Toko Online 🛒</h3>
                 <p style="color:#8fa7c2; font-size:13px;">E-Commerce & Sistem Belanja</p>
@@ -673,11 +913,14 @@ textarea {
                 <li>✅ Panduan Kelola Produk</li>
                 <li>✅ Support Teknis 1 Bulan</li>
             </ul>
-            <button class="btn btn-outline" onclick="openChat('Halo RizkyWeb, saya berminat dengan Paket 8. Toko Online (Rp2.8jt).')">Pesan Paket</button>
+            <div class="card-actions">
+                <button class="btn style="width:100%" onclick="selectPackage('8. Paket Toko Online (Rp2.800.000)')">Pesan</button>
+                <button class="btn btn-outline btn-sm" onclick="copyPackage('Paket Toko Online - Rp2.800.000')">📋</button>
+            </div>
         </div>
 
         <!-- Paket 9 -->
-        <div class="price-card">
+        <div class="price-card" data-category="spesialis" data-title="Web Sekolah 🏫">
             <div>
                 <h3>9. Web Sekolah 🏫</h3>
                 <p style="color:#8fa7c2; font-size:13px;">Sekolah, Kampus & Yayasan</p>
@@ -691,11 +934,14 @@ textarea {
                 <li>✅ Multi-Admin CMS</li>
                 <li>✅ Support Teknis 2 Bulan</li>
             </ul>
-            <button class="btn btn-outline" onclick="openChat('Halo RizkyWeb, saya berminat dengan Paket 9. Web Sekolah (Rp3.5jt).')">Pesan Paket</button>
+            <div class="card-actions">
+                <button class="btn style="width:100%" onclick="selectPackage('9. Paket Web Sekolah (Rp3.500.000)')">Pesan</button>
+                <button class="btn btn-outline btn-sm" onclick="copyPackage('Paket Web Sekolah - Rp3.500.000')">📋</button>
+            </div>
         </div>
 
         <!-- Paket 10 -->
-        <div class="price-card">
+        <div class="price-card" data-category="spesialis" data-title="Klinik & Booking 🏥">
             <div>
                 <h3>10. Klinik & Booking 🏥</h3>
                 <p style="color:#8fa7c2; font-size:13px;">Klinik, Salon, & Jasa Janji Temu</p>
@@ -709,11 +955,14 @@ textarea {
                 <li>✅ Domain & Hosting Bisnis</li>
                 <li>✅ Support Teknis 2 Bulan</li>
             </ul>
-            <button class="btn btn-outline" onclick="openChat('Halo RizkyWeb, saya berminat dengan Paket 10. Klinik & Booking (Rp4.5jt).')">Pesan Paket</button>
+            <div class="card-actions">
+                <button class="btn style="width:100%" onclick="selectPackage('10. Paket Klinik & Booking (Rp4.500.000)')">Pesan</button>
+                <button class="btn btn-outline btn-sm" onclick="copyPackage('Paket Klinik & Booking - Rp4.500.000')">📋</button>
+            </div>
         </div>
 
         <!-- Paket 11 -->
-        <div class="price-card">
+        <div class="price-card" data-category="spesialis" data-title="Custom Web App 💎">
             <div>
                 <h3>11. Custom Web App 💎</h3>
                 <p style="color:#8fa7c2; font-size:13px;">Aplikasi Web & Sistem Khusus</p>
@@ -727,11 +976,14 @@ textarea {
                 <li>✅ Training Penggunaan Sistem</li>
                 <li>✅ Priority Support 3 Bulan</li>
             </ul>
-            <button class="btn btn-outline" onclick="openChat('Halo RizkyWeb, saya ingin konsultasi Paket 11. Custom Web App.')">Konsultasi</button>
+            <div class="card-actions">
+                <button class="btn style="width:100%" onclick="selectPackage('11. Paket Custom Web App (Rp6.000.000+)')">Konsultasi</button>
+                <button class="btn btn-outline btn-sm" onclick="copyPackage('Paket Custom Web App - Rp6.000.000+')">📋</button>
+            </div>
         </div>
 
         <!-- Paket 12 -->
-        <div class="price-card">
+        <div class="price-card" data-category="spesialis" data-title="Enterprise / Portal 👑">
             <div>
                 <h3>12. Enterprise / Portal 👑</h3>
                 <p style="color:#8fa7c2; font-size:13px;">Korporat Besar & High Traffic</p>
@@ -745,18 +997,47 @@ textarea {
                 <li>✅ Garansi & Maintenance 1 Tahun</li>
                 <li>✅ Dedicated Team Support</li>
             </ul>
-            <button class="btn btn-outline" onclick="openChat('Halo RizkyWeb, saya ingin konsultasi Paket 12. Enterprise.')">Konsultasi</button>
+            <div class="card-actions">
+                <button class="btn style="width:100%" onclick="selectPackage('12. Paket Enterprise (Rp12.000.000+)')">Konsultasi</button>
+                <button class="btn btn-outline btn-sm" onclick="copyPackage('Paket Enterprise - Rp12.000.000+')">📋</button>
+            </div>
         </div>
 
     </div>
 </section>
 
+<!-- FITUR REKOMENDASI 2: ACCORDION FAQ INTERAKTIF -->
+<section id="faq" style="background: rgba(11, 28, 53, 0.3);">
+    <div class="heading">
+        <h2>❓ Pertanyaan Umum (FAQ)</h2>
+        <p>Klik pertanyaan di bawah untuk melihat jawabannya.</p>
+    </div>
+    <div class="faq-container">
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">Berapa lama proses pengerjaan website? <span>+</span></button>
+            <div class="faq-answer">Pengerjaan bervariasi mulai dari 1-3 hari untuk paket Landing Page/Pelajar, hingga 7-14 hari kerja untuk paket Company Profile dan Toko Online.</div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">Apakah ada biaya tahunan tambahan? <span>+</span></button>
+            <div class="faq-answer">Hanya ada biaya perpanjangan Domain & Hosting mulai tahun ke-2 yang harganya sangat terjangkau, tergantung jenis paket yang dipilih.</div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">Bagaimana sistem pembayarannya? <span>+</span></button>
+            <div class="faq-answer">Sistem pembayaran standar menggunakan DP 50% di awal sebagai tanda jadi pengerjaan, dan pelunasan 50% dilakukan setelah website selesai dan siap di-publish.</div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">Apakah website bisa diisi/diedit sendiri nanti? <span>+</span></button>
+            <div class="faq-answer">Bisa! Kami akan berikan akses admin serta panduan singkat cara mengedit teks, menambah produk, atau memperbarui foto di website Anda.</div>
+        </div>
+    </div>
+</section>
+
 <section id="kontak">
     <div class="contact-wrapper">
-        <h2>Masih Bingung Memilih Paket?</h2>
-        <p>Hubungi kami melalui WhatsApp dan beri tahu kebutuhan Anda. Kami akan merekomendasikan solusi dan paket yang paling efektif.</p>
+        <h2>Siap Membuat Website Impian Anda?</h2>
+        <p>Hubungi kami melalui WhatsApp untuk konsultasi gratis dan pembahasan spesifikasi ide Anda.</p>
         <span class="phone-number">📞 0895-4010-61300</span>
-        <button class="btn" onclick="openChat('Halo RizkyWeb, saya ingin berkonsultasi mengenai pilihan paket yang pas.')">💬 Konsultasi Gratis Sekarang</button>
+        <button class="btn" onclick="openChat('Halo RizkyWeb, saya ingin berkonsultasi mengenai pembuatan website.')">💬 Konsultasi via WhatsApp</button>
     </div>
 </section>
 
@@ -764,37 +1045,37 @@ textarea {
     <p>© 2026 RizkyWeb. All Rights Reserved. Solusi Pembuatan Website Terlengkap & Terpercaya.</p>
 </footer>
 
-<a class="wa" href="#" onclick="openChat('Halo RizkyWeb, saya ingin bertanya tentang pilihan paket website.')" title="Chat WhatsApp">💬</a>
+<a class="wa" href="#" onclick="openChat('Halo RizkyWeb, saya ingin bertanya tentang jasa website.')" title="Chat WhatsApp">💬</a>
 
 <!-- Modal Form WA -->
 <div class="modal" id="chatModal">
     <div class="modal-box">
         <span class="close" onclick="closeChat()">&times;</span>
-        <h2>💬 Konsultasi Website</h2>
-        <p style="color:#b6c9df; font-size:13px; margin-bottom:15px">Isi formulir singkat di bawah untuk langsung terhubung via WhatsApp.</p>
+        <h2>💬 Form Konsultasi WhatsApp</h2>
+        <p style="color:#b6c9df; font-size:13px; margin-bottom:15px">Isi data singkat untuk terhubung ke WhatsApp kami.</p>
         
         <label for="nama">Nama Anda</label>
         <input type="text" id="nama" placeholder="Contoh: Budi Santoso">
         
-        <label for="jenis">Pilih Paket Terkait</label>
+        <label for="jenis">Pilihan Paket / Fitur</label>
         <select id="jenis">
-            <option>1. Paket Pelajar / Tugas (Rp150.000)</option>
-            <option>2. Paket Portofolio Personal (Rp300.000)</option>
-            <option>3. Paket Landing Page Sales (Rp500.000)</option>
-            <option>4. Paket Kuliner & Resto (Rp750.000)</option>
-            <option>5. Paket Standar UMKM (Rp950.000)</option>
-            <option>6. Paket Company Profile (Rp1.800.000)</option>
-            <option>7. Paket Web Properti (Rp2.200.000)</option>
-            <option>8. Paket Toko Online (Rp2.800.000)</option>
-            <option>9. Paket Web Sekolah (Rp3.500.000)</option>
-            <option>10. Paket Klinik & Booking (Rp4.500.000)</option>
-            <option>11. Paket Custom Web App (Rp6.000.000+)</option>
-            <option>12. Paket Enterprise (Rp12.000.000+)</option>
-            <option>Lainnya / Butuh Rekomendasi</option>
+            <option value="Hitungan Kalkulator Custom">Hitungan Kalkulator Custom</option>
+            <option value="1. Paket Pelajar / Tugas (Rp150.000)">1. Paket Pelajar / Tugas (Rp150.000)</option>
+            <option value="2. Paket Portofolio Personal (Rp300.000)">2. Paket Portofolio Personal (Rp300.000)</option>
+            <option value="3. Paket Landing Page Sales (Rp500.000)">3. Paket Landing Page Sales (Rp500.000)</option>
+            <option value="4. Paket Kuliner & Resto (Rp750.000)">4. Paket Kuliner & Resto (Rp750.000)</option>
+            <option value="5. Paket Standar UMKM (Rp950.000)">5. Paket Standar UMKM (Rp950.000)</option>
+            <option value="6. Paket Company Profile (Rp1.800.000)">6. Paket Company Profile (Rp1.800.000)</option>
+            <option value="7. Paket Web Properti (Rp2.200.000)">7. Paket Web Properti (Rp2.200.000)</option>
+            <option value="8. Paket Toko Online (Rp2.800.000)">8. Paket Toko Online (Rp2.800.000)</option>
+            <option value="9. Paket Web Sekolah (Rp3.500.000)">9. Paket Web Sekolah (Rp3.500.000)</option>
+            <option value="10. Paket Klinik & Booking (Rp4.500.000)">10. Paket Klinik & Booking (Rp4.500.000)</option>
+            <option value="11. Paket Custom Web App (Rp6.000.000+)">11. Paket Custom Web App (Rp6.000.000+)</option>
+            <option value="12. Paket Enterprise (Rp12.000.000+)">12. Paket Enterprise (Rp12.000.000+)</option>
         </select>
         
-        <label for="pesan">Pesan / Detail Kebutuhan</label>
-        <textarea id="pesan" placeholder="Tuliskan gambaran singkat kebutuhan website Anda..."></textarea>
+        <label for="pesan">Pesan Detail</label>
+        <textarea id="pesan" placeholder="Detail kebutuhan atau pertanyaan Anda..."></textarea>
         
         <button class="btn" style="width:100%; margin-top:15px;" onclick="kirimWA()">🚀 Kirim Pesan Ke WA</button>
     </div>
@@ -802,7 +1083,34 @@ textarea {
 
 <script>
 const nomorWA = "62895401061300";
+let currentCategory = "all";
 
+// 1. Logika Kalkulator Harga Interaktif
+function calculatePrice() {
+    const baseType = parseInt(document.getElementById("calcType").value);
+    const pageCount = parseInt(document.getElementById("calcPages").value) || 1;
+    
+    let extraPageCost = (pageCount > 1) ? (pageCount - 1) * 50000 : 0;
+    
+    let addOns = 0;
+    if (document.getElementById("addSeo").checked) addOns += parseInt(document.getElementById("addSeo").value);
+    if (document.getElementById("addPayment").checked) addOns += parseInt(document.getElementById("addPayment").value);
+    if (document.getElementById("addMultiLang").checked) addOns += parseInt(document.getElementById("addMultiLang").value);
+
+    let total = baseType + extraPageCost + addOns;
+    document.getElementById("totalDisplay").innerText = "Rp" + total.toLocaleString('id-ID');
+}
+
+function orderFromCalc() {
+    const total = document.getElementById("totalDisplay").innerText;
+    const typeText = document.getElementById("calcType").options[document.getElementById("calcType").selectedIndex].text;
+    const pages = document.getElementById("calcPages").value;
+
+    document.getElementById("jenis").value = "Hitungan Kalkulator Custom";
+    openChat(`Halo RizkyWeb, saya melakukan estimasi di kalkulator web:\n- Tipe: ${typeText}\n- Jumlah Halaman: ${pages}\n- Estimasi Biaya: ${total}\n\nBisakah kita bahas lebih detail?`);
+}
+
+// 2. Fungsi Modal Chat WA
 function openChat(pesanAwal = "") {
     document.getElementById("pesan").value = pesanAwal;
     document.getElementById("chatModal").style.display = "flex";
@@ -812,27 +1120,83 @@ function closeChat() {
     document.getElementById("chatModal").style.display = "none";
 }
 
+function selectPackage(packageName) {
+    document.getElementById("jenis").value = packageName;
+    openChat(`Halo, saya tertarik pesan: ${packageName}. Mohon penjelasan langkah pemesanannya.`);
+}
+
+function copyPackage(text) {
+    navigator.clipboard.writeText(text);
+    alert(`Nama paket "${text}" berhasil disalin!`);
+}
+
+// 3. Filter & Search Paket
+function setCategory(category, element) {
+    currentCategory = category;
+    const buttons = document.querySelectorAll('.filter-btn');
+    buttons.forEach(btn => btn.classList.remove('active'));
+    element.classList.add('active');
+    filterPaket();
+}
+
+function filterPaket() {
+    const searchVal = document.getElementById("searchInput").value.toLowerCase();
+    const cards = document.querySelectorAll(".price-card");
+
+    cards.forEach(card => {
+        const title = card.getAttribute("data-title").toLowerCase();
+        const category = card.getAttribute("data-category");
+        
+        const matchSearch = title.includes(searchVal);
+        const matchCategory = (currentCategory === "all" || category === currentCategory);
+
+        if (matchSearch && matchCategory) {
+            card.style.display = "flex";
+        } else {
+            card.style.display = "none";
+        }
+    });
+}
+
+// 4. Accordion FAQ Interaktif
+function toggleFaq(btn) {
+    const answer = btn.nextElementSibling;
+    const icon = btn.querySelector("span");
+    
+    if (answer.classList.contains("show")) {
+        answer.classList.remove("show");
+        icon.innerText = "+";
+    } else {
+        answer.classList.add("show");
+        icon.innerText = "-";
+    }
+}
+
+// 5. Kirim Form WA
 function kirimWA() {
     const nama = document.getElementById("nama").value.trim();
     const jenis = document.getElementById("jenis").value;
     const pesan = document.getElementById("pesan").value.trim();
 
     if (!nama) {
-        alert("Silakan masukkan nama Anda terlebih dahulu.");
+        alert("Silakan masukkan nama Anda.");
         return;
     }
     if (!pesan) {
-        alert("Silakan tulis pesan atau detail kebutuhan Anda.");
+        alert("Silakan tulis pesan kebutuhan Anda.");
         return;
     }
 
-    const teks = `Halo RizkyWeb!%0A%0A*Nama:* ${encodeURIComponent(nama)}%0A*Pilihan Paket:* ${encodeURIComponent(jenis)}%0A*Pesan:* ${encodeURIComponent(pesan)}%0A%0ASaya ingin berkonsultasi mengenai pembuatan website ini.`;
+    const teks = `Halo RizkyWeb!%0A%0A*Nama:* ${encodeURIComponent(nama)}%0A*Kebutuhan/Paket:* ${encodeURIComponent(jenis)}%0A*Pesan:* ${encodeURIComponent(pesan)}%0A%0ASaya berminat untuk berkonsultasi.`;
     window.open(`https://wa.me/${nomorWA}?text=${teks}`, "_blank");
 }
 
 window.onclick = function(e) {
     if (e.target === document.getElementById("chatModal")) closeChat();
 }
+
+// Inisialisasi perhitungan kalkulator awal
+calculatePrice();
 </script>
 
 </body>
