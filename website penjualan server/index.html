@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RizkyWeb - Jasa Pembuatan Website</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Poppins,sans-serif;background:#071426;color:#fff}
+a{text-decoration:none;color:inherit}
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 8%;background:#0b1c35;position:sticky;top:0;z-index:10}
+.logo{font-size:24px;font-weight:800;color:#36a3ff}
+nav ul{display:flex;gap:25px;list-style:none;font-size:14px}
+nav ul a:hover{color:#36a3ff}
+.btn{display:inline-block;background:#168cff;color:white;padding:13px 22px;border-radius:10px;font-weight:600;border:0;cursor:pointer}
+.btn:hover{background:#0072dc}
+.hero{min-height:600px;display:flex;align-items:center;justify-content:space-between;gap:30px;padding:80px 8%;background:radial-gradient(circle at 80%,#123e73,#071426 60%)}
+.hero-content{max-width:600px}
+.hero small{color:#28a7ff;font-weight:bold;letter-spacing:2px}
+h1{font-size:clamp(32px,5vw,58px);line-height:1.2;margin:18px 0}
+h1 span{color:#219cff}
+.hero p{color:#bdcbe0;line-height:1.9;margin-bottom:28px}
+.hero-art{font-size:140px;text-align:center;filter:drop-shadow(0 0 30px #168cff)}
+section{padding:75px 8%}
+.heading{text-align:center;margin-bottom:40px}
+.heading h2{font-size:32px;margin-bottom:12px}
+.heading p{color:#aebdd1}
+.features,.services,.prices{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:#102641;padding:28px;border-radius:18px;border:1px solid #1c3b5d;transition:.3s}
+.card:hover{transform:translateY(-5px);border-color:#168cff}
+.card .icon{font-size:36px;margin-bottom:15px}
+.card h3{margin-bottom:12px}
+.card p{color:#aebdd1;font-size:14px;line-height:1.8}
+#layanan{background:#0a1b30}
+.price{font-size:28px;font-weight:bold;color:#35a7ff;margin:15px 0}
+.card ul{list-style:none;color:#c1d0e2;line-height:2.2;font-size:14px;margin-bottom:18px}
+.contact{background:linear-gradient(135deg,#075ab1,#102541);text-align:center}
+.contact p{color:#d4e5f7;margin:15px 0 25px}
+.contact strong{font-size:20px}
+footer{text-align:center;padding:25px;color:#8fa7c2;background:#050f1d;font-size:13px}
+.wa{position:fixed;bottom:25px;right:25px;background:#20c76b;color:white;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:29px;box-shadow:0 5px 20px #0008;z-index:20}
+.modal{display:none;position:fixed;inset:0;background:#000b;z-index:30;align-items:center;justify-content:center;padding:20px}
+.modal-box{background:#102641;padding:30px;border-radius:18px;width:100%;max-width:450px}
+.modal-box h2{margin-bottom:20px}
+input,textarea,select{width:100%;padding:13px;margin:8px 0 15px;background:#071426;border:1px solid #315071;color:white;border-radius:8px;font-family:inherit}
+textarea{resize:vertical;min-height:100px}
+.close{float:right;font-size:25px;cursor:pointer;color:#a9c1d9}
+@media(max-width:750px){
+nav{padding:16px 5%}
+nav ul{display:none}
+.hero{padding:60px 7%;text-align:center;flex-direction:column}
+.hero-art{font-size:90px}
+section{padding:55px 6%}
+.features,.services,.prices{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav>
+<a href="#" class="logo">⚡ RizkyWeb</a>
+<ul>
+<li><a href="#beranda">Beranda</a></li>
+<li><a href="#layanan">Layanan</a></li>
+<li><a href="#paket">Paket</a></li>
+<li><a href="#kontak">Kontak</a></li>
+</ul>
+<a class="btn" href="#" onclick="openChat('Halo, saya ingin bertanya tentang jasa pembuatan website.')">Chat WA</a>
+</nav>
+
+<section class="hero" id="beranda">
+<div class="hero-content">
+<small>JASA PEMBUATAN WEBSITE</small>
+<h1>Bangun Website <span>Profesional</span> untuk Bisnis Anda</h1>
+<p>Kami membantu membuat website modern, cepat, responsif, dan sesuai kebutuhan bisnis, sekolah, organisasi, maupun personal.</p>
+<a class="btn" href="#" onclick="openChat('Halo RizkyWeb, saya ingin konsultasi pembuatan website.')">💬 Konsultasi Gratis</a>
+<a class="btn" href="#paket" style="background:transparent;border:1px solid #368ed2;margin-left:8px">Lihat Paket</a>
+</div>
+<div class="hero-art">💻</div>
+</section>
+
+<section>
+<div class="heading">
+<h2>Kenapa Memilih Kami?</h2>
+<p>Solusi website yang dirancang sesuai kebutuhan Anda.</p>
+</div>
+<div class="features">
+<div class="card"><div class="icon">🚀</div><h3>Desain Modern</h3><p>Tampilan profesional dan responsif di HP maupun laptop.</p></div>
+<div class="card"><div class="icon">💻</div><h3>Koding Berkualitas</h3><p>Struktur website rapi, ringan, dan mudah dikembangkan.</p></div>
+<div class="card"><div class="icon">🛠️</div><h3>Support Website</h3><p>Kami siap membantu jika Anda membutuhkan perubahan atau perbaikan.</p></div>
+</div>
+</section>
+
+<section id="layanan">
+<div class="heading">
+<h2>Layanan Kami</h2>
+<p>Pilih layanan yang sesuai dengan kebutuhan Anda.</p>
+</div>
+<div class="services">
+<div class="card"><div class="icon">🌐</div><h3>Website Company Profile</h3><p>Website untuk memperkenalkan bisnis, usaha, atau perusahaan Anda.</p></div>
+<div class="card"><div class="icon">🛒</div><h3>Toko Online</h3><p>Website toko online untuk menampilkan produk dan menerima pesanan.</p></div>
+<div class="card"><div class="icon">🏫</div><h3>Sistem Informasi</h3><p>Aplikasi web untuk sekolah, organisasi, instansi, dan kebutuhan administrasi.</p></div>
+<div class="card"><div class="icon">📱</div><h3>Landing Page</h3><p>Halaman promosi yang menarik untuk meningkatkan jangkauan bisnis.</p></div>
+<div class="card"><div class="icon">⚙️</div><h3>Maintenance</h3><p>Pembaruan konten, perbaikan tampilan, dan pengembangan fitur.</p></div>
+<div class="card"><div class="icon">🎨</div><h3>Custom Website</h3><p>Website dengan fitur dan desain yang disesuaikan dengan permintaan Anda.</p></div>
+</div>
+</section>
+
+<section id="paket">
+<div class="heading">
+<h2>Pilihan Paket Website</h2>
+<p>Harga berikut adalah contoh dan bisa disesuaikan.</p>
+</div>
+<div class="prices">
+<div class="card">
+<h3>Paket Basic</h3>
+<div class="price">Rp500.000</div>
+<ul><li>✓ Landing page</li><li>✓ Desain responsif</li><li>✓ 1–3 halaman</li><li>✓ Integrasi WhatsApp</li></ul>
+<button class="btn" onclick="openChat('Halo, saya tertarik dengan Paket Basic seharga Rp500.000.')">Pesan Sekarang</button>
+</div>
+<div class="card" style="border:2px solid #168cff">
+<h3>Paket Professional</h3>
+<div class="price">Rp1.500.000</div>
+<ul><li>✓ Website multi halaman</li><li>✓ Desain premium</li><li>✓ Form kontak</li><li>✓ Fitur sesuai kebutuhan</li></ul>
+<button class="btn" onclick="openChat('Halo, saya tertarik dengan Paket Professional seharga Rp1.500.000.')">Pesan Sekarang</button>
+</div>
+<div class="card">
+<h3>Paket Custom</h3>
+<div class="price">Hubungi Kami</div>
+<ul><li>✓ Sistem informasi</li><li>✓ Fitur custom</li><li>✓ Database</li><li>✓ Konsultasi kebutuhan</li></ul>
+<button class="btn" onclick="openChat('Halo, saya ingin membuat website custom. Bisa konsultasi terlebih dahulu?')">Konsultasi</button>
+</div>
+</div>
+</section>
+
+<section class="contact" id="kontak">
+<h2>Siap Membuat Website Impian Anda?</h2>
+<p>Konsultasikan kebutuhan website Anda bersama kami melalui WhatsApp.</p>
+<p>📞 <strong id="nomorTampil">0812 3456 7890</strong></p>
+<a class="btn" href="#" onclick="openChat('Halo RizkyWeb, saya ingin memesan jasa pembuatan website.')">💬 Hubungi via WhatsApp</a>
+</section>
+
+<footer>
+<p>© 2026 RizkyWeb. Semua Hak Dilindungi.</p>
+<p>Jasa Pembuatan Website Profesional</p>
+</footer>
+
+<a class="wa" href="#" onclick="openChat('Halo RizkyWeb, saya ingin bertanya tentang jasa website.')" title="Chat WhatsApp">◉</a>
+
+<div class="modal" id="chatModal">
+<div class="modal-box">
+<span class="close" onclick="closeChat()">×</span>
+<h2>💬 Chat WhatsApp</h2>
+<p style="color:#b6c9df;font-size:14px;margin-bottom:15px">Isi data berikut agar pesan langsung tersusun di WhatsApp.</p>
+<label>Nama Anda</label>
+<input type="text" id="nama" placeholder="Masukkan nama">
+<label>Pilih Layanan</label>
+<select id="jenis">
+<option>Website Company Profile</option>
+<option>Toko Online</option>
+<option>Sistem Informasi</option>
+<option>Landing Page</option>
+<option>Website Custom</option>
+<option>Lainnya</option>
+</select>
+<label>Pesan</label>
+<textarea id="pesan" placeholder="Tulis kebutuhan website Anda..."></textarea>
+<button class="btn" style="width:100%" onclick="kirimWA()">🚀 Kirim ke WhatsApp</button>
+</div>
+</div>
+
+<script>
+// GANTI NOMOR INI DENGAN NOMOR WHATSAPP KAMU
+const nomorWA = "625401061300";
+
+function openChat(pesanAwal=""){
+document.getElementById("pesan").value=pesanAwal;
+document.getElementById("chatModal").style.display="flex";
+}
+function closeChat(){
+document.getElementById("chatModal").style.display="none";
+}
+function kirimWA(){
+const nama=document.getElementById("nama").value.trim();
+const jenis=document.getElementById("jenis").value;
+const pesan=document.getElementById("pesan").value.trim();
+if(!nama){alert("Silakan masukkan nama terlebih dahulu.");return;}
+if(!pesan){alert("Silakan tulis pesan terlebih dahulu.");return;}
+const teks=`Halo RizkyWeb!%0A%0ANama: ${encodeURIComponent(nama)}%0ALayanan: ${encodeURIComponent(jenis)}%0APesan: ${encodeURIComponent(pesan)}%0A%0ASaya ingin berkonsultasi tentang jasa pembuatan website.`;
+window.open(`https://wa.me/${nomorWA}?text=${teks}`,"_blank");
+}
+window.onclick=function(e){
+if(e.target===document.getElementById("chatModal"))closeChat();
+}
+</script>
+</body>
+</html>
