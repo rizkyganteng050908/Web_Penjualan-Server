@@ -116,69 +116,31 @@ section{padding:55px 6%}
 <p>Harga berikut adalah contoh dan bisa disesuaikan.</p>
 </div>
 <div class="prices">
-
-<div class="card" style="border:2px solid #20c76b">
-  <div class="icon">🎓</div>
-  <h3>Paket Pelajar</h3>
-  <div class="price">Rp50.000</div>
-  <ul>
-    <li>✓ Website untuk tugas sekolah</li>
-    <li>✓ Landing page sederhana</li>
-    <li>✓ Desain responsif</li>
-    <li>✓ Bantuan instalasi website</li>
-    <li>✓ Konsultasi project</li>
-    <li>✓ Pembuatan Databases</li>
-  </ul>
-  <button class="btn"
-    style="background:#20c76b"
-    onclick="openChat('Halo RizkyWeb, saya tertarik dengan Paket Pelajar seharga Rp150.000. Saya ingin konsultasi tentang project website sekolah.')">
-    🎓 Pesan Sekarang
-  </button>
+<div class="card">
+<h3>Paket Basic</h3>
+<div class="price">Rp500.000</div>
+<ul><li>✓ Landing page</li><li>✓ Desain responsif</li><li>✓ 1–3 halaman</li><li>✓ Integrasi WhatsApp</li></ul>
+<button class="btn" onclick="openChat('Halo, saya tertarik dengan Paket Basic seharga Rp500.000.')">Pesan Sekarang</button>
 </div>
-  
-<div class="card" style="border:2px solid #20c76b">
-  <div class="icon">📦</div>
-  <h3>Paket Basic Ramah di Kantong </h3>
-  <div class="price">Rp100.000</div>
-  <ul>
-    <li>✓ Tersedia Domain</li>
-    <li>✓ Tersedian Hosting Standar</li>
-    <li>✓ Domain Kostum</li>
-    <li>✓ Tersedia Github</li>
-    <li>✓ Tersedia Vercel</li>
-    <li>✓ Bisa Mengembalikan uang 1x24 jam</li>
-  </ul>
-  <button class="btn"
-    style="background:#20c76b"
-    onclick="openChat('Halo RizkyWeb, saya tertarik dengan Paket basic seharga Rp10.000. Saya ingin Pesan Paket Basic.')">
-    🎓 Pesan Sekarang
-  </button>
+<div class="card" style="border:2px solid #168cff">
+<h3>Paket Professional</h3>
+<div class="price">Rp1.500.000</div>
+<ul><li>✓ Website multi halaman</li><li>✓ Desain premium</li><li>✓ Form kontak</li><li>✓ Fitur sesuai kebutuhan</li></ul>
+<button class="btn" onclick="openChat('Halo, saya tertarik dengan Paket Professional seharga Rp1.500.000.')">Pesan Sekarang</button>
 </div>
-  
-<div class="card" style="border:2px solid #20c76b">
-  <div class="icon">💎</div>
-  <h3>Paket Premium</h3>
-  <div class="price">Rp500 Rb - 1 Juta</div>
-  <ul>
-    <li>✓ Gratis Domain Kustom (1tahun)</li>
-    <li>✓ Bantuan AI Lengkap</li>
-    <li>✓ Tersedia Hosting Premium</li>
-    <li>✓ Tersedia Github</li>
-    <li>✓ Fasilitas Tambahan: ertifikat SSL gratis tanpa batas, 2 akun email per website, dan pencadangan (backup) data mingguan.</li>
-    <li>✓ Keamanan Ekstra</li>
-  </ul>
-  <button class="btn"
-    style="background:#20c76b"
-    onclick="openChat('Halo RizkyWeb, saya tertarik dengan Paket Premium seharga Rp500 RB - 1.')">
-    🎓 Pesan Sekarang
-  </button>
+<div class="card">
+<h3>Paket Custom</h3>
+<div class="price">Hubungi Kami</div>
+<ul><li>✓ Sistem informasi</li><li>✓ Fitur custom</li><li>✓ Database</li><li>✓ Konsultasi kebutuhan</li></ul>
+<button class="btn" onclick="openChat('Halo, saya ingin membuat website custom. Bisa konsultasi terlebih dahulu?')">Konsultasi</button>
+</div>
 </div>
 </section>
 
 <section class="contact" id="kontak">
 <h2>Siap Membuat Website Impian Anda?</h2>
 <p>Konsultasikan kebutuhan website Anda bersama kami melalui WhatsApp.</p>
-<p>📞 <strong id="nomorTampil">625401061300</strong></p>
+<p>📞 <strong id="nomorTampil">0812 3456 7890</strong></p>
 <a class="btn" href="#" onclick="openChat('Halo RizkyWeb, saya ingin memesan jasa pembuatan website.')">💬 Hubungi via WhatsApp</a>
 </section>
 
@@ -213,7 +175,7 @@ section{padding:55px 6%}
 
 <script>
 // GANTI NOMOR INI DENGAN NOMOR WHATSAPP KAMU
-const nomorWA = "625401061300";
+const nomorWA = "6281234567890";
 
 function openChat(pesanAwal=""){
 document.getElementById("pesan").value=pesanAwal;
