@@ -44,7 +44,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 18px 8%;
-    max-width: 1300px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
@@ -106,13 +106,13 @@ nav ul a:hover {
 
 /* Hero Section */
 .hero {
-    min-height: 80vh;
+    min-height: 75vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 40px;
     padding: 60px 8%;
-    max-width: 1300px;
+    max-width: 1400px;
     margin: 0 auto;
     background: radial-gradient(circle at 80% 20%, rgba(22, 140, 255, 0.15), transparent 50%);
 }
@@ -161,7 +161,7 @@ h1 span {
 }
 
 .hero-art {
-    font-size: 160px;
+    font-size: 150px;
     text-align: center;
     filter: drop-shadow(0 0 40px rgba(22, 140, 255, 0.4));
     animation: float 4s ease-in-out infinite;
@@ -175,7 +175,7 @@ h1 span {
 /* Sections */
 section {
     padding: 80px 8%;
-    max-width: 1300px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
@@ -234,10 +234,10 @@ section {
     line-height: 1.7;
 }
 
-/* Pricing Grid - 4 kolom di desktop */
+/* Pricing Grid - Grid 3 atau 4 kolom */
 .prices {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
     align-items: stretch;
 }
@@ -281,12 +281,12 @@ section {
 }
 
 .price-card h3 {
-    font-size: 22px;
+    font-size: 20px;
     margin-bottom: 5px;
 }
 
 .price {
-    font-size: 28px;
+    font-size: 26px;
     font-weight: 800;
     color: #35a7ff;
     margin: 15px 0;
@@ -296,7 +296,7 @@ section {
     list-style: none;
     color: #c1d0e2;
     line-height: 2;
-    font-size: 14px;
+    font-size: 13.5px;
     margin-bottom: 25px;
     flex-grow: 1;
 }
@@ -475,10 +475,10 @@ textarea {
     <div class="hero-content">
         <span class="badge">JASA PEMBUATAN WEBSITE</span>
         <h1>Bangun Website <span>Profesional</span> & Modern</h1>
-        <p>Solusi website berkualitas tinggi, responsif, cepat, dan terjangkau untuk mahasiswa, UMKM, perusahaan, hingga kebutuhan custom.</p>
+        <p>Solusi website lengkap, cepat, dan responsif. Menyediakan 12 pilihan paket terbaik untuk personal, UMKM, instansi, hingga perusahaan skala besar.</p>
         <div class="hero-btn-group">
             <button class="btn" onclick="openChat('Halo RizkyWeb, saya ingin konsultasi gratis.')">💬 Konsultasi Gratis</button>
-            <a class="btn btn-outline" href="#paket">Lihat Semua Paket</a>
+            <a class="btn btn-outline" href="#paket">Pilih Paket</a>
         </div>
     </div>
     <div class="hero-art">💻</div>
@@ -523,11 +523,11 @@ textarea {
     </div>
 </section>
 
-<!-- SECTION 8 PAKET LENGKAP -->
+<!-- SECTION 12 PAKET LENGKAP -->
 <section id="paket">
     <div class="heading">
-        <h2>8 Pilihan Paket Website</h2>
-        <p>Pilih paket yang paling sesuai dengan kebutuhan, skala bisnis, dan anggaran Anda.</p>
+        <h2>12 Pilihan Paket Website</h2>
+        <p>Temukan paket yang paling spesifik dan pas sesuai dengan budget serta jenis kebutuhan Anda.</p>
     </div>
     <div class="prices">
         
@@ -540,144 +540,212 @@ textarea {
             </div>
             <ul>
                 <li>✅ 1 - 3 Halaman Website</li>
-                <li>✅ Tampilan Responsive (HP/PC)</li>
-                <li>✅ Hosting Subdomain Gratis</li>
-                <li>✅ Tautan Sosmed / Kontak</li>
+                <li>✅ Responsive HP & Desktop</li>
+                <li>✅ Subdomain Gratis</li>
+                <li>✅ Integrasi Sosmed & Kontak</li>
                 <li>✅ Revisi 1x</li>
             </ul>
-            <button class="btn btn-outline" onclick="openChat('Halo RizkyWeb, saya tertarik dengan Paket 1. Pelajar (Rp150rb).')">Pesan Paket</button>
+            <button class="btn btn-outline" onclick="openChat('Halo RizkyWeb, saya berminat dengan Paket 1. Pelajar (Rp150rb).')">Pesan Paket</button>
         </div>
 
         <!-- Paket 2 -->
         <div class="price-card">
             <div>
-                <h3>2. Landing Page 🚀</h3>
-                <p style="color:#8fa7c2; font-size:13px;">Fokus Iklan FB/Google Ads</p>
-                <div class="price">Rp450.000</div>
+                <h3>2. Portofolio Personal 🖼️</h3>
+                <p style="color:#8fa7c2; font-size:13px;">Freelancer, Desainer & CV Online</p>
+                <div class="price">Rp300.000</div>
             </div>
             <ul>
-                <li>✅ 1 Halaman Panjang Promosi</li>
+                <li>✅ Layout Modern / Galeri Karya</li>
                 <li>✅ Domain .my.id / .site (1 Thn)</li>
-                <li>✅ Integrasi Direct Chat WA</li>
-                <li>✅ Form Pemesanan / Lead</li>
-                <li>✅ Desain Tinggi Konversi</li>
-                <li>✅ Revisi 2x</li>
+                <li>✅ Halaman Profil & Kontak WA</li>
+                <li>✅ Tombol Download CV / PDF</li>
+                <li>✅ Revisi 1x</li>
             </ul>
-            <button class="btn btn-outline" onclick="openChat('Halo RizkyWeb, saya tertarik dengan Paket 2. Landing Page (Rp450rb).')">Pesan Paket</button>
+            <button class="btn btn-outline" onclick="openChat('Halo RizkyWeb, saya berminat dengan Paket 2. Portofolio (Rp300rb).')">Pesan Paket</button>
         </div>
 
         <!-- Paket 3 -->
         <div class="price-card">
             <div>
-                <h3>3. Standar UMKM 🏪</h3>
-                <p style="color:#8fa7c2; font-size:13px;">Profil Usaha & Produk Lokal</p>
-                <div class="price">Rp850.000</div>
+                <h3>3. Landing Page Sales 🚀</h3>
+                <p style="color:#8fa7c2; font-size:13px;">Fokus Iklan Google / Meta Ads</p>
+                <div class="price">Rp500.000</div>
             </div>
             <ul>
-                <li>✅ Domain .com (1 Thn)</li>
-                <li>✅ Fast Cloud Hosting (1 Thn)</li>
-                <li>✅ 3 - 5 Halaman Utama</li>
-                <li>✅ Galeri Produk / Jasa</li>
-                <li>✅ Free SSL Keamanan</li>
+                <li>✅ 1 Halaman Sales Page Panjang</li>
+                <li>✅ Domain Custom (1 Thn)</li>
+                <li>✅ Fast Loading Optimization</li>
+                <li>✅ Direct Call-to-Action ke WA</li>
+                <li>✅ Form Penjualan / Lead</li>
                 <li>✅ Revisi 2x</li>
             </ul>
-            <button class="btn btn-outline" onclick="openChat('Halo RizkyWeb, saya tertarik dengan Paket 3. Standar UMKM (Rp850rb).')">Pesan Paket</button>
+            <button class="btn btn-outline" onclick="openChat('Halo RizkyWeb, saya berminat dengan Paket 3. Landing Page (Rp500rb).')">Pesan Paket</button>
         </div>
 
         <!-- Paket 4 -->
-        <div class="price-card popular">
-            <span class="popular-badge">Paling Populer</span>
+        <div class="price-card">
             <div>
-                <h3>4. Company Profile 💼</h3>
-                <p style="color:#8fa7c2; font-size:13px;">Profil Perusahaan Profesional</p>
-                <div class="price">Rp1.800.000</div>
+                <h3>4. Kuliner & Resto 🍽️</h3>
+                <p style="color:#8fa7c2; font-size:13px;">Restoran, Kafe & Menu QR</p>
+                <div class="price">Rp750.000</div>
             </div>
             <ul>
-                <li>✅ Domain .com / .id (1 Thn)</li>
-                <li>✅ High Performance Server</li>
-                <li>✅ Up to 8 Halaman Lengkap</li>
-                <li>✅ Email Bisnis Official</li>
-                <li>✅ Optimasi SEO Dasar</li>
-                <li>✅ Fitur Blog / Berita</li>
-                <li>✅ Garansi Maintenance 1 Bln</li>
+                <li>✅ Menu Makanan & QR Code Digital</li>
+                <li>✅ Integrasi Order via WhatsApp</li>
+                <li>✅ Peta Lokasi & Jam Buka</li>
+                <li>✅ Galeri Foto Makanan & Tempat</li>
+                <li>✅ Free SSL & Domain (1 Thn)</li>
+                <li>✅ Revisi 2x</li>
             </ul>
-            <button class="btn" onclick="openChat('Halo RizkyWeb, saya tertarik dengan Paket 4. Company Profile (Rp1.8jt).')">Pesan Paket</button>
+            <button class="btn btn-outline" onclick="openChat('Halo RizkyWeb, saya berminat dengan Paket 4. Resto & Kuliner (Rp750rb).')">Pesan Paket</button>
         </div>
 
         <!-- Paket 5 -->
         <div class="price-card">
             <div>
-                <h3>5. Toko Online 🛒</h3>
-                <p style="color:#8fa7c2; font-size:13px;">E-Commerce Jual Produk</p>
-                <div class="price">Rp2.500.000</div>
+                <h3>5. Standar UMKM 🏪</h3>
+                <p style="color:#8fa7c2; font-size:13px;">Profil Usaha & Katalog Lokal</p>
+                <div class="price">Rp950.000</div>
             </div>
             <ul>
-                <li>✅ Domain .com Utama</li>
-                <li>✅ Hosting Kapasitas Besar</li>
-                <li>✅ Sistem Katalog Products</li>
-                <li>✅ Order via WhatsApp / Cart</li>
-                <li>✅ Hitung Ongkir Otomatis</li>
-                <li>✅ Panduan Kelola Produk</li>
-                <li>✅ Support Teknis 1 Bulan</li>
+                <li>✅ Domain .com (1 Thn)</li>
+                <li>✅ Cloud Hosting Cepat</li>
+                <li>✅ 3 - 5 Halaman Utama</li>
+                <li>✅ Showcase Produk / Jasa</li>
+                <li>✅ Tombol WA Integration</li>
+                <li>✅ Revisi 2x</li>
             </ul>
-            <button class="btn btn-outline" onclick="openChat('Halo RizkyWeb, saya tertarik dengan Paket 5. Toko Online (Rp2.5jt).')">Pesan Paket</button>
+            <button class="btn btn-outline" onclick="openChat('Halo RizkyWeb, saya berminat dengan Paket 5. Standar UMKM (Rp950rb).')">Pesan Paket</button>
         </div>
 
         <!-- Paket 6 -->
-        <div class="price-card">
+        <div class="price-card popular">
+            <span class="popular-badge">Paling Populer</span>
             <div>
-                <h3>6. Web Sekolah / Instansi 🏫</h3>
-                <p style="color:#8fa7c2; font-size:13px;">Sekolah, Kampus & Yayasan</p>
-                <div class="price">Rp3.500.000</div>
+                <h3>6. Company Profile 🏢</h3>
+                <p style="color:#8fa7c2; font-size:13px;">Profil Perusahaan Profesional</p>
+                <div class="price">Rp1.800.000</div>
             </div>
             <ul>
-                <li>✅ Domain Resmi (.sch.id / .or.id)</li>
+                <li>✅ Domain .com / .id (1 Thn)</li>
                 <li>✅ Server Kinerja Tinggi</li>
-                <li>✅ Fitur Berita & Pengumuman</li>
-                <li>✅ Galeri Kegiatan & Alumni</li>
-                <li>✅ Form PPDB / Pendaftaran</li>
-                <li>✅ Multi Admin Privilage</li>
-                <li>✅ Support Teknis 2 Bulan</li>
+                <li>✅ Up to 8 Halaman Lengkap</li>
+                <li>✅ Email Bisnis Resmi (@perusahaan)</li>
+                <li>✅ Optimasi SEO Dasar</li>
+                <li>✅ Fitur Blog / Artikel</li>
+                <li>✅ Garansi Maintenance 1 Bln</li>
             </ul>
-            <button class="btn btn-outline" onclick="openChat('Halo RizkyWeb, saya tertarik dengan Paket 6. Web Sekolah (Rp3.5jt).')">Pesan Paket</button>
+            <button class="btn" onclick="openChat('Halo RizkyWeb, saya berminat dengan Paket 6. Company Profile (Rp1.8jt).')">Pesan Paket</button>
         </div>
 
         <!-- Paket 7 -->
         <div class="price-card">
             <div>
-                <h3>7. Custom Web App 💎</h3>
+                <h3>7. Web Properti 🏡</h3>
+                <p style="color:#8fa7c2; font-size:13px;">Agency, Agent & Listing Rumah</p>
+                <div class="price">Rp2.200.000</div>
+            </div>
+            <ul>
+                <li>✅ Listing Properti (Jual/Sewa)</li>
+                <li>✅ Filter Harga, Lokasi & Tipe</li>
+                <li>✅ Galeri / Video Tour Properti</li>
+                <li>✅ Integrasi Maps & Detail Agent</li>
+                <li>✅ Domain .com + Hosting (1 Thn)</li>
+                <li>✅ Support Teknis 1 Bulan</li>
+            </ul>
+            <button class="btn btn-outline" onclick="openChat('Halo RizkyWeb, saya berminat dengan Paket 7. Web Properti (Rp2.2jt).')">Pesan Paket</button>
+        </div>
+
+        <!-- Paket 8 -->
+        <div class="price-card">
+            <div>
+                <h3>8. Toko Online 🛒</h3>
+                <p style="color:#8fa7c2; font-size:13px;">E-Commerce & Sistem Belanja</p>
+                <div class="price">Rp2.800.000</div>
+            </div>
+            <ul>
+                <li>✅ Domain .com Utama</li>
+                <li>✅ Hosting Kapasitas Besar</li>
+                <li>✅ Katalog Produk Unlimted</li>
+                <li>✅ Hitung Ongkir Otomatis</li>
+                <li>✅ Order Cart & Checkout WA</li>
+                <li>✅ Panduan Kelola Produk</li>
+                <li>✅ Support Teknis 1 Bulan</li>
+            </ul>
+            <button class="btn btn-outline" onclick="openChat('Halo RizkyWeb, saya berminat dengan Paket 8. Toko Online (Rp2.8jt).')">Pesan Paket</button>
+        </div>
+
+        <!-- Paket 9 -->
+        <div class="price-card">
+            <div>
+                <h3>9. Web Sekolah 🏫</h3>
+                <p style="color:#8fa7c2; font-size:13px;">Sekolah, Kampus & Yayasan</p>
+                <div class="price">Rp3.500.000</div>
+            </div>
+            <ul>
+                <li>✅ Domain Resmi (.sch.id / .or.id)</li>
+                <li>✅ Portal Berita & Pengumuman</li>
+                <li>✅ Galeri Kegiatan & Guru</li>
+                <li>✅ Form PPDB Online</li>
+                <li>✅ Multi-Admin CMS</li>
+                <li>✅ Support Teknis 2 Bulan</li>
+            </ul>
+            <button class="btn btn-outline" onclick="openChat('Halo RizkyWeb, saya berminat dengan Paket 9. Web Sekolah (Rp3.5jt).')">Pesan Paket</button>
+        </div>
+
+        <!-- Paket 10 -->
+        <div class="price-card">
+            <div>
+                <h3>10. Klinik & Booking 🏥</h3>
+                <p style="color:#8fa7c2; font-size:13px;">Klinik, Salon, & Jasa Janji Temu</p>
+                <div class="price">Rp4.500.000</div>
+            </div>
+            <ul>
+                <li>✅ System Booking / Reservasi</li>
+                <li>✅ Jadwal Dokter / Praktisi</li>
+                <li>✅ Integrasi Kalender & WA Notif</li>
+                <li>✅ Katalog Layanan & Biaya</li>
+                <li>✅ Domain & Hosting Bisnis</li>
+                <li>✅ Support Teknis 2 Bulan</li>
+            </ul>
+            <button class="btn btn-outline" onclick="openChat('Halo RizkyWeb, saya berminat dengan Paket 10. Klinik & Booking (Rp4.5jt).')">Pesan Paket</button>
+        </div>
+
+        <!-- Paket 11 -->
+        <div class="price-card">
+            <div>
+                <h3>11. Custom Web App 💎</h3>
                 <p style="color:#8fa7c2; font-size:13px;">Aplikasi Web & Sistem Khusus</p>
-                <div class="price">Mulai Rp5.5JT</div>
+                <div class="price">Mulai Rp6.0JT</div>
             </div>
             <ul>
                 <li>✅ Alur & Fitur Bebas Custom</li>
                 <li>✅ Database Relasional Kompleks</li>
                 <li>✅ Integrasi Payment Gateway</li>
                 <li>✅ Dashboard Admin Interaktif</li>
-                <li>✅ Keamanan Tingkat Lanjut</li>
-                <li>✅ Training Penggunaan</li>
+                <li>✅ Training Penggunaan Sistem</li>
                 <li>✅ Priority Support 3 Bulan</li>
             </ul>
-            <button class="btn btn-outline" onclick="openChat('Halo RizkyWeb, saya ingin konsultasi Paket 7. Custom Web App.')">Konsultasi</button>
+            <button class="btn btn-outline" onclick="openChat('Halo RizkyWeb, saya ingin konsultasi Paket 11. Custom Web App.')">Konsultasi</button>
         </div>
 
-        <!-- Paket 8 -->
+        <!-- Paket 12 -->
         <div class="price-card">
             <div>
-                <h3>8. Enterprise / Portal 👑</h3>
-                <p style="color:#8fa7c2; font-size:13px;">Perusahaan Besar & Portal Sistem</p>
-                <div class="price">Mulai Rp10JT</div>
+                <h3>12. Enterprise / Portal 👑</h3>
+                <p style="color:#8fa7c2; font-size:13px;">Korporat Besar & High Traffic</p>
+                <div class="price">Mulai Rp12JT</div>
             </div>
             <ul>
-                <li>✅ Dedicated VPS Server</li>
-                <li>✅ Arsitektur High Traffic</li>
-                <li>✅ SLA Uptime 99.9%</li>
-                <li>✅ Integrasi API / ERP</li>
-                <li>✅ Back Up Otomatis Harian</li>
-                <li>✅ Kontrak Garansi & Maintenance 1 Thn</li>
-                <li>✅ Tim Dedicated Support</li>
+                <li>✅ Dedicated VPS High Performance</li>
+                <li>✅ Arsitektur High-Traffic & Security</li>
+                <li>✅ Integrasi API / ERP Sistem</li>
+                <li>✅ Auto Backup Harian</li>
+                <li>✅ Garansi & Maintenance 1 Tahun</li>
+                <li>✅ Dedicated Team Support</li>
             </ul>
-            <button class="btn btn-outline" onclick="openChat('Halo RizkyWeb, saya ingin konsultasi Paket 8. Enterprise.')">Konsultasi</button>
+            <button class="btn btn-outline" onclick="openChat('Halo RizkyWeb, saya ingin konsultasi Paket 12. Enterprise.')">Konsultasi</button>
         </div>
 
     </div>
@@ -685,15 +753,15 @@ textarea {
 
 <section id="kontak">
     <div class="contact-wrapper">
-        <h2>Bingung Memilih Paket Yang Tepat?</h2>
-        <p>Diskusikan kebutuhan website Anda, kami siap memberikan saran paket paling pas untuk bisnis Anda.</p>
+        <h2>Masih Bingung Memilih Paket?</h2>
+        <p>Hubungi kami melalui WhatsApp dan beri tahu kebutuhan Anda. Kami akan merekomendasikan solusi dan paket yang paling efektif.</p>
         <span class="phone-number">📞 0895-4010-61300</span>
-        <button class="btn" onclick="openChat('Halo RizkyWeb, saya butuh saran pilihan paket yang cocok untuk usaha saya.')">💬 Konsultasi Gratis Sekarang</button>
+        <button class="btn" onclick="openChat('Halo RizkyWeb, saya ingin berkonsultasi mengenai pilihan paket yang pas.')">💬 Konsultasi Gratis Sekarang</button>
     </div>
 </section>
 
 <footer>
-    <p>© 2026 RizkyWeb. All Rights Reserved. Jasa Pembuatan Website Profesional & Terpercaya.</p>
+    <p>© 2026 RizkyWeb. All Rights Reserved. Solusi Pembuatan Website Terlengkap & Terpercaya.</p>
 </footer>
 
 <a class="wa" href="#" onclick="openChat('Halo RizkyWeb, saya ingin bertanya tentang pilihan paket website.')" title="Chat WhatsApp">💬</a>
@@ -703,7 +771,7 @@ textarea {
     <div class="modal-box">
         <span class="close" onclick="closeChat()">&times;</span>
         <h2>💬 Konsultasi Website</h2>
-        <p style="color:#b6c9df; font-size:13px; margin-bottom:15px">Lengkapi detail di bawah untuk terhubung langsung ke WhatsApp.</p>
+        <p style="color:#b6c9df; font-size:13px; margin-bottom:15px">Isi formulir singkat di bawah untuk langsung terhubung via WhatsApp.</p>
         
         <label for="nama">Nama Anda</label>
         <input type="text" id="nama" placeholder="Contoh: Budi Santoso">
@@ -711,18 +779,22 @@ textarea {
         <label for="jenis">Pilih Paket Terkait</label>
         <select id="jenis">
             <option>1. Paket Pelajar / Tugas (Rp150.000)</option>
-            <option>2. Paket Landing Page (Rp450.000)</option>
-            <option>3. Paket Standar UMKM (Rp850.000)</option>
-            <option>4. Paket Company Profile (Rp1.800.000)</option>
-            <option>5. Paket Toko Online (Rp2.500.000)</option>
-            <option>6. Paket Sekolah & Instansi (Rp3.500.000)</option>
-            <option>7. Paket Custom Web App (Rp5.500.000+)</option>
-            <option>8. Paket Enterprise (Rp10.000.000+)</option>
-            <option>Lainnya / Bingung Memilih Paket</option>
+            <option>2. Paket Portofolio Personal (Rp300.000)</option>
+            <option>3. Paket Landing Page Sales (Rp500.000)</option>
+            <option>4. Paket Kuliner & Resto (Rp750.000)</option>
+            <option>5. Paket Standar UMKM (Rp950.000)</option>
+            <option>6. Paket Company Profile (Rp1.800.000)</option>
+            <option>7. Paket Web Properti (Rp2.200.000)</option>
+            <option>8. Paket Toko Online (Rp2.800.000)</option>
+            <option>9. Paket Web Sekolah (Rp3.500.000)</option>
+            <option>10. Paket Klinik & Booking (Rp4.500.000)</option>
+            <option>11. Paket Custom Web App (Rp6.000.000+)</option>
+            <option>12. Paket Enterprise (Rp12.000.000+)</option>
+            <option>Lainnya / Butuh Rekomendasi</option>
         </select>
         
         <label for="pesan">Pesan / Detail Kebutuhan</label>
-        <textarea id="pesan" placeholder="Ceritakan singkat kebutuhan website Anda..."></textarea>
+        <textarea id="pesan" placeholder="Tuliskan gambaran singkat kebutuhan website Anda..."></textarea>
         
         <button class="btn" style="width:100%; margin-top:15px;" onclick="kirimWA()">🚀 Kirim Pesan Ke WA</button>
     </div>
@@ -750,11 +822,11 @@ function kirimWA() {
         return;
     }
     if (!pesan) {
-        alert("Silakan tulis pesan atau pertanyaan Anda.");
+        alert("Silakan tulis pesan atau detail kebutuhan Anda.");
         return;
     }
 
-    const teks = `Halo RizkyWeb!%0A%0A*Nama:* ${encodeURIComponent(nama)}%0A*Pilihan Paket:* ${encodeURIComponent(jenis)}%0A*Pesan:* ${encodeURIComponent(pesan)}%0A%0ASaya ingin konsultasi pembuatan website.`;
+    const teks = `Halo RizkyWeb!%0A%0A*Nama:* ${encodeURIComponent(nama)}%0A*Pilihan Paket:* ${encodeURIComponent(jenis)}%0A*Pesan:* ${encodeURIComponent(pesan)}%0A%0ASaya ingin berkonsultasi mengenai pembuatan website ini.`;
     window.open(`https://wa.me/${nomorWA}?text=${teks}`, "_blank");
 }
 
