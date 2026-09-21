@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RizkyWeb - Jasa Pembuatan Website Terlengkap & Interaktif</title>
+<title>RizkyWeb - Jasa Pembuatan Website Profesional</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
@@ -279,23 +279,31 @@ section {
     display: block;
 }
 
-.roi-input input {
+.roi-input input, .calc-group select, .calc-group input[type="number"] {
     width: 100%;
     padding: 12px;
     background: var(--bg-main);
     border: 1px solid var(--border-color);
     color: var(--text-main);
     border-radius: 8px;
+    outline: none;
+    font-family: inherit;
 }
 
-.roi-result {
+.roi-result, .calc-result {
     padding: 20px;
     background: rgba(33, 156, 255, 0.1);
+    border: 1px solid rgba(33, 156, 255, 0.3);
     border-radius: 12px;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-.roi-value {
+.roi-value, .calc-total {
     font-size: 26px;
     font-weight: 800;
     color: #20c76b;
@@ -444,13 +452,13 @@ th {
     background: rgba(33, 156, 255, 0.1);
 }
 
-/* Modal General */
+/* === MODAL & FORM FIX === */
 .modal {
     display: none;
     position: fixed;
     inset: 0;
     background: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(6px);
     z-index: 1000;
     align-items: center;
     justify-content: center;
@@ -459,20 +467,105 @@ th {
 
 .modal-box {
     background: var(--bg-card);
-    padding: 30px;
+    padding: 32px 28px;
     border-radius: 20px;
     width: 100%;
-    max-width: 600px;
+    max-width: 480px;
     border: 1px solid var(--border-color);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
     max-height: 90vh;
     overflow-y: auto;
+    position: relative;
+    box-sizing: border-box;
 }
 
-.close {
-    float: right;
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.modal-header h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.close-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-sub);
     font-size: 24px;
     cursor: pointer;
+    line-height: 1;
+}
+
+.close-btn:hover {
+    color: var(--text-main);
+}
+
+/* Form Layout Vertikal Ke Bawah */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 16px;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 13px;
+    font-weight: 500;
     color: var(--text-sub);
+}
+
+.form-control {
+    width: 100% !important;
+    padding: 12px 14px;
+    background: var(--bg-main);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    color: var(--text-main);
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.form-control:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 10px rgba(22, 140, 255, 0.25);
+}
+
+textarea.form-control {
+    resize: vertical;
+    min-height: 90px;
+    line-height: 1.5;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, var(--primary), #0056b3);
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+    box-shadow: 0 4px 15px rgba(22, 140, 255, 0.3);
+}
+
+.btn-submit:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(22, 140, 255, 0.5);
 }
 
 .wa-float {
@@ -505,6 +598,7 @@ th {
     <a href="#" class="logo">⚡ RizkyWeb</a>
     <ul>
         <li><a href="#beranda">Beranda</a></li>
+        <li><a href="#kalkulator">Hitung Biaya</a></li>
         <li><a href="#portofolio">Portofolio</a></li>
         <li><a href="#roi">Kalkulator ROI</a></li>
         <li><a href="#alur">Alur Kerja</a></li>
@@ -530,11 +624,54 @@ th {
     <div class="hero-art">🚀</div>
 </section>
 
-<!-- REKOMENDASI FITUR 1: SIMULATOR PORTOFOLIO LIVE PREVIEW -->
+<!-- KALKULATOR ESTIMASI BIAYA CUSTOM -->
+<section id="kalkulator">
+    <div class="heading">
+        <h2>🧮 Kalkulator Estimasi Harga</h2>
+        <p>Hitung kisaran biaya website impian Anda sesuai dengan fitur yang Anda butuhkan!</p>
+    </div>
+    <div class="box-container">
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:20px;">
+            <div class="form-group">
+                <label for="calcType">Tipe Website</label>
+                <select id="calcType" class="form-control" onchange="calculatePrice()">
+                    <option value="150000">Pelajar / Portfolio Basic (Rp150rb)</option>
+                    <option value="500000">Landing Page Iklan (Rp500rb)</option>
+                    <option value="950000" selected>Company Profile / UMKM (Rp950rb)</option>
+                    <option value="2800000">Toko Online / E-Commerce (Rp2.8jt)</option>
+                    <option value="3500000">Web Sekolah / Portal (Rp3.5jt)</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="calcPages">Jumlah Halaman (+Rp50rb/hal)</label>
+                <input type="number" id="calcPages" class="form-control" value="3" min="1" max="30" onchange="calculatePrice()" onkeyup="calculatePrice()">
+            </div>
+
+            <div class="form-group">
+                <label>Fitur Tambahan (Add-Ons)</label>
+                <div style="display:flex; flex-direction:column; gap:8px; margin-top:5px; font-size:13.5px; color:var(--text-sub);">
+                    <label><input type="checkbox" id="addSeo" value="200000" onchange="calculatePrice()"> Optimasi SEO Dasar (+200rb)</label>
+                    <label><input type="checkbox" id="addPayment" value="500000" onchange="calculatePrice()"> Payment Gateway Auto (+500rb)</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="calc-result" style="margin-top:20px;">
+            <div>
+                <span style="color:var(--text-sub); font-size:13px;">Estimasi Total Biaya:</span>
+                <div class="calc-total" id="totalDisplay">Rp1.050.000</div>
+            </div>
+            <button class="btn" onclick="orderFromCalc()">💬 Pesan Sesuai Hitungan Ini</button>
+        </div>
+    </div>
+</section>
+
+<!-- SIMULATOR PORTOFOLIO LIVE PREVIEW -->
 <section id="portofolio">
     <div class="heading">
         <h2>🖥️ Contoh Tampilan Website</h2>
-        <p>Klik tombol untuk mensimulasikan tampilan live di layar Desktop maupun Mobile HP.</p>
+        <p>Klik tombol untuk mensimulasikan contoh fitur tampilan website.</p>
     </div>
     <div class="portfolio-grid">
         <div class="port-card">
@@ -558,7 +695,7 @@ th {
     </div>
 </section>
 
-<!-- REKOMENDASI FITUR 2: KALKULATOR ROI / ESTIMASI KEUNTUNGAN -->
+<!-- KALKULATOR ROI -->
 <section id="roi">
     <div class="heading">
         <h2>📈 Kalkulator Potensi Omzet (ROI)</h2>
@@ -586,7 +723,7 @@ th {
     </div>
 </section>
 
-<!-- REKOMENDASI FITUR 3: INTERACTIVE WORKFLOW TIMELINE -->
+<!-- ALUR KERJA -->
 <section id="alur">
     <div class="heading">
         <h2>⚙️ 4 Langkah Alur Pengerjaan</h2>
@@ -670,7 +807,7 @@ th {
             <ul>
                 <li>✅ Domain .com + Hosting</li>
                 <li>✅ 3 - 5 Halaman Profil Usaha</li>
-                <li>✅ Katalolg Produk Sederhana</li>
+                <li>✅ Katalog Produk Sederhana</li>
             </ul>
             <button class="btn" onclick="selectPackage('Paket UMKM - Rp950rb')">Pesan Sekarang</button>
         </div>
@@ -716,7 +853,7 @@ th {
     </div>
 </section>
 
-<!-- REKOMENDASI FITUR 4: TESTIMONIAL CAROUSEL INTERAKTIF -->
+<!-- TESTIMONIAL SLIDER -->
 <section>
     <div class="heading">
         <h2>💬 Kata Klien Kami</h2>
@@ -724,7 +861,6 @@ th {
     </div>
     <div class="box-container testimonial-box">
         <p class="testi-content" id="testiText">"Pengerjaan cepat banget, hasil desain website UMKM saya jadi terlihat jauh lebih mahal dan terpercaya. Recomended RizkyWeb!"</p>
-
         <p class="testi-author" id="testiAuthor">⭐ ⭐ ⭐ ⭐ ⭐ — Mas Hendra (Owner Kopi Lokal)</p>
         <div style="margin-top:15px; display:flex; gap:10px; justify-content:center;">
             <button class="btn btn-outline" style="padding:6px 15px;" onclick="prevTesti()">❮ Sebelumnya</button>
@@ -739,24 +875,28 @@ th {
 
 <a class="wa-float" href="#" onclick="openChat('Halo RizkyWeb, saya ingin berkonsultasi.')" title="Chat WhatsApp">💬</a>
 
-<!-- MODAL PREVIEW SIMULATOR PORTOFOLIO -->
+<!-- MODAL PREVIEW PORTOFOLIO -->
 <div class="modal" id="previewModal">
     <div class="modal-box">
-        <span class="close" onclick="closeModal('previewModal')">&times;</span>
-        <h2 id="prevTitle">Demo Preview</h2>
+        <div class="modal-header">
+            <h2 id="prevTitle">Demo Preview</h2>
+            <button class="close-btn" onclick="closeModal('previewModal')">&times;</button>
+        </div>
         <div style="background:var(--bg-main); padding:20px; border-radius:12px; margin:15px 0; border:1px solid var(--border-color);">
             <p><strong>Fitur Unggulan:</strong> <span id="prevFeatures"></span></p>
             <p style="margin-top:8px;"><strong>Responsif:</strong> <span id="prevMobile"></span></p>
         </div>
-        <button class="btn" style="width:100%" onclick="orderCurrentPreview()">💬 Pesan Tampilan Seperti Ini</button>
+        <button class="btn-submit" onclick="orderCurrentPreview()">💬 Pesan Tampilan Seperti Ini</button>
     </div>
 </div>
 
 <!-- MODAL COMPARISON TABLE -->
 <div class="modal" id="compareModal">
-    <div class="modal-box" style="max-width:700px;">
-        <span class="close" onclick="closeModal('compareModal')">&times;</span>
-        <h2>📊 Perbandingan Fitur Paket</h2>
+    <div class="modal-box" style="max-width:650px;">
+        <div class="modal-header">
+            <h2>📊 Perbandingan Fitur Paket</h2>
+            <button class="close-btn" onclick="closeModal('compareModal')">&times;</button>
+        </div>
         <div class="table-wrapper">
             <table>
                 <thead>
@@ -798,18 +938,32 @@ th {
     </div>
 </div>
 
-<!-- MODAL CHAT WA -->
+<!-- MODAL FORM WHATSAPP (FIXED LAYOUT) -->
 <div class="modal" id="chatModal">
     <div class="modal-box">
-        <span class="close" onclick="closeModal('chatModal')">&times;</span>
-        <h2>💬 Form Konsultasi WhatsApp</h2>
-        <label>Nama Anda</label>
-        <input type="text" id="nama" placeholder="Contoh: Budi Santoso">
-        <label>Pilihan Paket / Layanan</label>
-        <input type="text" id="jenis" readonly>
-        <label>Pesan Tambahan</label>
-        <textarea id="pesan" placeholder="Detail kebutuhan website Anda..."></textarea>
-        <button class="btn" style="width:100%; margin-top:15px;" onclick="kirimWA()">🚀 Kirim Pesan ke WA</button>
+        <div class="modal-header">
+            <h2>💬 Form Konsultasi WhatsApp</h2>
+            <button class="close-btn" onclick="closeModal('chatModal')">&times;</button>
+        </div>
+        
+        <div class="form-group">
+            <label for="nama">Nama Anda</label>
+            <input type="text" id="nama" class="form-control" placeholder="Contoh: Kiki">
+        </div>
+
+        <div class="form-group">
+            <label for="jenis">Pilihan Paket / Layanan</label>
+            <input type="text" id="jenis" class="form-control" readonly>
+        </div>
+
+        <div class="form-group">
+            <label for="pesan">Pesan Tambahan</label>
+            <textarea id="pesan" class="form-control" placeholder="Tuliskan detail kebutuhan website Anda..."></textarea>
+        </div>
+
+        <button class="btn-submit" onclick="kirimWA()">
+            🚀 Kirim Pesan ke WA
+        </button>
     </div>
 </div>
 
@@ -822,7 +976,29 @@ function toggleTheme() {
     document.body.classList.toggle("light-mode");
 }
 
-// 2. ROI Calculator
+// 2. Kalkulator Biaya Custom
+function calculatePrice() {
+    const baseType = parseInt(document.getElementById("calcType").value);
+    const pageCount = parseInt(document.getElementById("calcPages").value) || 1;
+    let extraPageCost = (pageCount > 1) ? (pageCount - 1) * 50000 : 0;
+    
+    let addOns = 0;
+    if (document.getElementById("addSeo").checked) addOns += parseInt(document.getElementById("addSeo").value);
+    if (document.getElementById("addPayment").checked) addOns += parseInt(document.getElementById("addPayment").value);
+
+    let total = baseType + extraPageCost + addOns;
+    document.getElementById("totalDisplay").innerText = "Rp" + total.toLocaleString('id-ID');
+}
+
+function orderFromCalc() {
+    const total = document.getElementById("totalDisplay").innerText;
+    const typeText = document.getElementById("calcType").options[document.getElementById("calcType").selectedIndex].text;
+    const pages = document.getElementById("calcPages").value;
+
+    selectPackage(`Hitungan Custom: ${typeText} (${pages} Halaman) - ${total}`);
+}
+
+// 3. ROI Calculator
 function calculateROI() {
     const visitors = parseInt(document.getElementById("roiVisitors").value) || 0;
     const price = parseInt(document.getElementById("roiPrice").value) || 0;
@@ -834,7 +1010,7 @@ function calculateROI() {
     document.getElementById("roiOutput").innerText = "Rp" + revenue.toLocaleString('id-ID') + " / Bulan";
 }
 
-// 3. Testimonial Slider
+// 4. Testimonial Slider
 const testimonials = [
     { text: `"Pengerjaan cepat banget, hasil desain website UMKM saya jadi terlihat jauh lebih mahal dan terpercaya."`, author: "⭐ ⭐ ⭐ ⭐ ⭐ — Mas Hendra (Owner Kopi)" },
     { text: `"Sangat terbantu untuk tugas akhir kampus. Proses revisi ramah dan cepat selesai tepat waktu!"`, author: "⭐ ⭐ ⭐ ⭐ ⭐ — Rian (Mahasiswa)" },
@@ -855,7 +1031,7 @@ function prevTesti() {
     updateTesti();
 }
 
-// 4. Modal Helpers
+// 5. Modal Handlers
 function openModal(id) { document.getElementById(id).style.display = "flex"; }
 function closeModal(id) { document.getElementById(id).style.display = "none"; }
 
@@ -866,10 +1042,10 @@ function openChat(pesanAwal = "") {
 
 function selectPackage(packageName) {
     document.getElementById("jenis").value = packageName;
-    openChat(`Halo RizkyWeb, saya tertarik dengan ${packageName}. Mohon info selengkapnya.`);
+    openChat(`Halo RizkyWeb, saya tertarik dengan ${packageName}. Bisakah dijelaskan proses pemesanannya?`);
 }
 
-// 5. Preview Simulator
+// 6. Preview Simulator
 function previewSite(title, features, mobile) {
     currentPreviewName = title;
     document.getElementById("prevTitle").innerText = title;
@@ -883,7 +1059,7 @@ function orderCurrentPreview() {
     selectPackage(`Demo Layout: ${currentPreviewName}`);
 }
 
-// 6. Filter Paket
+// 7. Filter Paket
 let currentCategory = "all";
 function setCategory(cat, el) {
     currentCategory = cat;
@@ -903,7 +1079,7 @@ function filterPaket() {
     });
 }
 
-// 7. Kirim Pesan WA
+// 8. Kirim Pesan WA
 function kirimWA() {
     const nama = document.getElementById("nama").value.trim();
     const jenis = document.getElementById("jenis").value;
@@ -921,6 +1097,7 @@ window.onclick = function(e) {
 }
 
 calculateROI();
+calculatePrice();
 </script>
 
 </body>
