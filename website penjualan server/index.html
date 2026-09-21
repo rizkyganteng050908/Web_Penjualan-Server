@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RizkyWeb - Jasa Pembuatan Website Profesional</title>
+<title>RizkyWeb - Jasa Pembuatan Website Terlengkap</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
@@ -228,7 +228,6 @@ section {
     font-size: 15px;
 }
 
-/* Box & Cards */
 .box-container {
     background: var(--bg-card);
     border: 1px solid var(--border-color);
@@ -237,7 +236,7 @@ section {
     margin-bottom: 40px;
 }
 
-/* 1. Interactive Portfolio Preview */
+/* Portfolio Preview */
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -263,7 +262,7 @@ section {
     margin-bottom: 15px;
 }
 
-/* 2. ROI Calculator */
+/* ROI Calculator */
 .roi-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -309,7 +308,7 @@ section {
     color: #20c76b;
 }
 
-/* 3. Workflow Steps */
+/* Workflow Steps */
 .workflow {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -337,7 +336,7 @@ section {
     margin: 0 auto 15px;
 }
 
-/* 4. Filter & Pricing Grid */
+/* Filter & Pricing Grid */
 .pricing-controls {
     display: flex;
     flex-direction: column;
@@ -393,6 +392,12 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: transform 0.3s;
+}
+
+.price-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
 }
 
 .price {
@@ -408,9 +413,10 @@ section {
     font-size: 13.5px;
     color: var(--text-sub);
     margin-bottom: 20px;
+    flex-grow: 1;
 }
 
-/* 5. Testimonial Carousel */
+/* Testimonial */
 .testimonial-box {
     text-align: center;
     max-width: 650px;
@@ -429,7 +435,7 @@ section {
     color: var(--primary-light);
 }
 
-/* Comparison Table Modal */
+/* Comparison Table */
 .table-wrapper {
     overflow-x: auto;
 }
@@ -615,7 +621,7 @@ textarea.form-control {
     <div class="hero-content">
         <span class="badge">JASA PEMBUATAN WEBSITE</span>
         <h1>Website <span>Modern</span> & Siap Dongkrak Omzet</h1>
-        <p>Solusi website responsif, profesional, dan kaya fitur. Diskusikan ide usaha Anda dan dapatkan estimasi terbaik sekarang!</p>
+        <p>Solusi website responsif, profesional, dan kaya fitur. Pilihlah dari 12 paket lengkap kami sesuai dengan kebutuhan Anda!</p>
         <div class="hero-btn-group">
             <a class="btn" href="#paket">Pilih Paket Web</a>
             <button class="btn btn-outline" onclick="openModal('compareModal')">📊 Bandingkan Fitur</button>
@@ -753,16 +759,16 @@ textarea.form-control {
     </div>
 </section>
 
-<!-- SECTION PAKET LENGKAP -->
+<!-- SECTION 12 PAKET LENGKAP -->
 <section id="paket">
     <div class="heading">
-        <h2>Daftar Paket Website</h2>
-        <p>Gunakan pencarian atau filter untuk menemukan paket yang sesuai.</p>
+        <h2>12 Pilihan Paket Website Lengkap</h2>
+        <p>Pilih paket yang paling sesuai dengan anggaran dan skala kebutuhan Anda.</p>
     </div>
 
     <div class="pricing-controls">
         <div class="search-box">
-            <input type="text" id="searchInput" onkeyup="filterPaket()" placeholder="🔍 Cari paket (contoh: Toko Online, Sekolah, UMKM)...">
+            <input type="text" id="searchInput" onkeyup="filterPaket()" placeholder="🔍 Cari paket (contoh: Toko Online, Sekolah, Resto, Properti)...">
         </div>
         <div class="filter-buttons">
             <button class="filter-btn active" onclick="setCategory('all', this)">Semua Paket</button>
@@ -773,6 +779,7 @@ textarea.form-control {
     </div>
 
     <div class="prices">
+        <!-- Paket 1 -->
         <div class="price-card" data-category="pemula" data-title="Pelajar / Tugas 🎓">
             <div>
                 <h3>1. Pelajar / Tugas 🎓</h3>
@@ -780,75 +787,176 @@ textarea.form-control {
             </div>
             <ul>
                 <li>✅ 1-3 Halaman Web</li>
-                <li>✅ Responsive HP / Laptop</li>
-                <li>✅ Free Subdomain</li>
+                <li>✅ Tampilan Responsive</li>
+                <li>✅ Free Subdomain Hosting</li>
+                <li>✅ Integrasi Sosmed & WA</li>
             </ul>
-            <button class="btn" onclick="selectPackage('Paket Pelajar - Rp150rb')">Pesan Sekarang</button>
+            <button class="btn" onclick="selectPackage('1. Paket Pelajar / Tugas (Rp150.000)')">Pesan Sekarang</button>
         </div>
 
+        <!-- Paket 2 -->
+        <div class="price-card" data-category="pemula" data-title="Portofolio Personal 🖼️">
+            <div>
+                <h3>2. Portofolio Personal 🖼️</h3>
+                <div class="price">Rp300.000</div>
+            </div>
+            <ul>
+                <li>✅ Layout Galeri Karya Modern</li>
+                <li>✅ Domain .my.id / .site (1 Thn)</li>
+                <li>✅ Tombol Download CV / PDF</li>
+                <li>✅ Kontak WA Integration</li>
+            </ul>
+            <button class="btn" onclick="selectPackage('2. Paket Portofolio Personal (Rp300.000)')">Pesan Sekarang</button>
+        </div>
+
+        <!-- Paket 3 -->
         <div class="price-card" data-category="pemula" data-title="Landing Page Sales 🚀">
             <div>
-                <h3>2. Landing Page Sales 🚀</h3>
+                <h3>3. Landing Page Sales 🚀</h3>
                 <div class="price">Rp500.000</div>
             </div>
             <ul>
                 <li>✅ 1 Halaman Promosi Panjang</li>
                 <li>✅ Domain Custom (1 Thn)</li>
+                <li>✅ Fast Loading Optimization</li>
                 <li>✅ Order Direct ke WA</li>
             </ul>
-            <button class="btn" onclick="selectPackage('Paket Landing Page - Rp500rb')">Pesan Sekarang</button>
+            <button class="btn" onclick="selectPackage('3. Paket Landing Page Sales (Rp500.000)')">Pesan Sekarang</button>
         </div>
 
+        <!-- Paket 4 -->
+        <div class="price-card" data-category="spesialis" data-title="Kuliner & Resto 🍽️">
+            <div>
+                <h3>4. Kuliner & Resto 🍽️</h3>
+                <div class="price">Rp750.000</div>
+            </div>
+            <ul>
+                <li>✅ Menu Makanan & QR Code Digital</li>
+                <li>✅ Integrasi Order via WhatsApp</li>
+                <li>✅ Peta Lokasi & Jam Buka</li>
+                <li>✅ Galeri Foto Makanan & Tempat</li>
+            </ul>
+            <button class="btn" onclick="selectPackage('4. Paket Kuliner & Resto (Rp750.000)')">Pesan Sekarang</button>
+        </div>
+
+        <!-- Paket 5 -->
         <div class="price-card" data-category="bisnis" data-title="Standar UMKM 🏪">
             <div>
-                <h3>3. Standar UMKM 🏪</h3>
+                <h3>5. Standar UMKM 🏪</h3>
                 <div class="price">Rp950.000</div>
             </div>
             <ul>
-                <li>✅ Domain .com + Hosting</li>
+                <li>✅ Domain .com + Hosting (1 Thn)</li>
                 <li>✅ 3 - 5 Halaman Profil Usaha</li>
-                <li>✅ Katalog Produk Sederhana</li>
+                <li>✅ Showcase Produk / Jasa</li>
+                <li>✅ Free SSL Keamanan</li>
             </ul>
-            <button class="btn" onclick="selectPackage('Paket UMKM - Rp950rb')">Pesan Sekarang</button>
+            <button class="btn" onclick="selectPackage('5. Paket Standar UMKM (Rp950.000)')">Pesan Sekarang</button>
         </div>
 
+        <!-- Paket 6 -->
         <div class="price-card" data-category="bisnis" data-title="Company Profile 🏢">
             <div>
-                <h3>4. Company Profile 🏢</h3>
+                <h3>6. Company Profile 🏢</h3>
                 <div class="price">Rp1.800.000</div>
             </div>
             <ul>
                 <li>✅ Domain .com / .id Resmi</li>
-                <li>✅ Multi-halaman Lengkap</li>
-                <li>✅ Email Bisnis Official</li>
+                <li>✅ Multi-halaman Lengkap (Up to 8)</li>
+                <li>✅ Email Bisnis Official (@perusahaan)</li>
+                <li>✅ SEO Basic Optimization</li>
             </ul>
-            <button class="btn" onclick="selectPackage('Paket Company Profile - Rp1.8JT')">Pesan Sekarang</button>
+            <button class="btn" onclick="selectPackage('6. Paket Company Profile (Rp1.800.000)')">Pesan Sekarang</button>
         </div>
 
+        <!-- Paket 7 -->
+        <div class="price-card" data-category="spesialis" data-title="Web Properti 🏡">
+            <div>
+                <h3>7. Web Properti 🏡</h3>
+                <div class="price">Rp2.200.000</div>
+            </div>
+            <ul>
+                <li>✅ Listing Properti (Jual/Sewa)</li>
+                <li>✅ Filter Harga, Lokasi & Tipe</li>
+                <li>✅ Galeri & Detail Agent</li>
+                <li>✅ Domain .com + Hosting (1 Thn)</li>
+            </ul>
+            <button class="btn" onclick="selectPackage('7. Paket Web Properti (Rp2.200.000)')">Pesan Sekarang</button>
+        </div>
+
+        <!-- Paket 8 -->
         <div class="price-card" data-category="bisnis" data-title="Toko Online 🛒">
             <div>
-                <h3>5. Toko Online 🛒</h3>
+                <h3>8. Toko Online 🛒</h3>
                 <div class="price">Rp2.800.000</div>
             </div>
             <ul>
                 <li>✅ E-Commerce Katalog Produk</li>
-                <li>✅ Checkout Sistem WA / Ongkir</li>
+                <li>✅ Hitung Ongkir Otomatis</li>
+                <li>✅ Cart & Checkout WA</li>
                 <li>✅ Panduan Kelola Produk</li>
             </ul>
-            <button class="btn" onclick="selectPackage('Paket Toko Online - Rp2.8JT')">Pesan Sekarang</button>
+            <button class="btn" onclick="selectPackage('8. Paket Toko Online (Rp2.800.000)')">Pesan Sekarang</button>
         </div>
 
-        <div class="price-card" data-category="spesialis" data-title="Custom System 💎">
+        <!-- Paket 9 -->
+        <div class="price-card" data-category="spesialis" data-title="Web Sekolah 🏫">
             <div>
-                <h3>6. Custom System 💎</h3>
-                <div class="price">Mulai Rp5.5JT</div>
+                <h3>9. Web Sekolah 🏫</h3>
+                <div class="price">Rp3.500.000</div>
             </div>
             <ul>
-                <li>✅ Fitur Custom Spesifik</li>
-                <li>✅ Database Complex</li>
-                <li>✅ Integration & Priority Support</li>
+                <li>✅ Domain Resmi (.sch.id / .or.id)</li>
+                <li>✅ Portal Berita & Pengumuman</li>
+                <li>✅ Form PPDB Online</li>
+                <li>✅ Multi-Admin Management</li>
             </ul>
-            <button class="btn btn-outline" onclick="selectPackage('Paket Custom System - Rp5.5JT+')">Konsultasi</button>
+            <button class="btn" onclick="selectPackage('9. Paket Web Sekolah (Rp3.500.000)')">Pesan Sekarang</button>
+        </div>
+
+        <!-- Paket 10 -->
+        <div class="price-card" data-category="spesialis" data-title="Klinik & Booking 🏥">
+            <div>
+                <h3>10. Klinik & Booking 🏥</h3>
+                <div class="price">Rp4.500.000</div>
+            </div>
+            <ul>
+                <li>✅ System Booking / Reservasi</li>
+                <li>✅ Jadwal Dokter / Praktisi</li>
+                <li>✅ Integrasi Kalender & WA Notif</li>
+                <li>✅ Katalog Layanan & Biaya</li>
+            </ul>
+            <button class="btn" onclick="selectPackage('10. Paket Klinik & Booking (Rp4.500.000)')">Pesan Sekarang</button>
+        </div>
+
+        <!-- Paket 11 -->
+        <div class="price-card" data-category="spesialis" data-title="Custom Web App 💎">
+            <div>
+                <h3>11. Custom Web App 💎</h3>
+                <div class="price">Mulai Rp6.0JT</div>
+            </div>
+            <ul>
+                <li>✅ Alur & Fitur Bebas Custom</li>
+                <li>✅ Database Relasional Kompleks</li>
+                <li>✅ Dashboard Admin Interaktif</li>
+                <li>✅ Priority Support 3 Bulan</li>
+            </ul>
+            <button class="btn btn-outline" onclick="selectPackage('11. Paket Custom Web App (Rp6.000.000+)')">Konsultasi</button>
+        </div>
+
+        <!-- Paket 12 -->
+        <div class="price-card" data-category="spesialis" data-title="Enterprise / Portal 👑">
+            <div>
+                <h3>12. Enterprise / Portal 👑</h3>
+                <div class="price">Mulai Rp12JT</div>
+            </div>
+            <ul>
+                <li>✅ Dedicated VPS High Performance</li>
+                <li>✅ Arsitektur High-Traffic & Security</li>
+                <li>✅ Integrasi API / ERP Sistem</li>
+                <li>✅ Dedicated Team Support</li>
+            </ul>
+            <button class="btn btn-outline" onclick="selectPackage('12. Paket Enterprise (Rp12.000.000+)')">Konsultasi</button>
         </div>
     </div>
 </section>
@@ -938,7 +1046,7 @@ textarea.form-control {
     </div>
 </div>
 
-<!-- MODAL FORM WHATSAPP (FIXED LAYOUT) -->
+<!-- MODAL FORM WHATSAPP (FIXED LAYOUT VERTIKAL) -->
 <div class="modal" id="chatModal">
     <div class="modal-box">
         <div class="modal-header">
