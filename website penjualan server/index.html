@@ -7,6 +7,9 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
+/* === DEFINISI TEMA (COLOR PALETTES) === */
+
+/* 1. Dark Mode (Default) */
 :root {
     --bg-main: #060e1a;
     --bg-card: #0d213a;
@@ -17,9 +20,11 @@
     --primary-light: #35a7ff;
     --border-color: #1c3b5d;
     --header-bg: rgba(11, 28, 53, 0.85);
+    --accent-glow: rgba(22, 140, 255, 0.3);
 }
 
-body.light-mode {
+/* 2. Light Mode */
+body.theme-light {
     --bg-main: #f4f7fc;
     --bg-card: #ffffff;
     --bg-card-hover: #eef4fc;
@@ -29,6 +34,49 @@ body.light-mode {
     --primary-light: #0284c7;
     --border-color: #cbd5e1;
     --header-bg: rgba(255, 255, 255, 0.9);
+    --accent-glow: rgba(0, 102, 204, 0.2);
+}
+
+/* 3. Cyberpunk Theme (Neon Purple & Cyan) */
+body.theme-cyberpunk {
+    --bg-main: #0f051d;
+    --bg-card: #1a0b2e;
+    --bg-card-hover: #291245;
+    --text-main: #00f0ff;
+    --text-sub: #d097ff;
+    --primary: #ff007f;
+    --primary-light: #00f0ff;
+    --border-color: #49176e;
+    --header-bg: rgba(26, 11, 46, 0.9);
+    --accent-glow: rgba(255, 0, 127, 0.5);
+}
+
+/* 4. Ocean Theme (Deep Blue & Turquoise) */
+body.theme-ocean {
+    --bg-main: #021a24;
+    --bg-card: #062c3a;
+    --bg-card-hover: #0c3e52;
+    --text-main: #e0f7fa;
+    --text-sub: #80deea;
+    --primary: #00b4d8;
+    --primary-light: #48cae4;
+    --border-color: #11536f;
+    --header-bg: rgba(6, 44, 58, 0.9);
+    --accent-glow: rgba(0, 180, 216, 0.4);
+}
+
+/* 5. Sunset Theme (Dark Warm Amber & Coral) */
+body.theme-sunset {
+    --bg-main: #1c0d13;
+    --bg-card: #2e1520;
+    --bg-card-hover: #421f2d;
+    --text-main: #fff0f3;
+    --text-sub: #ffb3c1;
+    --primary: #ff4d6d;
+    --primary-light: #ff758f;
+    --border-color: #5c2438;
+    --header-bg: rgba(46, 21, 32, 0.9);
+    --accent-glow: rgba(255, 77, 109, 0.4);
 }
 
 * {
@@ -46,7 +94,7 @@ body {
     background: var(--bg-main);
     color: var(--text-main);
     overflow-x: hidden;
-    transition: background 0.4s ease, color 0.4s ease;
+    transition: background 0.4s ease, color 0.4s ease, border-color 0.4s ease;
 }
 
 a {
@@ -61,8 +109,8 @@ a {
 }
 
 @keyframes pulseGlow {
-    0%, 100% { box-shadow: 0 0 15px rgba(22, 140, 255, 0.3); }
-    50% { box-shadow: 0 0 30px rgba(22, 140, 255, 0.7); }
+    0%, 100% { box-shadow: 0 0 15px var(--accent-glow); }
+    50% { box-shadow: 0 0 30px var(--accent-glow); }
 }
 
 @keyframes pulseBadge {
@@ -88,7 +136,7 @@ header {
     background: var(--header-bg);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border-color);
-    transition: all 0.3s ease;
+    transition: background 0.4s ease, border-color 0.4s ease;
 }
 
 nav {
@@ -147,20 +195,22 @@ nav ul a:hover {
     color: var(--primary-light);
 }
 
-.theme-toggle {
+/* Dropdown Theme Switcher */
+.theme-select {
     background: var(--bg-card);
     border: 1px solid var(--border-color);
     color: var(--text-main);
-    padding: 8px 14px;
+    padding: 8px 12px;
     border-radius: 20px;
     cursor: pointer;
     font-size: 13px;
     font-weight: 600;
+    outline: none;
     transition: all 0.3s ease;
 }
 
-.theme-toggle:hover {
-    transform: scale(1.08);
+.theme-select:hover {
+    transform: scale(1.05);
     border-color: var(--primary-light);
 }
 
@@ -170,7 +220,7 @@ nav ul a:hover {
     align-items: center;
     justify-content: center;
     gap: 8px;
-    background: linear-gradient(135deg, var(--primary), #0056b3);
+    background: linear-gradient(135deg, var(--primary), var(--border-color));
     color: white;
     padding: 12px 22px;
     border-radius: 10px;
@@ -179,7 +229,7 @@ nav ul a:hover {
     cursor: pointer;
     overflow: hidden;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 4px 15px rgba(22, 140, 255, 0.3);
+    box-shadow: 0 4px 15px var(--accent-glow);
 }
 
 .btn::before {
@@ -199,7 +249,7 @@ nav ul a:hover {
 
 .btn:hover {
     transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 8px 25px rgba(22, 140, 255, 0.5);
+    box-shadow: 0 8px 25px var(--accent-glow);
 }
 
 .btn:active {
@@ -214,7 +264,7 @@ nav ul a:hover {
 }
 
 .btn-outline:hover {
-    background: rgba(54, 142, 210, 0.15);
+    background: var(--accent-glow);
     border-color: var(--primary);
 }
 
@@ -228,7 +278,7 @@ nav ul a:hover {
     padding: 60px 8%;
     max-width: 1400px;
     margin: 0 auto;
-    background: radial-gradient(circle at 80% 20%, rgba(22, 140, 255, 0.18), transparent 55%);
+    background: radial-gradient(circle at 80% 20%, var(--accent-glow), transparent 55%);
 }
 
 .hero-content {
@@ -238,8 +288,8 @@ nav ul a:hover {
 .badge {
     display: inline-block;
     padding: 6px 14px;
-    background: rgba(33, 156, 255, 0.12);
-    border: 1px solid rgba(33, 156, 255, 0.35);
+    background: var(--bg-card);
+    border: 1px solid var(--primary-light);
     color: var(--primary-light);
     border-radius: 20px;
     font-size: 13px;
@@ -257,7 +307,7 @@ h1 {
 }
 
 h1 span {
-    background: linear-gradient(135deg, var(--primary-light), #00d2ff);
+    background: linear-gradient(135deg, var(--primary-light), var(--primary));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -278,7 +328,7 @@ h1 span {
 .hero-art {
     font-size: 150px;
     text-align: center;
-    filter: drop-shadow(0 0 35px rgba(22, 140, 255, 0.5));
+    filter: drop-shadow(0 0 35px var(--accent-glow));
     animation: float 4.5s ease-in-out infinite;
     user-select: none;
 }
@@ -312,12 +362,12 @@ section {
     border-radius: 24px;
     padding: 35px;
     margin-bottom: 40px;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background 0.4s ease;
 }
 
 .box-container:hover {
     border-color: var(--primary-light);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 30px var(--accent-glow);
 }
 
 /* Portfolio Preview */
@@ -339,12 +389,12 @@ section {
 .port-card:hover {
     transform: translateY(-8px);
     border-color: var(--primary-light);
-    box-shadow: 0 12px 30px rgba(22, 140, 255, 0.2);
+    box-shadow: 0 12px 30px var(--accent-glow);
 }
 
 .port-card .preview-box {
     height: 160px;
-    background: rgba(0,0,0,0.25);
+    background: rgba(0,0,0,0.2);
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -388,13 +438,13 @@ section {
 
 .roi-input input:focus {
     border-color: var(--primary);
-    box-shadow: 0 0 10px rgba(22, 140, 255, 0.3);
+    box-shadow: 0 0 10px var(--accent-glow);
 }
 
 .roi-result, .calc-result {
     padding: 20px;
-    background: rgba(33, 156, 255, 0.1);
-    border: 1px solid rgba(33, 156, 255, 0.3);
+    background: var(--bg-card-hover);
+    border: 1px solid var(--border-color);
     border-radius: 12px;
     text-align: center;
     display: flex;
@@ -407,7 +457,7 @@ section {
 .roi-value, .calc-total {
     font-size: 26px;
     font-weight: 800;
-    color: #20c76b;
+    color: var(--primary-light);
     transition: transform 0.3s ease;
 }
 
@@ -475,7 +525,7 @@ section {
 
 .search-box input:focus {
     border-color: var(--primary);
-    box-shadow: 0 0 15px rgba(22, 140, 255, 0.25);
+    box-shadow: 0 0 15px var(--accent-glow);
 }
 
 .filter-buttons {
@@ -505,7 +555,7 @@ section {
     background: var(--primary);
     color: white;
     border-color: var(--primary);
-    box-shadow: 0 4px 12px rgba(22, 140, 255, 0.4);
+    box-shadow: 0 4px 12px var(--accent-glow);
 }
 
 .prices {
@@ -528,7 +578,7 @@ section {
 .price-card:hover {
     transform: translateY(-8px) scale(1.01);
     border-color: var(--primary-light);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 12px 30px var(--accent-glow);
 }
 
 .price {
@@ -600,7 +650,7 @@ th, td {
 }
 
 th {
-    background: rgba(33, 156, 255, 0.1);
+    background: var(--bg-card-hover);
 }
 
 /* === MODAL ANIMATED === */
@@ -660,7 +710,7 @@ th {
     transform: rotate(90deg);
 }
 
-/* Form Layout Vertikal Ke Bawah */
+/* Form Layout Vertikal */
 .form-group {
     display: flex;
     flex-direction: column;
@@ -691,7 +741,7 @@ th {
 
 .form-control:focus {
     border-color: var(--primary);
-    box-shadow: 0 0 12px rgba(22, 140, 255, 0.3);
+    box-shadow: 0 0 12px var(--accent-glow);
 }
 
 textarea.form-control {
@@ -703,7 +753,7 @@ textarea.form-control {
 .btn-submit {
     width: 100%;
     padding: 14px;
-    background: linear-gradient(135deg, var(--primary), #0056b3);
+    background: linear-gradient(135deg, var(--primary), var(--border-color));
     color: #ffffff;
     border: none;
     border-radius: 10px;
@@ -716,12 +766,12 @@ textarea.form-control {
     justify-content: center;
     gap: 8px;
     margin-top: 10px;
-    box-shadow: 0 4px 15px rgba(22, 140, 255, 0.3);
+    box-shadow: 0 4px 15px var(--accent-glow);
 }
 
 .btn-submit:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(22, 140, 255, 0.5);
+    box-shadow: 0 6px 20px var(--accent-glow);
 }
 
 /* Floating WhatsApp Button Animation */
@@ -754,7 +804,7 @@ textarea.form-control {
 }
 </style>
 </head>
-<body>
+<body class="theme-dark">
 
 <header>
 <nav>
@@ -768,7 +818,14 @@ textarea.form-control {
         <li><a href="#paket">Paket</a></li>
     </ul>
     <div style="display:flex; gap:10px; align-items:center;">
-        <button class="theme-toggle" onclick="toggleTheme()">🌙 Mode</button>
+        <!-- Selector Tema Pilihan -->
+        <select class="theme-select" onchange="changeTheme(this.value)">
+            <option value="theme-dark">🌙 Dark</option>
+            <option value="theme-light">☀️ Light</option>
+            <option value="theme-cyberpunk">🔮 Cyberpunk</option>
+            <option value="theme-ocean">🌊 Ocean</option>
+            <option value="theme-sunset">🌅 Sunset</option>
+        </select>
         <button class="btn" onclick="openChat('Halo RizkyWeb, saya berminat konsultasi.')">Chat WA</button>
     </div>
 </nav>
@@ -1203,7 +1260,7 @@ textarea.form-control {
     </div>
 </div>
 
-<!-- MODAL FORM WHATSAPP (FIXED LAYOUT VERTIKAL) -->
+<!-- MODAL FORM WHATSAPP -->
 <div class="modal" id="chatModal">
     <div class="modal-box">
         <div class="modal-header">
@@ -1236,9 +1293,9 @@ textarea.form-control {
 const nomorWA = "62895401061300";
 let currentPreviewName = "";
 
-// 1. Dark / Light Mode Toggle
-function toggleTheme() {
-    document.body.classList.toggle("light-mode");
+// 1. Theme Switcher Function
+function changeTheme(themeName) {
+    document.body.className = themeName;
 }
 
 // 2. Kalkulator Biaya Custom
@@ -1275,7 +1332,7 @@ function calculateROI() {
     document.getElementById("roiOutput").innerText = "Rp" + revenue.toLocaleString('id-ID') + " / Bulan";
 }
 
-// 4. Testimonial Slider with Smooth Fade
+// 4. Testimonial Slider
 const testimonials = [
     { text: `"Pengerjaan cepat banget, hasil desain website UMKM saya jadi terlihat jauh lebih mahal dan terpercaya."`, author: "⭐ ⭐ ⭐ ⭐ ⭐ — Mas Hendra (Owner Kopi)" },
     { text: `"Sangat terbantu untuk tugas akhir kampus. Proses revisi ramah dan cepat selesai tepat waktu!"`, author: "⭐ ⭐ ⭐ ⭐ ⭐ — Rian (Mahasiswa)" },
@@ -1388,5 +1445,3 @@ calculatePrice();
 
 </body>
 </html>
-
-```
