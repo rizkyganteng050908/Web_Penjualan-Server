@@ -1,3 +1,6 @@
+Berikut adalah kode HTML lengkap yang sudah ditambahkan berbagai efek **animasi modern dan halus** (efek *hover*, kartu melayang, pulsing badge, transisi smooth, animasi modal masuk, hingga efek kilau tombol) agar tampilan website RizkyWeb terasa jauh lebih hidup dan interaktif.
+
+```html
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -10,7 +13,7 @@
 :root {
     --bg-main: #060e1a;
     --bg-card: #0d213a;
-    --bg-card-hover: rgba(16, 38, 65, 0.8);
+    --bg-card-hover: rgba(16, 38, 65, 0.9);
     --text-main: #ffffff;
     --text-sub: #aebdd1;
     --primary: #168cff;
@@ -46,12 +49,38 @@ body {
     background: var(--bg-main);
     color: var(--text-main);
     overflow-x: hidden;
-    transition: background 0.3s, color 0.3s;
+    transition: background 0.4s ease, color 0.4s ease;
 }
 
 a {
     text-decoration: none;
     color: inherit;
+}
+
+/* === KEYFRAME ANIMATIONS === */
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-18px) rotate(3deg); }
+}
+
+@keyframes pulseGlow {
+    0%, 100% { box-shadow: 0 0 15px rgba(22, 140, 255, 0.3); }
+    50% { box-shadow: 0 0 30px rgba(22, 140, 255, 0.7); }
+}
+
+@keyframes pulseBadge {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.85; }
+}
+
+@keyframes modalZoom {
+    from { transform: scale(0.85) translateY(20px); opacity: 0; }
+    to { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
 }
 
 /* Header & Nav */
@@ -62,6 +91,7 @@ header {
     background: var(--header-bg);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border-color);
+    transition: all 0.3s ease;
 }
 
 nav {
@@ -80,6 +110,11 @@ nav {
     display: flex;
     align-items: center;
     gap: 8px;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
 }
 
 nav ul {
@@ -88,6 +123,27 @@ nav ul {
     list-style: none;
     font-size: 14px;
     font-weight: 500;
+}
+
+nav ul a {
+    position: relative;
+    padding-bottom: 4px;
+    transition: color 0.3s ease;
+}
+
+nav ul a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--primary-light);
+    transition: width 0.3s ease;
+}
+
+nav ul a:hover::after {
+    width: 100%;
 }
 
 nav ul a:hover {
@@ -103,9 +159,16 @@ nav ul a:hover {
     cursor: pointer;
     font-size: 13px;
     font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.08);
+    border-color: var(--primary-light);
 }
 
 .btn {
+    position: relative;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -117,13 +180,33 @@ nav ul a:hover {
     font-weight: 600;
     border: 0;
     cursor: pointer;
-    transition: all 0.3s ease;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 4px 15px rgba(22, 140, 255, 0.3);
 }
 
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: none;
+}
+
+.btn:hover::before {
+    animation: shimmer 0.8s ease-in-out;
+}
+
 .btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(22, 140, 255, 0.5);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(22, 140, 255, 0.5);
+}
+
+.btn:active {
+    transform: translateY(-1px) scale(0.98);
 }
 
 .btn-outline {
@@ -134,7 +217,8 @@ nav ul a:hover {
 }
 
 .btn-outline:hover {
-    background: rgba(54, 142, 210, 0.1);
+    background: rgba(54, 142, 210, 0.15);
+    border-color: var(--primary);
 }
 
 /* Hero Section */
@@ -147,7 +231,7 @@ nav ul a:hover {
     padding: 60px 8%;
     max-width: 1400px;
     margin: 0 auto;
-    background: radial-gradient(circle at 80% 20%, rgba(22, 140, 255, 0.15), transparent 50%);
+    background: radial-gradient(circle at 80% 20%, rgba(22, 140, 255, 0.18), transparent 55%);
 }
 
 .hero-content {
@@ -157,14 +241,15 @@ nav ul a:hover {
 .badge {
     display: inline-block;
     padding: 6px 14px;
-    background: rgba(33, 156, 255, 0.1);
-    border: 1px solid rgba(33, 156, 255, 0.3);
+    background: rgba(33, 156, 255, 0.12);
+    border: 1px solid rgba(33, 156, 255, 0.35);
     color: var(--primary-light);
     border-radius: 20px;
     font-size: 13px;
     font-weight: 700;
     letter-spacing: 1px;
     margin-bottom: 15px;
+    animation: pulseBadge 3s infinite ease-in-out;
 }
 
 h1 {
@@ -196,13 +281,9 @@ h1 span {
 .hero-art {
     font-size: 150px;
     text-align: center;
-    filter: drop-shadow(0 0 40px rgba(22, 140, 255, 0.4));
-    animation: float 4s ease-in-out infinite;
-}
-
-@keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
+    filter: drop-shadow(0 0 35px rgba(22, 140, 255, 0.5));
+    animation: float 4.5s ease-in-out infinite;
+    user-select: none;
 }
 
 /* Section General */
@@ -234,6 +315,12 @@ section {
     border-radius: 24px;
     padding: 35px;
     margin-bottom: 40px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box-container:hover {
+    border-color: var(--primary-light);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 /* Portfolio Preview */
@@ -249,17 +336,29 @@ section {
     border-radius: 16px;
     padding: 20px;
     text-align: center;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.port-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary-light);
+    box-shadow: 0 12px 30px rgba(22, 140, 255, 0.2);
 }
 
 .port-card .preview-box {
     height: 160px;
-    background: rgba(0,0,0,0.2);
+    background: rgba(0,0,0,0.25);
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 50px;
     margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.port-card:hover .preview-box {
+    transform: scale(1.08);
 }
 
 /* ROI Calculator */
@@ -287,6 +386,12 @@ section {
     border-radius: 8px;
     outline: none;
     font-family: inherit;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.roi-input input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 10px rgba(22, 140, 255, 0.3);
 }
 
 .roi-result, .calc-result {
@@ -306,6 +411,7 @@ section {
     font-size: 26px;
     font-weight: 800;
     color: #20c76b;
+    transition: transform 0.3s ease;
 }
 
 /* Workflow Steps */
@@ -321,11 +427,18 @@ section {
     padding: 25px 20px;
     border-radius: 16px;
     text-align: center;
+    transition: all 0.35s ease;
+}
+
+.step-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--primary);
+    background: var(--bg-card-hover);
 }
 
 .step-num {
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
     background: var(--primary);
     color: #fff;
     border-radius: 50%;
@@ -334,6 +447,12 @@ section {
     justify-content: center;
     font-weight: 700;
     margin: 0 auto 15px;
+    transition: transform 0.4s ease, background 0.3s ease;
+}
+
+.step-card:hover .step-num {
+    transform: rotate(360deg) scale(1.1);
+    background: var(--primary-light);
 }
 
 /* Filter & Pricing Grid */
@@ -354,6 +473,12 @@ section {
     border-radius: 30px;
     color: var(--text-main);
     outline: none;
+    transition: all 0.3s ease;
+}
+
+.search-box input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 15px rgba(22, 140, 255, 0.25);
 }
 
 .filter-buttons {
@@ -371,11 +496,19 @@ section {
     border-radius: 20px;
     font-size: 13px;
     cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    color: var(--text-main);
+    border-color: var(--primary);
 }
 
 .filter-btn.active {
     background: var(--primary);
     color: white;
+    border-color: var(--primary);
+    box-shadow: 0 4px 12px rgba(22, 140, 255, 0.4);
 }
 
 .prices {
@@ -392,12 +525,13 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: transform 0.3s;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .price-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--primary);
+    transform: translateY(-8px) scale(1.01);
+    border-color: var(--primary-light);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
 }
 
 .price {
@@ -405,6 +539,11 @@ section {
     font-weight: 800;
     color: var(--primary-light);
     margin: 15px 0;
+    transition: transform 0.3s ease;
+}
+
+.price-card:hover .price {
+    transform: scale(1.05);
 }
 
 .price-card ul {
@@ -414,6 +553,14 @@ section {
     color: var(--text-sub);
     margin-bottom: 20px;
     flex-grow: 1;
+}
+
+.price-card ul li {
+    transition: transform 0.2s ease;
+}
+
+.price-card:hover ul li {
+    transform: translateX(3px);
 }
 
 /* Testimonial */
@@ -428,6 +575,7 @@ section {
     font-size: 16px;
     margin-bottom: 15px;
     color: var(--text-sub);
+    transition: opacity 0.3s ease;
 }
 
 .testi-author {
@@ -458,17 +606,18 @@ th {
     background: rgba(33, 156, 255, 0.1);
 }
 
-/* === MODAL & FORM FIX === */
+/* === MODAL ANIMATED === */
 .modal {
     display: none;
     position: fixed;
     inset: 0;
     background: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(6px);
+    backdrop-filter: blur(8px);
     z-index: 1000;
     align-items: center;
     justify-content: center;
     padding: 20px;
+    transition: opacity 0.3s ease;
 }
 
 .modal-box {
@@ -478,11 +627,12 @@ th {
     width: 100%;
     max-width: 480px;
     border: 1px solid var(--border-color);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
     max-height: 90vh;
     overflow-y: auto;
     position: relative;
     box-sizing: border-box;
+    animation: modalZoom 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
 
 .modal-header {
@@ -505,10 +655,12 @@ th {
     font-size: 24px;
     cursor: pointer;
     line-height: 1;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .close-btn:hover {
     color: var(--text-main);
+    transform: rotate(90deg);
 }
 
 /* Form Layout Vertikal Ke Bawah */
@@ -537,11 +689,12 @@ th {
     font-size: 14px;
     outline: none;
     box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .form-control:focus {
     border-color: var(--primary);
-    box-shadow: 0 0 10px rgba(22, 140, 255, 0.25);
+    box-shadow: 0 0 12px rgba(22, 140, 255, 0.3);
 }
 
 textarea.form-control {
@@ -560,7 +713,7 @@ textarea.form-control {
     font-size: 15px;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.25s ease;
+    transition: all 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -570,10 +723,11 @@ textarea.form-control {
 }
 
 .btn-submit:hover {
-    transform: translateY(-1px);
+    transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(22, 140, 255, 0.5);
 }
 
+/* Floating WhatsApp Button Animation */
 .wa-float {
     position: fixed;
     bottom: 30px;
@@ -589,6 +743,12 @@ textarea.form-control {
     font-size: 30px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.4);
     z-index: 99;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: pulseGlow 2.5s infinite;
+}
+
+.wa-float:hover {
+    transform: scale(1.12) rotate(8deg);
 }
 
 @media(max-width: 750px) {
@@ -978,7 +1138,7 @@ textarea.form-control {
 </section>
 
 <footer>
-    <p>© 2026 RizkyWeb. All Rights Reserved. Solusi Website Profesional.</p>
+    <p style="text-align: center; padding: 30px; border-top: 1px solid var(--border-color); color: var(--text-sub); font-size: 14px;">© 2026 RizkyWeb. All Rights Reserved. Solusi Website Profesional.</p>
 </footer>
 
 <a class="wa-float" href="#" onclick="openChat('Halo RizkyWeb, saya ingin berkonsultasi.')" title="Chat WhatsApp">💬</a>
@@ -1118,7 +1278,7 @@ function calculateROI() {
     document.getElementById("roiOutput").innerText = "Rp" + revenue.toLocaleString('id-ID') + " / Bulan";
 }
 
-// 4. Testimonial Slider
+// 4. Testimonial Slider with Smooth Fade
 const testimonials = [
     { text: `"Pengerjaan cepat banget, hasil desain website UMKM saya jadi terlihat jauh lebih mahal dan terpercaya."`, author: "⭐ ⭐ ⭐ ⭐ ⭐ — Mas Hendra (Owner Kopi)" },
     { text: `"Sangat terbantu untuk tugas akhir kampus. Proses revisi ramah dan cepat selesai tepat waktu!"`, author: "⭐ ⭐ ⭐ ⭐ ⭐ — Rian (Mahasiswa)" },
@@ -1127,9 +1287,20 @@ const testimonials = [
 let currentTesti = 0;
 
 function updateTesti() {
-    document.getElementById("testiText").innerText = testimonials[currentTesti].text;
-    document.getElementById("testiAuthor").innerText = testimonials[currentTesti].author;
+    const textEl = document.getElementById("testiText");
+    const authorEl = document.getElementById("testiAuthor");
+    
+    textEl.style.opacity = 0;
+    authorEl.style.opacity = 0;
+
+    setTimeout(() => {
+        textEl.innerText = testimonials[currentTesti].text;
+        authorEl.innerText = testimonials[currentTesti].author;
+        textEl.style.opacity = 1;
+        authorEl.style.opacity = 1;
+    }, 200);
 }
+
 function nextTesti() {
     currentTesti = (currentTesti + 1) % testimonials.length;
     updateTesti();
@@ -1140,8 +1311,12 @@ function prevTesti() {
 }
 
 // 5. Modal Handlers
-function openModal(id) { document.getElementById(id).style.display = "flex"; }
-function closeModal(id) { document.getElementById(id).style.display = "none"; }
+function openModal(id) { 
+    document.getElementById(id).style.display = "flex"; 
+}
+function closeModal(id) { 
+    document.getElementById(id).style.display = "none"; 
+}
 
 function openChat(pesanAwal = "") {
     document.getElementById("pesan").value = pesanAwal;
@@ -1183,7 +1358,13 @@ function filterPaket() {
         const cat = c.getAttribute("data-category");
         const matchQ = title.includes(q);
         const matchCat = (currentCategory === "all" || cat === currentCategory);
-        c.style.display = (matchQ && matchCat) ? "flex" : "none";
+        
+        if (matchQ && matchCat) {
+            c.style.display = "flex";
+            c.style.animation = "modalZoom 0.3s ease forwards";
+        } else {
+            c.style.display = "none";
+        }
     });
 }
 
@@ -1210,3 +1391,5 @@ calculatePrice();
 
 </body>
 </html>
+
+```
