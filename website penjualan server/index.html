@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -7,209 +8,154 @@
 <title>RizkyWeb - Jasa Pembuatan Website</title>
 
 <style>
-
-/* =====================================================
-   GOOGLE FONT
-===================================================== */
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 
-
-/* =====================================================
-   RESET
-===================================================== */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-html {
-    scroll-behavior: smooth;
+html{
+    scroll-behavior:smooth;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background: #071426;
-    color: #ffffff;
-    overflow-x: hidden;
+body{
+    font-family:'Poppins',sans-serif;
+    background:#061321;
+    color:#fff;
+    overflow-x:hidden;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
+a{
+    text-decoration:none;
+    color:inherit;
 }
 
 button,
 input,
 textarea,
-select {
-    font-family: inherit;
+select{
+    font-family:inherit;
 }
 
-
-/* =====================================================
-   BACKGROUND EFFECT
-===================================================== */
-
-body::before {
-    content: "";
-
-    position: fixed;
-
-    width: 500px;
-    height: 500px;
-
-    left: -250px;
-    top: 250px;
-
-    background: #168cff;
-
-    opacity: .05;
-
-    border-radius: 50%;
-
-    filter: blur(100px);
-
-    pointer-events: none;
-
-    z-index: -1;
-}
-
-body::after {
-    content: "";
-
-    position: fixed;
-
-    width: 450px;
-    height: 450px;
-
-    right: -200px;
-    bottom: 100px;
-
-    background: #7c3cff;
-
-    opacity: .05;
-
-    border-radius: 50%;
-
-    filter: blur(100px);
-
-    pointer-events: none;
-
-    z-index: -1;
-}
-
-
-/* =====================================================
+/* ================================
    NAVBAR
-===================================================== */
+================================ */
 
-.navbar {
-    position: sticky;
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:999;
 
-    top: 0;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 
-    width: 100%;
+    padding:17px 7%;
 
-    padding: 17px 7%;
+    background:rgba(4,14,27,.9);
+    backdrop-filter:blur(18px);
 
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    background: rgba(5, 16, 31, .88);
-
-    backdrop-filter: blur(18px);
-
-    border-bottom: 1px solid rgba(255,255,255,.06);
-
-    z-index: 999;
+    border-bottom:1px solid rgba(255,255,255,.06);
 }
 
-.logo {
-    font-size: 25px;
-
-    font-weight: 800;
-
-    color: #36a3ff;
+.logo{
+    font-size:25px;
+    font-weight:800;
+    color:#28a5ff;
 }
 
-.logo span {
-    color: white;
+.logo span{
+    color:#fff;
 }
 
-.nav-menu {
-    display: flex;
-
-    align-items: center;
-
-    gap: 28px;
-
-    list-style: none;
+.nav-menu{
+    display:flex;
+    gap:28px;
+    list-style:none;
 }
 
-.nav-menu a {
-    color: #b9c9dc;
-
-    font-size: 14px;
-
-    transition: .3s;
+.nav-menu a{
+    color:#b7c7d9;
+    font-size:14px;
+    transition:.3s;
 }
 
-.nav-menu a:hover {
-    color: #36a3ff;
+.nav-menu a:hover{
+    color:#29a6ff;
 }
 
-.nav-button {
-    background: #168cff;
+.nav-btn{
+    border:none;
+    background:#168cff;
+    color:#fff;
 
-    color: white;
+    padding:11px 18px;
+    border-radius:9px;
 
-    border: none;
+    cursor:pointer;
+    font-weight:600;
 
-    padding: 11px 18px;
-
-    border-radius: 9px;
-
-    cursor: pointer;
-
-    font-weight: 600;
-
-    transition: .3s;
+    transition:.3s;
 }
 
-.nav-button:hover {
-    transform: translateY(-3px);
-
-    box-shadow:
-        0 10px 25px rgba(22,140,255,.3);
+.nav-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(22,140,255,.35);
 }
 
+/* ================================
+   BUTTON
+================================ */
 
-/* =====================================================
+.btn{
+    border:none;
+    background:#168cff;
+    color:#fff;
+
+    padding:13px 22px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-4px) scale(1.02);
+    box-shadow:0 12px 28px rgba(22,140,255,.3);
+}
+
+.btn-outline{
+    background:transparent;
+    border:1px solid #31577d;
+}
+
+.btn-outline:hover{
+    border-color:#168cff;
+    background:rgba(22,140,255,.08);
+}
+
+/* ================================
    HERO
-===================================================== */
+================================ */
 
-.hero {
-    min-height: 680px;
+.hero{
+    min-height:680px;
 
-    padding: 80px 7%;
+    padding:80px 7%;
 
-    display: flex;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 
-    align-items: center;
+    gap:40px;
 
-    justify-content: space-between;
-
-    gap: 40px;
-
-    position: relative;
-
-    overflow: hidden;
+    position:relative;
+    overflow:hidden;
 
     background:
         radial-gradient(
@@ -217,188 +163,117 @@ body::after {
             rgba(20,120,220,.25),
             transparent 35%
         ),
-
         radial-gradient(
             circle at 10% 20%,
             rgba(20,80,160,.20),
             transparent 30%
         ),
-
         #071426;
 }
 
-.hero-content {
-    max-width: 650px;
-
-    position: relative;
-
-    z-index: 5;
+.hero-content{
+    max-width:650px;
+    position:relative;
+    z-index:5;
 }
 
-.hero-badge {
-    display: inline-block;
+.badge{
+    display:inline-block;
 
-    padding: 8px 15px;
+    padding:8px 15px;
 
-    border-radius: 50px;
+    border-radius:50px;
 
-    background: rgba(22,140,255,.1);
+    background:rgba(22,140,255,.1);
 
-    border: 1px solid rgba(22,140,255,.35);
+    border:1px solid rgba(22,140,255,.35);
 
-    color: #36a3ff;
+    color:#36a3ff;
 
-    font-size: 12px;
+    font-size:12px;
+    font-weight:700;
 
-    font-weight: 700;
+    letter-spacing:2px;
 
-    letter-spacing: 2px;
-
-    margin-bottom: 20px;
+    margin-bottom:20px;
 }
 
-.hero h1 {
-    font-size: clamp(38px, 5vw, 66px);
+.hero h1{
+    font-size:clamp(38px,5vw,65px);
+    line-height:1.1;
 
-    line-height: 1.1;
-
-    margin-bottom: 22px;
+    margin-bottom:22px;
 }
 
-.hero h1 span {
-    color: #219cff;
-
+.hero h1 span{
     background:
         linear-gradient(
             90deg,
             #168cff,
-            #7b61ff
+            #8b5cf6
         );
 
-    -webkit-background-clip: text;
-
-    -webkit-text-fill-color: transparent;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
 }
 
-.hero-description {
-    color: #b7c7da;
-
-    line-height: 1.9;
-
-    font-size: 15px;
-
-    margin-bottom: 30px;
-
-    max-width: 590px;
+.hero p{
+    color:#b7c7da;
+    line-height:1.9;
+    font-size:15px;
+    margin-bottom:30px;
 }
 
-.hero-buttons {
-    display: flex;
-
-    gap: 12px;
-
-    flex-wrap: wrap;
+.hero-buttons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
 }
 
-.btn {
-    border: none;
+/* ================================
+   3D LAPTOP
+================================ */
 
-    background: #168cff;
+.hero-3d{
+    width:480px;
+    height:430px;
 
-    color: white;
+    position:relative;
 
-    padding: 13px 22px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-    border-radius: 10px;
-
-    cursor: pointer;
-
-    font-weight: 600;
-
-    transition: .3s;
+    perspective:1200px;
 }
 
-.btn:hover {
-    transform:
-        translateY(-4px)
-        scale(1.02);
+.laptop{
+    width:350px;
+    height:240px;
 
-    box-shadow:
-        0 12px 28px rgba(22,140,255,.3);
-}
+    position:relative;
 
-.btn-outline {
-    background: transparent;
-
-    border: 1px solid #31577d;
-
-    color: #d6e5f5;
-}
-
-.btn-outline:hover {
-    border-color: #168cff;
-
-    background: rgba(22,140,255,.08);
-}
-
-
-/* =====================================================
-   3D HERO
-===================================================== */
-
-.hero-3d {
-    width: 480px;
-
-    height: 430px;
-
-    position: relative;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    perspective: 1200px;
-
-    z-index: 5;
-}
-
-.laptop {
-    width: 350px;
-
-    height: 240px;
-
-    position: relative;
-
-    transform-style: preserve-3d;
+    transform-style:preserve-3d;
 
     transform:
         rotateX(12deg)
         rotateY(-18deg);
 
-    animation:
-        laptopFloat 4.5s ease-in-out infinite;
+    animation:laptopFloat 4.5s ease-in-out infinite;
 
-    filter:
-        drop-shadow(
-            0 35px 25px rgba(0,0,0,.5)
-        );
+    filter:drop-shadow(
+        0 35px 25px rgba(0,0,0,.5)
+    );
 }
 
+.screen{
+    position:absolute;
 
-/* SCREEN */
+    width:295px;
+    height:185px;
 
-.screen {
-    position: absolute;
-
-    width: 295px;
-
-    height: 185px;
-
-    top: 0;
-
-    left: 28px;
+    top:0;
+    left:28px;
 
     background:
         linear-gradient(
@@ -407,90 +282,50 @@ body::after {
             #123d68
         );
 
-    border: 9px solid #182f49;
+    border:9px solid #182f49;
 
     border-radius:
-        14px
-        14px
-        6px
-        6px;
+        14px 14px 6px 6px;
 
-    transform:
-        translateZ(20px);
+    transform:translateZ(20px);
 
     box-shadow:
         inset 0 0 30px rgba(40,160,255,.25),
-
         0 0 35px rgba(30,150,255,.25);
 
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
 
-.screen::before {
-    content: "";
-
-    position: absolute;
-
-    width: 8px;
-
-    height: 8px;
-
-    border-radius: 50%;
-
-    background: #6f8ba5;
-
-    top: 5px;
-
-    left: 50%;
-
-    transform: translateX(-50%);
+.screen-content{
+    text-align:center;
 }
 
-.screen-content {
-    text-align: center;
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 5px;
+.screen-content .code{
+    color:#36a3ff;
+    font-size:38px;
+    font-weight:800;
 }
 
-.screen-content .code {
-    font-size: 38px;
-
-    color: #36a3ff;
-
-    font-weight: 800;
+.screen-content strong{
+    display:block;
+    font-size:20px;
 }
 
-.screen-content strong {
-    font-size: 20px;
+.screen-content small{
+    color:#8fa9c3;
+    font-size:10px;
 }
 
-.screen-content small {
-    color: #8fa9c3;
+.keyboard{
+    position:absolute;
 
-    font-size: 10px;
-}
+    width:350px;
+    height:42px;
 
-
-/* KEYBOARD */
-
-.keyboard {
-    position: absolute;
-
-    width: 350px;
-
-    height: 42px;
-
-    left: 0;
-
-    bottom: 28px;
+    left:0;
+    bottom:28px;
 
     background:
         linear-gradient(
@@ -503,45 +338,35 @@ body::after {
         rotateX(65deg)
         translateZ(8px);
 
-    border-radius: 5px;
-
-    box-shadow:
-        0 8px 20px rgba(0,0,0,.5);
+    border-radius:5px;
 }
 
-.keyboard::after {
-    content: "";
+.keyboard::after{
+    content:"";
 
-    position: absolute;
+    position:absolute;
 
-    width: 60px;
+    width:60px;
+    height:13px;
 
-    height: 13px;
+    background:#294f6e;
 
-    background: #294f6e;
+    border-radius:3px;
 
-    border-radius: 3px;
+    left:50%;
+    top:13px;
 
-    left: 50%;
-
-    top: 13px;
-
-    transform: translateX(-50%);
+    transform:translateX(-50%);
 }
 
+.laptop-base{
+    position:absolute;
 
-/* BASE */
+    width:365px;
+    height:19px;
 
-.laptop-base {
-    position: absolute;
-
-    width: 365px;
-
-    height: 19px;
-
-    left: -7px;
-
-    bottom: 4px;
+    left:-7px;
+    bottom:4px;
 
     background:
         linear-gradient(
@@ -551,25 +376,19 @@ body::after {
             #1c3e5d
         );
 
-    border-radius: 4px;
-
-    transform: translateZ(0);
+    border-radius:4px;
 }
 
+@keyframes laptopFloat{
 
-/* LAPTOP ANIMATION */
-
-@keyframes laptopFloat {
-
-    0%,
-    100% {
+    0%,100%{
         transform:
             translateY(0)
             rotateX(12deg)
             rotateY(-18deg);
     }
 
-    50% {
+    50%{
         transform:
             translateY(-20px)
             rotateX(16deg)
@@ -577,184 +396,129 @@ body::after {
     }
 }
 
+/* ================================
+   FLOATING ICON
+================================ */
 
-/* =====================================================
-   FLOATING 3D ICONS
-===================================================== */
+.floating{
+    position:absolute;
 
-.floating {
-    position: absolute;
+    width:62px;
+    height:62px;
 
-    width: 62px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-    height: 62px;
+    border-radius:17px;
 
-    border-radius: 17px;
+    background:rgba(10,32,55,.88);
 
-    display: flex;
+    border:1px solid #2b6595;
 
-    align-items: center;
-
-    justify-content: center;
-
-    font-size: 28px;
-
-    background:
-        rgba(10,32,55,.88);
-
-    border:
-        1px solid #2b6595;
+    font-size:28px;
 
     box-shadow:
         0 15px 35px rgba(0,0,0,.35);
 
-    backdrop-filter: blur(10px);
-
-    transform-style: preserve-3d;
+    backdrop-filter:blur(10px);
 }
 
-.floating-1 {
-    top: 25px;
-
-    left: 10px;
-
-    animation:
-        floatIcon1 3s ease-in-out infinite;
+.floating-1{
+    top:25px;
+    left:10px;
+    animation:float1 3s infinite ease-in-out;
 }
 
-.floating-2 {
-    top: 100px;
-
-    right: 5px;
-
-    animation:
-        floatIcon2 4s ease-in-out infinite;
+.floating-2{
+    top:100px;
+    right:5px;
+    animation:float2 4s infinite ease-in-out;
 }
 
-.floating-3 {
-    bottom: 25px;
-
-    left: 35px;
-
-    animation:
-        floatIcon3 3.5s ease-in-out infinite;
+.floating-3{
+    bottom:25px;
+    left:35px;
+    animation:float3 3.5s infinite ease-in-out;
 }
 
-.floating-4 {
-    bottom: 45px;
-
-    right: 20px;
-
-    animation:
-        floatIcon4 4.5s ease-in-out infinite;
+.floating-4{
+    bottom:45px;
+    right:20px;
+    animation:float4 4.5s infinite ease-in-out;
 }
 
-@keyframes floatIcon1 {
-
-    0%,100% {
-        transform:
-            translateY(0)
-            rotateZ(0);
+@keyframes float1{
+    0%,100%{
+        transform:translateY(0) rotateZ(0);
     }
-
-    50% {
-        transform:
-            translateY(-25px)
-            rotateZ(12deg);
+    50%{
+        transform:translateY(-25px) rotateZ(12deg);
     }
 }
 
-@keyframes floatIcon2 {
-
-    0%,100% {
-        transform:
-            translateY(0)
-            rotateY(0);
+@keyframes float2{
+    0%,100%{
+        transform:translateY(0) rotateY(0);
     }
-
-    50% {
-        transform:
-            translateY(-22px)
-            rotateY(180deg);
+    50%{
+        transform:translateY(-22px) rotateY(180deg);
     }
 }
 
-@keyframes floatIcon3 {
-
-    0%,100% {
-        transform:
-            translateY(0)
-            rotateX(0);
+@keyframes float3{
+    0%,100%{
+        transform:translateY(0) rotateX(0);
     }
-
-    50% {
-        transform:
-            translateY(-18px)
-            rotateX(180deg);
+    50%{
+        transform:translateY(-18px) rotateX(180deg);
     }
 }
 
-@keyframes floatIcon4 {
-
-    0%,100% {
-        transform:
-            translateY(0)
-            rotateZ(0);
+@keyframes float4{
+    0%,100%{
+        transform:translateY(0) rotateZ(0);
     }
-
-    50% {
-        transform:
-            translateY(-25px)
-            rotateZ(-12deg);
+    50%{
+        transform:translateY(-25px) rotateZ(-12deg);
     }
 }
 
-
-/* =====================================================
+/* ================================
    SECTION
-===================================================== */
+================================ */
 
-section {
-    padding: 90px 7%;
+section{
+    padding:90px 7%;
 }
 
-.section-heading {
-    text-align: center;
-
-    max-width: 700px;
-
-    margin:
-        0 auto
-        50px;
+.heading{
+    text-align:center;
+    max-width:700px;
+    margin:0 auto 50px;
 }
 
-.section-heading h2 {
-    font-size: 35px;
-
-    margin-bottom: 12px;
+.heading h2{
+    font-size:35px;
+    margin-bottom:12px;
 }
 
-.section-heading p {
-    color: #9fb2c8;
-
-    line-height: 1.8;
+.heading p{
+    color:#9fb2c8;
+    line-height:1.8;
 }
 
+/* ================================
+   CARD
+================================ */
 
-/* =====================================================
-   FEATURE
-===================================================== */
-
-.feature-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap: 22px;
+.grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
 }
 
-.card {
+.card{
     background:
         linear-gradient(
             145deg,
@@ -762,96 +526,63 @@ section {
             rgba(7,23,41,.95)
         );
 
-    border:
-        1px solid #1d3d5d;
+    border:1px solid #1d3d5d;
 
-    border-radius: 18px;
+    border-radius:18px;
 
-    padding: 28px;
+    padding:28px;
 
-    transition:
-        .4s;
+    transition:.4s;
 
-    transform-style: preserve-3d;
+    transform-style:preserve-3d;
 }
 
-.card:hover {
+.card:hover{
     transform:
         perspective(900px)
         rotateX(5deg)
         rotateY(-5deg)
         translateY(-9px);
 
-    border-color: #168cff;
+    border-color:#168cff;
 
     box-shadow:
         15px 25px 45px rgba(0,0,0,.35);
 }
 
-.card-icon {
-    width: 58px;
+.icon{
+    width:58px;
+    height:58px;
 
-    height: 58px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-    border-radius: 15px;
+    border-radius:15px;
 
-    background:
-        rgba(22,140,255,.1);
+    background:rgba(22,140,255,.1);
 
-    display: flex;
+    font-size:27px;
 
-    align-items: center;
-
-    justify-content: center;
-
-    font-size: 27px;
-
-    margin-bottom: 18px;
+    margin-bottom:18px;
 }
 
-.card h3 {
-    font-size: 19px;
-
-    margin-bottom: 10px;
+.card h3{
+    font-size:19px;
+    margin-bottom:10px;
 }
 
-.card p {
-    color: #9fb2c8;
-
-    line-height: 1.8;
-
-    font-size: 14px;
+.card p{
+    color:#9fb2c8;
+    line-height:1.8;
+    font-size:14px;
 }
 
+/* ================================
+   PACKAGE
+================================ */
 
-/* =====================================================
-   SERVICES
-===================================================== */
-
-.services-section {
-    background:
-        linear-gradient(
-            180deg,
-            #071426,
-            #091c32
-        );
-}
-
-.service-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap: 22px;
-}
-
-
-/* =====================================================
-   PACKAGES
-===================================================== */
-
-.package-section {
+.package-section{
     background:
         radial-gradient(
             circle at 50% 50%,
@@ -860,147 +591,483 @@ section {
         );
 }
 
-.package-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap: 22px;
+.package-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
 }
 
-.package-card {
-    position: relative;
+.package-card{
+    position:relative;
 
-    display: flex;
+    min-height:450px;
 
-    flex-direction: column;
-
-    justify-content: space-between;
-
-    min-height: 430px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
 }
 
-.package-card.featured {
+.package-number{
+    position:absolute;
+
+    top:18px;
+    right:18px;
+
+    padding:5px 9px;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.06);
+
+    color:#8ea6bf;
+
+    font-size:10px;
+}
+
+.package-icon{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.package-card h3{
+    font-size:20px;
+    padding-right:45px;
+}
+
+.package-subtitle{
+    color:#839ab2;
+    font-size:12px;
+    min-height:38px;
+    margin-top:5px;
+}
+
+.price{
+    color:#36a3ff;
+
+    font-size:28px;
+
+    font-weight:800;
+
+    margin:18px 0;
+}
+
+.package-list{
+    list-style:none;
+
+    color:#b5c7da;
+
+    font-size:13px;
+
+    line-height:2;
+
+    margin-bottom:20px;
+}
+
+.package-card .btn{
+    width:100%;
+    margin-top:auto;
+}
+
+/* =====================================================
+   PAKET PREMIUM - UNGU PINK
+===================================================== */
+
+.premium-card{
+
     border:
-        2px solid #168cff;
+        2px solid #a855f7 !important;
+
+    background:
+
+        radial-gradient(
+            circle at 85% 10%,
+            rgba(236,72,153,.30),
+            transparent 32%
+        ),
+
+        radial-gradient(
+            circle at 15% 90%,
+            rgba(139,92,246,.25),
+            transparent 35%
+        ),
+
+        linear-gradient(
+            145deg,
+            #281044,
+            #130c29 55%,
+            #090b20
+        );
 
     box-shadow:
-        0 15px 40px rgba(22,140,255,.08);
+        0 0 25px rgba(168,85,247,.18),
+        inset 0 0 35px rgba(168,85,247,.06);
+
+    transform:translateY(-8px);
 }
 
-.package-card.student {
+.premium-card:hover{
+
+    border-color:#ec4899 !important;
+
+    box-shadow:
+        0 0 25px rgba(168,85,247,.35),
+        0 0 60px rgba(236,72,153,.18),
+        0 25px 50px rgba(0,0,0,.4);
+
+    transform:
+        perspective(900px)
+        rotateX(5deg)
+        rotateY(-5deg)
+        translateY(-15px);
+}
+
+.premium-card .package-icon{
+    filter:
+        drop-shadow(
+            0 0 12px rgba(236,72,153,.7)
+        );
+}
+
+.premium-card .price{
+
+    background:
+        linear-gradient(
+            90deg,
+            #c084fc,
+            #f472b6
+        );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    text-shadow:
+        0 0 20px rgba(236,72,153,.25);
+}
+
+.premium-card .package-list li::first-letter{
+    color:#e879f9;
+}
+
+.premium-card .btn{
+
+    background:
+        linear-gradient(
+            90deg,
+            #9333ea,
+            #ec4899
+        );
+
+    box-shadow:
+        0 8px 25px rgba(168,85,247,.25);
+}
+
+.premium-card .btn:hover{
+
+    background:
+        linear-gradient(
+            90deg,
+            #a855f7,
+            #f472b6
+        );
+
+    box-shadow:
+        0 10px 35px rgba(236,72,153,.4);
+}
+
+/* PREMIUM BADGE */
+
+.premium-badge{
+
+    position:absolute;
+
+    top:-15px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    padding:7px 18px;
+
+    border-radius:30px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #9333ea,
+            #ec4899
+        );
+
+    color:#fff;
+
+    font-size:11px;
+
+    font-weight:800;
+
+    white-space:nowrap;
+
+    box-shadow:
+        0 5px 20px rgba(236,72,153,.35);
+
+    animation:
+        premiumPulse 2s infinite;
+}
+
+@keyframes premiumPulse{
+
+    0%,100%{
+        box-shadow:
+            0 5px 20px
+            rgba(236,72,153,.35);
+    }
+
+    50%{
+        box-shadow:
+            0 5px 35px
+            rgba(236,72,153,.7);
+    }
+}
+
+/* =====================================================
+   PAKET UNLIMITED - GOLD
+===================================================== */
+
+.unlimited-card{
+
+    border:
+        2px solid #f59e0b !important;
+
+    background:
+
+        radial-gradient(
+            circle at 85% 10%,
+            rgba(251,191,36,.35),
+            transparent 32%
+        ),
+
+        radial-gradient(
+            circle at 15% 90%,
+            rgba(234,88,12,.25),
+            transparent 35%
+        ),
+
+        linear-gradient(
+            145deg,
+            #4a2807,
+            #251307 55%,
+            #100b05
+        );
+
+    box-shadow:
+        0 0 30px rgba(245,158,11,.25),
+        inset 0 0 40px rgba(245,158,11,.07);
+
+    transform:translateY(-12px);
+
+    overflow:hidden;
+}
+
+.unlimited-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+    height:180px;
+
+    top:-80px;
+    right:-80px;
+
+    border-radius:50%;
+
+    background:#fbbf24;
+
+    opacity:.08;
+
+    filter:blur(10px);
+
+    animation:
+        goldLight 4s infinite ease-in-out;
+}
+
+@keyframes goldLight{
+
+    0%,100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.4);
+    }
+}
+
+.unlimited-card:hover{
+
+    border-color:#fde047 !important;
+
+    box-shadow:
+        0 0 35px rgba(245,158,11,.45),
+        0 0 75px rgba(234,88,12,.2),
+        0 30px 55px rgba(0,0,0,.45);
+
+    transform:
+        perspective(900px)
+        rotateX(5deg)
+        rotateY(-5deg)
+        translateY(-18px);
+}
+
+.unlimited-card .package-icon{
+
+    filter:
+        drop-shadow(
+            0 0 15px rgba(251,191,36,.8)
+        );
+}
+
+.unlimited-card .price{
+
+    background:
+        linear-gradient(
+            90deg,
+            #facc15,
+            #fb923c,
+            #fde68a
+        );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    filter:
+        drop-shadow(
+            0 0 12px rgba(251,191,36,.25)
+        );
+}
+
+.unlimited-card .btn{
+
+    background:
+        linear-gradient(
+            90deg,
+            #d97706,
+            #f59e0b,
+            #fbbf24
+        );
+
+    color:#1b1002;
+
+    font-weight:800;
+
+    box-shadow:
+        0 8px 25px rgba(245,158,11,.25);
+}
+
+.unlimited-card .btn:hover{
+
+    background:
+        linear-gradient(
+            90deg,
+            #f59e0b,
+            #facc15
+        );
+
+    box-shadow:
+        0 10px 40px rgba(245,158,11,.5);
+}
+
+/* UNLIMITED BADGE */
+
+.unlimited-badge{
+
+    position:absolute;
+
+    top:-15px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    padding:8px 20px;
+
+    border-radius:30px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #d97706,
+            #fbbf24,
+            #f59e0b
+        );
+
+    color:#1b1002;
+
+    font-size:11px;
+
+    font-weight:900;
+
+    white-space:nowrap;
+
+    box-shadow:
+        0 5px 25px rgba(245,158,11,.45);
+
+    animation:
+        unlimitedPulse 1.8s infinite;
+}
+
+@keyframes unlimitedPulse{
+
+    0%,100%{
+        transform:
+            translateX(-50%)
+            scale(1);
+    }
+
+    50%{
+        transform:
+            translateX(-50%)
+            scale(1.06);
+    }
+}
+
+/* =====================================================
+   PELAJAR
+===================================================== */
+
+.student-card{
+
     border:
         2px solid #20c76b;
 
     background:
         linear-gradient(
             145deg,
-            rgba(20,70,58,.95),
-            rgba(8,28,40,.95)
+            #0d3d30,
+            #081e24
         );
 }
 
-.package-card.student:hover {
-    border-color: #20c76b;
+.student-card .price{
+    color:#20c76b;
+}
+
+.student-card:hover{
+
+    border-color:#34d399;
 
     box-shadow:
-        0 20px 45px rgba(32,199,107,.12);
+        0 20px 45px
+        rgba(32,199,107,.15);
 }
-
-.package-card.premium {
-    border-color: #8d6bff;
-}
-
-.package-number {
-    position: absolute;
-
-    top: 18px;
-
-    right: 18px;
-
-    font-size: 11px;
-
-    padding: 5px 9px;
-
-    border-radius: 20px;
-
-    background: rgba(255,255,255,.06);
-
-    color: #8ea6bf;
-}
-
-.package-icon {
-    font-size: 40px;
-
-    margin-bottom: 15px;
-}
-
-.package-card h3 {
-    font-size: 19px;
-
-    margin-bottom: 5px;
-
-    padding-right: 40px;
-}
-
-.package-subtitle {
-    color: #839ab2;
-
-    font-size: 12px;
-
-    min-height: 35px;
-}
-
-.price {
-    color: #36a3ff;
-
-    font-size: 28px;
-
-    font-weight: 800;
-
-    margin:
-        17px
-        0;
-}
-
-.student .price {
-    color: #20c76b;
-}
-
-.package-list {
-    list-style: none;
-
-    color: #b5c7da;
-
-    font-size: 13px;
-
-    line-height: 2;
-
-    margin-bottom: 20px;
-}
-
-.package-list li::first-letter {
-    color: #36a3ff;
-}
-
-.package-card .btn {
-    width: 100%;
-
-    margin-top: auto;
-}
-
 
 /* =====================================================
-   CUSTOM PACKAGE BANNER
+   BANNER
 ===================================================== */
 
-.custom-banner {
-    margin-top: 35px;
+.banner{
 
-    padding: 35px;
+    margin-top:35px;
 
-    border-radius: 20px;
+    padding:35px;
+
+    border-radius:20px;
 
     background:
         linear-gradient(
@@ -1009,240 +1076,169 @@ section {
             #14253d
         );
 
-    border: 1px solid #28689c;
+    border:1px solid #28689c;
 
-    display: flex;
+    display:flex;
 
-    align-items: center;
+    align-items:center;
 
-    justify-content: space-between;
+    justify-content:space-between;
 
-    gap: 20px;
+    gap:20px;
 }
 
-.custom-banner h3 {
-    font-size: 25px;
-
-    margin-bottom: 8px;
+.banner h3{
+    font-size:24px;
+    margin-bottom:8px;
 }
 
-.custom-banner p {
-    color: #b8cee3;
-
-    font-size: 14px;
+.banner p{
+    color:#b8cee3;
+    font-size:14px;
 }
-
-
-/* =====================================================
-   PROCESS
-===================================================== */
-
-.process-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(4, 1fr);
-
-    gap: 20px;
-}
-
-.process {
-    text-align: center;
-}
-
-.process-number {
-    width: 65px;
-
-    height: 65px;
-
-    margin:
-        0 auto
-        18px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    border-radius: 50%;
-
-    background:
-        linear-gradient(
-            135deg,
-            #168cff,
-            #634bff
-        );
-
-    font-size: 22px;
-
-    font-weight: 800;
-
-    box-shadow:
-        0 10px 25px rgba(22,140,255,.2);
-}
-
-.process h3 {
-    margin-bottom: 8px;
-}
-
-.process p {
-    color: #91a6bd;
-
-    font-size: 13px;
-
-    line-height: 1.7;
-}
-
 
 /* =====================================================
    CONTACT
 ===================================================== */
 
-.contact-section {
+.contact{
+
+    text-align:center;
+
     background:
         linear-gradient(
             135deg,
             #0759ad,
             #101f37
         );
-
-    text-align: center;
 }
 
-.contact-section h2 {
-    font-size: 36px;
-
-    margin-bottom: 12px;
+.contact h2{
+    font-size:36px;
+    margin-bottom:12px;
 }
 
-.contact-section p {
-    color: #d0e0ef;
-
-    margin-bottom: 25px;
+.contact p{
+    color:#d0e0ef;
+    margin-bottom:25px;
 }
 
-.contact-number {
-    font-size: 19px;
-
-    font-weight: 700;
-
-    margin-bottom: 25px;
+.contact-number{
+    font-size:19px;
+    font-weight:700;
+    margin-bottom:25px;
 }
-
 
 /* =====================================================
    FOOTER
 ===================================================== */
 
-footer {
-    padding: 35px 7%;
+footer{
 
-    background: #040d18;
+    background:#040d18;
 
-    text-align: center;
+    text-align:center;
 
-    color: #71879e;
+    padding:35px;
 
-    font-size: 13px;
+    color:#71879e;
 
-    line-height: 2;
+    font-size:13px;
+
+    line-height:2;
 }
 
-
 /* =====================================================
-   WHATSAPP FLOATING
+   WHATSAPP
 ===================================================== */
 
-.whatsapp-floating {
-    position: fixed;
+.wa{
 
-    width: 62px;
+    position:fixed;
 
-    height: 62px;
+    width:62px;
+    height:62px;
 
-    right: 25px;
+    right:25px;
+    bottom:25px;
 
-    bottom: 25px;
+    z-index:1000;
 
-    border-radius: 50%;
+    border-radius:50%;
 
-    background: #20c76b;
+    background:#20c76b;
 
-    display: flex;
+    display:flex;
 
-    align-items: center;
+    align-items:center;
+    justify-content:center;
 
-    justify-content: center;
+    font-size:28px;
 
-    font-size: 28px;
-
-    color: white;
-
-    z-index: 1000;
-
-    cursor: pointer;
+    cursor:pointer;
 
     box-shadow:
         0 8px 30px rgba(0,0,0,.4);
 
     animation:
-        whatsappPulse 2s infinite;
+        waPulse 2s infinite;
 }
 
-@keyframes whatsappPulse {
+@keyframes waPulse{
 
-    0% {
+    0%{
         box-shadow:
             0 0 0 0
             rgba(32,199,107,.6);
     }
 
-    70% {
+    70%{
         box-shadow:
             0 0 0 16px
             rgba(32,199,107,0);
     }
 
-    100% {
+    100%{
         box-shadow:
             0 0 0 0
             rgba(32,199,107,0);
     }
 }
 
-
 /* =====================================================
    MODAL
 ===================================================== */
 
-.modal {
-    position: fixed;
+.modal{
 
-    inset: 0;
+    position:fixed;
 
-    background:
-        rgba(0,0,0,.78);
+    inset:0;
 
-    display: none;
+    z-index:2000;
 
-    align-items: center;
+    display:none;
 
-    justify-content: center;
+    align-items:center;
+    justify-content:center;
 
-    padding: 20px;
+    padding:20px;
 
-    z-index: 2000;
+    background:rgba(0,0,0,.78);
 }
 
-.modal.show {
-    display: flex;
+.modal.show{
+    display:flex;
 }
 
-.modal-box {
-    width: 100%;
+.modal-box{
 
-    max-width: 500px;
+    width:100%;
+    max-width:500px;
+
+    padding:30px;
+
+    border-radius:20px;
 
     background:
         linear-gradient(
@@ -1251,355 +1247,294 @@ footer {
             #071426
         );
 
-    border:
-        1px solid #315475;
-
-    border-radius: 20px;
-
-    padding: 30px;
+    border:1px solid #315475;
 
     box-shadow:
         0 30px 80px rgba(0,0,0,.6);
 
     animation:
-        modalAnimation .3s ease;
+        modalIn .3s ease;
 }
 
-@keyframes modalAnimation {
+@keyframes modalIn{
 
-    from {
-        opacity: 0;
-
+    from{
+        opacity:0;
         transform:
             translateY(30px)
             scale(.92);
     }
 
-    to {
-        opacity: 1;
-
+    to{
+        opacity:1;
         transform:
             translateY(0)
             scale(1);
     }
 }
 
-.modal-header {
-    display: flex;
+.modal-head{
 
-    align-items: center;
+    display:flex;
 
-    justify-content: space-between;
+    align-items:center;
 
-    margin-bottom: 10px;
+    justify-content:space-between;
+
+    margin-bottom:10px;
 }
 
-.modal-header h2 {
-    font-size: 23px;
+.modal-head h2{
+    font-size:23px;
 }
 
-.close {
-    font-size: 30px;
+.close{
 
-    color: #91a9c0;
+    font-size:30px;
 
-    cursor: pointer;
+    color:#91a9c0;
 
-    transition: .3s;
+    cursor:pointer;
+
+    transition:.3s;
 }
 
-.close:hover {
-    color: white;
+.close:hover{
 
-    transform:
-        rotate(90deg);
+    color:white;
+
+    transform:rotate(90deg);
 }
 
-.modal-description {
-    color: #9eb4ca;
+.modal-desc{
 
-    font-size: 13px;
+    color:#9eb4ca;
 
-    line-height: 1.7;
+    font-size:13px;
 
-    margin-bottom: 20px;
+    line-height:1.7;
+
+    margin-bottom:20px;
 }
 
-.form-group {
-    margin-bottom: 15px;
+.form-group{
+    margin-bottom:15px;
 }
 
-.form-group label {
-    display: block;
+.form-group label{
 
-    font-size: 13px;
+    display:block;
 
-    color: #c9d8e7;
+    color:#c9d8e7;
 
-    margin-bottom: 7px;
+    font-size:13px;
+
+    margin-bottom:7px;
 }
 
-.form-control {
-    width: 100%;
+.form-control{
 
-    padding: 13px 14px;
+    width:100%;
 
-    border-radius: 9px;
+    padding:13px 14px;
 
-    background: #061321;
+    border-radius:9px;
 
-    border: 1px solid #2b4e6e;
+    background:#061321;
 
-    color: white;
+    border:1px solid #2b4e6e;
 
-    outline: none;
+    color:#fff;
+
+    outline:none;
 }
 
-.form-control:focus {
-    border-color: #168cff;
+.form-control:focus{
+
+    border-color:#168cff;
 
     box-shadow:
         0 0 0 3px
         rgba(22,140,255,.1);
 }
 
-textarea.form-control {
-    min-height: 100px;
+textarea.form-control{
 
-    resize: vertical;
+    min-height:100px;
+
+    resize:vertical;
 }
 
-.modal-submit {
-    width: 100%;
-
-    margin-top: 5px;
+.modal-submit{
+    width:100%;
 }
-
 
 /* =====================================================
    TOAST
 ===================================================== */
 
-.toast {
-    position: fixed;
+.toast{
 
-    left: 50%;
+    position:fixed;
 
-    bottom: 30px;
+    left:50%;
+    bottom:30px;
 
     transform:
         translateX(-50%)
         translateY(100px);
 
-    background: #142d46;
+    opacity:0;
 
-    border:
-        1px solid #315a7e;
+    z-index:3000;
 
-    color: white;
+    padding:13px 20px;
 
-    padding: 13px 20px;
+    background:#142d46;
 
-    border-radius: 10px;
+    border:1px solid #315a7e;
 
-    opacity: 0;
+    border-radius:10px;
 
-    transition: .4s;
-
-    z-index: 3000;
+    transition:.4s;
 }
 
-.toast.show {
-    opacity: 1;
+.toast.show{
+
+    opacity:1;
 
     transform:
         translateX(-50%)
         translateY(0);
 }
 
-
 /* =====================================================
    RESPONSIVE
 ===================================================== */
 
-@media(max-width:1100px) {
+@media(max-width:1100px){
 
-    .package-grid {
-        grid-template-columns:
-            repeat(2, 1fr);
+    .package-grid{
+        grid-template-columns:repeat(2,1fr);
     }
 
-    .feature-grid,
-    .service-grid {
-        grid-template-columns:
-            repeat(2, 1fr);
-    }
-
-    .hero-3d {
-        width: 400px;
+    .grid{
+        grid-template-columns:repeat(2,1fr);
     }
 
 }
 
+@media(max-width:850px){
 
-@media(max-width:850px) {
-
-    .nav-menu {
-        display: none;
+    .nav-menu{
+        display:none;
     }
 
-    .hero {
-        flex-direction: column;
+    .hero{
 
-        text-align: center;
+        flex-direction:column;
 
-        padding-top: 70px;
+        text-align:center;
     }
 
-    .hero-description {
-        margin-left: auto;
-
-        margin-right: auto;
+    .hero p{
+        max-width:600px;
+        margin-left:auto;
+        margin-right:auto;
     }
 
-    .hero-buttons {
-        justify-content: center;
+    .hero-buttons{
+        justify-content:center;
     }
 
-    .hero-3d {
-        width: 100%;
-
-        max-width: 500px;
-
-        height: 350px;
+    .hero-3d{
+        width:100%;
+        height:350px;
     }
 
-    .process-grid {
-        grid-template-columns:
-            repeat(2, 1fr);
-    }
-
-    .custom-banner {
-        flex-direction: column;
-
-        text-align: center;
+    .banner{
+        flex-direction:column;
+        text-align:center;
     }
 
 }
 
+@media(max-width:650px){
 
-@media(max-width:650px) {
-
-    .navbar {
-        padding:
-            15px 5%;
+    .navbar{
+        padding:15px 5%;
     }
 
-    .logo {
-        font-size: 21px;
+    .logo{
+        font-size:21px;
     }
 
-    .nav-button {
-        padding:
-            9px 13px;
-
-        font-size: 12px;
+    .nav-btn{
+        padding:9px 13px;
+        font-size:12px;
     }
 
-    .hero {
-        padding:
-            60px 5%;
+    .hero{
+        padding:60px 5%;
     }
 
-    .hero h1 {
-        font-size: 38px;
+    .hero h1{
+        font-size:38px;
     }
 
-    .hero-3d {
-        height: 300px;
-
-        transform: scale(.8);
+    .hero-3d{
+        transform:scale(.78);
     }
 
-    section {
-        padding:
-            70px 5%;
+    section{
+        padding:70px 5%;
     }
 
-    .feature-grid,
-    .service-grid,
-    .package-grid {
-        grid-template-columns: 1fr;
+    .grid,
+    .package-grid{
+        grid-template-columns:1fr;
     }
 
-    .process-grid {
-        grid-template-columns: 1fr;
+    .heading h2{
+        font-size:28px;
     }
 
-    .section-heading h2 {
-        font-size: 28px;
+    .contact h2{
+        font-size:28px;
     }
 
-    .contact-section h2 {
-        font-size: 28px;
+    .wa{
+        width:55px;
+        height:55px;
+
+        right:17px;
+        bottom:17px;
+
+        font-size:24px;
     }
 
-    .whatsapp-floating {
-        width: 55px;
-
-        height: 55px;
-
-        right: 17px;
-
-        bottom: 17px;
-
-        font-size: 24px;
+    .premium-card,
+    .unlimited-card{
+        transform:none;
     }
 
 }
 
+@media(max-width:450px){
 
-@media(max-width:450px) {
-
-    .hero-3d {
-        transform:
-            scale(.68);
+    .hero-3d{
+        transform:scale(.65);
     }
 
-    .modal-box {
-        padding: 23px;
-    }
-
-}
-
-
-/* =====================================================
-   REDUCED MOTION
-===================================================== */
-
-@media(prefers-reduced-motion: reduce) {
-
-    *,
-    *::before,
-    *::after {
-        animation-duration:
-            .01ms !important;
-
-        animation-iteration-count:
-            1 !important;
-
-        scroll-behavior:
-            auto !important;
+    .modal-box{
+        padding:23px;
     }
 
 }
-
 </style>
 </head>
 
-
 <body>
-
 
 <!-- =====================================================
      NAVBAR
@@ -1614,40 +1549,26 @@ textarea.form-control {
     <ul class="nav-menu">
 
         <li>
-            <a href="#beranda">
-                Beranda
-            </a>
+            <a href="#beranda">Beranda</a>
         </li>
 
         <li>
-            <a href="#layanan">
-                Layanan
-            </a>
+            <a href="#layanan">Layanan</a>
         </li>
 
         <li>
-            <a href="#paket">
-                Paket
-            </a>
+            <a href="#paket">Paket</a>
         </li>
 
         <li>
-            <a href="#proses">
-                Proses
-            </a>
-        </li>
-
-        <li>
-            <a href="#kontak">
-                Kontak
-            </a>
+            <a href="#kontak">Kontak</a>
         </li>
 
     </ul>
 
     <button
-        class="nav-button"
-        onclick="openChat('Halo RizkyWeb, saya ingin konsultasi mengenai pembuatan website.')">
+        class="nav-btn"
+        onclick="openChat('Halo RizkyWeb, saya ingin konsultasi tentang pembuatan website.')">
 
         💬 Chat WA
 
@@ -1656,18 +1577,15 @@ textarea.form-control {
 </nav>
 
 
-
 <!-- =====================================================
      HERO
 ===================================================== -->
 
-<section
-    class="hero"
-    id="beranda">
+<section class="hero" id="beranda">
 
     <div class="hero-content">
 
-        <div class="hero-badge">
+        <div class="badge">
             🚀 JASA PEMBUATAN WEBSITE
         </div>
 
@@ -1679,15 +1597,12 @@ textarea.form-control {
             </span>
         </h1>
 
-        <p class="hero-description">
+        <p>
 
             Buat website profesional untuk bisnis,
-            sekolah, organisasi, toko online,
-            portofolio, sistem informasi, maupun
+            sekolah, toko online, organisasi,
+            portfolio, sistem informasi maupun
             kebutuhan personal.
-
-            Tampilan modern, responsif dan
-            bisa disesuaikan dengan kebutuhan.
 
         </p>
 
@@ -1695,7 +1610,7 @@ textarea.form-control {
 
             <button
                 class="btn"
-                onclick="openChat('Halo RizkyWeb, saya ingin konsultasi gratis tentang pembuatan website.')">
+                onclick="openChat('Halo RizkyWeb, saya ingin konsultasi gratis.')">
 
                 💬 Konsultasi Gratis
 
@@ -1714,8 +1629,7 @@ textarea.form-control {
     </div>
 
 
-
-    <!-- 3D -->
+    <!-- 3D LAPTOP -->
 
     <div class="hero-3d">
 
@@ -1747,7 +1661,6 @@ textarea.form-control {
 
         </div>
 
-
         <div class="floating floating-1">
             ⚡
         </div>
@@ -1769,33 +1682,30 @@ textarea.form-control {
 </section>
 
 
-
 <!-- =====================================================
      KEUNGGULAN
 ===================================================== -->
 
 <section>
 
-    <div class="section-heading">
+    <div class="heading">
 
         <h2>
             Kenapa Memilih RizkyWeb?
         </h2>
 
         <p>
-            Website dibuat dengan tampilan modern
-            dan disesuaikan dengan kebutuhan.
+            Website modern yang dibuat
+            sesuai kebutuhan project.
         </p>
 
     </div>
 
-
-    <div class="feature-grid">
-
+    <div class="grid">
 
         <div class="card">
 
-            <div class="card-icon">
+            <div class="icon">
                 🎨
             </div>
 
@@ -1804,16 +1714,15 @@ textarea.form-control {
             </h3>
 
             <p>
-                Tampilan website dibuat modern,
-                profesional dan nyaman digunakan.
+                Tampilan profesional,
+                modern dan nyaman digunakan.
             </p>
 
         </div>
 
-
         <div class="card">
 
-            <div class="card-icon">
+            <div class="icon">
                 📱
             </div>
 
@@ -1822,16 +1731,15 @@ textarea.form-control {
             </h3>
 
             <p>
-                Website dapat menyesuaikan
-                tampilan pada HP, tablet dan laptop.
+                Tampilan menyesuaikan
+                HP, tablet dan laptop.
             </p>
 
         </div>
 
-
         <div class="card">
 
-            <div class="card-icon">
+            <div class="icon">
                 ⚡
             </div>
 
@@ -1840,34 +1748,32 @@ textarea.form-control {
             </h3>
 
             <p>
-                Struktur website dibuat ringan
-                sehingga lebih nyaman digunakan.
+                Website dibuat ringan
+                dan mudah digunakan.
             </p>
 
         </div>
 
-
         <div class="card">
 
-            <div class="card-icon">
+            <div class="icon">
                 🔧
             </div>
 
             <h3>
-                Bisa Custom
+                Custom
             </h3>
 
             <p>
-                Fitur dan tampilan dapat disesuaikan
+                Fitur dapat disesuaikan
                 dengan kebutuhan project.
             </p>
 
         </div>
 
-
         <div class="card">
 
-            <div class="card-icon">
+            <div class="icon">
                 💬
             </div>
 
@@ -1876,16 +1782,15 @@ textarea.form-control {
             </h3>
 
             <p>
-                Konsultasikan kebutuhan dan
-                perubahan website melalui WhatsApp.
+                Konsultasi dan bantuan
+                melalui WhatsApp.
             </p>
 
         </div>
 
-
         <div class="card">
 
-            <div class="card-icon">
+            <div class="icon">
                 🔒
             </div>
 
@@ -1894,47 +1799,41 @@ textarea.form-control {
             </h3>
 
             <p>
-                Kode dibuat terstruktur sehingga
-                lebih mudah dikembangkan.
+                Kode terstruktur agar
+                mudah dikembangkan.
             </p>
 
         </div>
-
 
     </div>
 
 </section>
 
 
-
 <!-- =====================================================
      LAYANAN
 ===================================================== -->
 
-<section
-    class="services-section"
-    id="layanan">
+<section id="layanan">
 
-    <div class="section-heading">
+    <div class="heading">
 
         <h2>
             Layanan Website
         </h2>
 
         <p>
-            Berbagai jenis website yang dapat
-            dibuat sesuai kebutuhan Anda.
+            Pilihan layanan untuk berbagai
+            kebutuhan.
         </p>
 
     </div>
 
-
-    <div class="service-grid">
-
+    <div class="grid">
 
         <div class="card">
 
-            <div class="card-icon">
+            <div class="icon">
                 🌐
             </div>
 
@@ -1943,16 +1842,15 @@ textarea.form-control {
             </h3>
 
             <p>
-                Website untuk perusahaan,
-                bisnis, organisasi dan usaha.
+                Website perusahaan,
+                bisnis dan organisasi.
             </p>
 
         </div>
 
-
         <div class="card">
 
-            <div class="card-icon">
+            <div class="icon">
                 🛒
             </div>
 
@@ -1961,16 +1859,15 @@ textarea.form-control {
             </h3>
 
             <p>
-                Website untuk menampilkan
-                produk dan menerima pesanan.
+                Website untuk menjual
+                produk secara online.
             </p>
 
         </div>
 
-
         <div class="card">
 
-            <div class="card-icon">
+            <div class="icon">
                 🎓
             </div>
 
@@ -1979,16 +1876,15 @@ textarea.form-control {
             </h3>
 
             <p>
-                Website sekolah untuk informasi,
-                profil dan kegiatan sekolah.
+                Website informasi dan
+                profil sekolah.
             </p>
 
         </div>
 
-
         <div class="card">
 
-            <div class="card-icon">
+            <div class="icon">
                 📊
             </div>
 
@@ -1997,16 +1893,15 @@ textarea.form-control {
             </h3>
 
             <p>
-                Aplikasi web untuk administrasi
-                dan pengelolaan data.
+                Aplikasi web untuk
+                administrasi dan data.
             </p>
 
         </div>
 
-
         <div class="card">
 
-            <div class="card-icon">
+            <div class="icon">
                 📱
             </div>
 
@@ -2015,16 +1910,15 @@ textarea.form-control {
             </h3>
 
             <p>
-                Halaman promosi untuk produk,
-                jasa atau bisnis.
+                Halaman promosi untuk
+                produk dan jasa.
             </p>
 
         </div>
 
-
         <div class="card">
 
-            <div class="card-icon">
+            <div class="icon">
                 👨‍💻
             </div>
 
@@ -2033,17 +1927,15 @@ textarea.form-control {
             </h3>
 
             <p>
-                Website portfolio untuk
-                menampilkan project dan profil.
+                Website untuk menampilkan
+                project dan profil.
             </p>
 
         </div>
 
-
     </div>
 
 </section>
-
 
 
 <!-- =====================================================
@@ -2054,15 +1946,15 @@ textarea.form-control {
     class="package-section"
     id="paket">
 
-    <div class="section-heading">
+    <div class="heading">
 
         <h2>
-            12 Paket Website
+            📦 12 Paket Website
         </h2>
 
         <p>
-            Pilih paket sesuai kebutuhan dan
-            budget project Anda.
+            Mulai dari paket pelajar sampai
+            paket website berskala besar.
         </p>
 
     </div>
@@ -2071,12 +1963,14 @@ textarea.form-control {
     <div class="package-grid">
 
 
-        <!-- 1 -->
+        <!-- =========================
+             01 PELAJAR
+        ========================== -->
 
-        <div class="card package-card student">
+        <div class="card package-card student-card">
 
             <span class="package-number">
-                Paket 01
+                01
             </span>
 
             <div>
@@ -2123,13 +2017,14 @@ textarea.form-control {
         </div>
 
 
-
-        <!-- 2 -->
+        <!-- =========================
+             02 STARTER
+        ========================== -->
 
         <div class="card package-card">
 
             <span class="package-number">
-                Paket 02
+                02
             </span>
 
             <div>
@@ -2175,13 +2070,14 @@ textarea.form-control {
         </div>
 
 
-
-        <!-- 3 -->
+        <!-- =========================
+             03 BUSINESS
+        ========================== -->
 
         <div class="card package-card">
 
             <span class="package-number">
-                Paket 03
+                03
             </span>
 
             <div>
@@ -2195,8 +2091,7 @@ textarea.form-control {
                 </h3>
 
                 <p class="package-subtitle">
-                    Untuk UMKM dan
-                    bisnis kecil.
+                    Untuk UMKM dan bisnis kecil.
                 </p>
 
                 <div class="price">
@@ -2206,8 +2101,8 @@ textarea.form-control {
                 <ul class="package-list">
 
                     <li>✓ 5 halaman</li>
-                    <li>✓ Responsive</li>
                     <li>✓ Desain profesional</li>
+                    <li>✓ Responsive</li>
                     <li>✓ WhatsApp</li>
                     <li>✓ Form kontak</li>
                     <li>✓ Revisi 2x</li>
@@ -2227,13 +2122,14 @@ textarea.form-control {
         </div>
 
 
-
-        <!-- 4 -->
+        <!-- =========================
+             04 COMPANY
+        ========================== -->
 
         <div class="card package-card">
 
             <span class="package-number">
-                Paket 04
+                04
             </span>
 
             <div>
@@ -2247,8 +2143,7 @@ textarea.form-control {
                 </h3>
 
                 <p class="package-subtitle">
-                    Untuk perusahaan dan
-                    organisasi.
+                    Untuk perusahaan dan organisasi.
                 </p>
 
                 <div class="price">
@@ -2279,13 +2174,14 @@ textarea.form-control {
         </div>
 
 
+        <!-- =========================
+             05 TOKO ONLINE
+        ========================== -->
 
-        <!-- 5 -->
-
-        <div class="card package-card featured">
+        <div class="card package-card">
 
             <span class="package-number">
-                Paket 05
+                05
             </span>
 
             <div>
@@ -2331,13 +2227,14 @@ textarea.form-control {
         </div>
 
 
-
-        <!-- 6 -->
+        <!-- =========================
+             06 SEKOLAH
+        ========================== -->
 
         <div class="card package-card">
 
             <span class="package-number">
-                Paket 06
+                06
             </span>
 
             <div>
@@ -2383,13 +2280,14 @@ textarea.form-control {
         </div>
 
 
-
-        <!-- 7 -->
+        <!-- =========================
+             07 SISTEM INFORMASI
+        ========================== -->
 
         <div class="card package-card">
 
             <span class="package-number">
-                Paket 07
+                07
             </span>
 
             <div>
@@ -2403,8 +2301,8 @@ textarea.form-control {
                 </h3>
 
                 <p class="package-subtitle">
-                    Untuk kebutuhan
-                    administrasi.
+                    Untuk kebutuhan administrasi
+                    dan pengelolaan data.
                 </p>
 
                 <div class="price">
@@ -2435,13 +2333,14 @@ textarea.form-control {
         </div>
 
 
+        <!-- =========================
+             08 PROFESSIONAL
+        ========================== -->
 
-        <!-- 8 -->
-
-        <div class="card package-card featured">
+        <div class="card package-card">
 
             <span class="package-number">
-                Paket 08
+                08
             </span>
 
             <div>
@@ -2455,8 +2354,8 @@ textarea.form-control {
                 </h3>
 
                 <p class="package-subtitle">
-                    Website profesional
-                    dengan fitur lebih lengkap.
+                    Website profesional dengan
+                    fitur lebih lengkap.
                 </p>
 
                 <div class="price">
@@ -2470,7 +2369,7 @@ textarea.form-control {
                     <li>✓ Dashboard</li>
                     <li>✓ Database</li>
                     <li>✓ Form interaktif</li>
-                    <li>✓ Optimasi responsive</li>
+                    <li>✓ Responsive</li>
 
                 </ul>
 
@@ -2487,13 +2386,18 @@ textarea.form-control {
         </div>
 
 
+        <!-- =================================================
+             09 PREMIUM - SUPER MENCOLOK
+        ================================================== -->
 
-        <!-- 9 -->
+        <div class="card package-card premium-card">
 
-        <div class="card package-card premium">
+            <div class="premium-badge">
+                💎 MOST POPULAR
+            </div>
 
             <span class="package-number">
-                Paket 09
+                09
             </span>
 
             <div>
@@ -2508,7 +2412,7 @@ textarea.form-control {
 
                 <p class="package-subtitle">
                     Tampilan premium dengan
-                    fitur lebih lengkap.
+                    fitur lengkap dan elegan.
                 </p>
 
                 <div class="price">
@@ -2517,12 +2421,13 @@ textarea.form-control {
 
                 <ul class="package-list">
 
-                    <li>✓ Desain premium</li>
-                    <li>✓ Animasi 3D</li>
-                    <li>✓ Database</li>
-                    <li>✓ Login</li>
-                    <li>✓ Dashboard</li>
-                    <li>✓ Fitur custom</li>
+                    <li>💜 ✓ Desain Premium</li>
+                    <li>💜 ✓ Animasi 3D</li>
+                    <li>💜 ✓ Database</li>
+                    <li>💜 ✓ Login pengguna</li>
+                    <li>💜 ✓ Dashboard</li>
+                    <li>💜 ✓ Fitur Custom</li>
+                    <li>💜 ✓ Optimasi Responsive</li>
 
                 </ul>
 
@@ -2532,20 +2437,21 @@ textarea.form-control {
                 class="btn"
                 onclick="pesanPaket('Paket Premium - Rp2.500.000')">
 
-                💎 Pesan Paket
+                💎 Pilih Premium
 
             </button>
 
         </div>
 
 
-
-        <!-- 10 -->
+        <!-- =========================
+             10 CUSTOM
+        ========================== -->
 
         <div class="card package-card">
 
             <span class="package-number">
-                Paket 10
+                10
             </span>
 
             <div>
@@ -2559,8 +2465,8 @@ textarea.form-control {
                 </h3>
 
                 <p class="package-subtitle">
-                    Dibuat berdasarkan
-                    kebutuhan khusus.
+                    Website sesuai kebutuhan
+                    khusus project.
                 </p>
 
                 <div class="price">
@@ -2571,10 +2477,10 @@ textarea.form-control {
 
                     <li>✓ Fitur custom</li>
                     <li>✓ Database</li>
-                    <li>✓ Login pengguna</li>
+                    <li>✓ Login</li>
                     <li>✓ Dashboard</li>
                     <li>✓ API / integrasi</li>
-                    <li>✓ Konsultasi project</li>
+                    <li>✓ Konsultasi</li>
 
                 </ul>
 
@@ -2591,13 +2497,14 @@ textarea.form-control {
         </div>
 
 
-
-        <!-- 11 -->
+        <!-- =========================
+             11 ENTERPRISE
+        ========================== -->
 
         <div class="card package-card">
 
             <span class="package-number">
-                Paket 11
+                11
             </span>
 
             <div>
@@ -2643,13 +2550,18 @@ textarea.form-control {
         </div>
 
 
+        <!-- =================================================
+             12 UNLIMITED - PALING MENCOLOK
+        ================================================== -->
 
-        <!-- 12 -->
+        <div class="card package-card unlimited-card">
 
-        <div class="card package-card premium">
+            <div class="unlimited-badge">
+                👑 ULTIMATE PACKAGE
+            </div>
 
             <span class="package-number">
-                Paket 12
+                12
             </span>
 
             <div>
@@ -2663,8 +2575,8 @@ textarea.form-control {
                 </h3>
 
                 <p class="package-subtitle">
-                    Solusi website dengan
-                    kebutuhan sangat lengkap.
+                    Solusi website lengkap
+                    untuk kebutuhan besar.
                 </p>
 
                 <div class="price">
@@ -2673,12 +2585,14 @@ textarea.form-control {
 
                 <ul class="package-list">
 
-                    <li>✓ Fitur unlimited*</li>
-                    <li>✓ Sistem custom</li>
-                    <li>✓ Database</li>
-                    <li>✓ Multi pengguna</li>
-                    <li>✓ Dashboard lengkap</li>
-                    <li>✓ Pengembangan lanjutan</li>
+                    <li>👑 ✓ Fitur Unlimited*</li>
+                    <li>👑 ✓ Sistem Custom</li>
+                    <li>👑 ✓ Database</li>
+                    <li>👑 ✓ Multi Pengguna</li>
+                    <li>👑 ✓ Dashboard Lengkap</li>
+                    <li>👑 ✓ Laporan</li>
+                    <li>👑 ✓ Integrasi API</li>
+                    <li>👑 ✓ Pengembangan Lanjutan</li>
 
                 </ul>
 
@@ -2688,37 +2602,35 @@ textarea.form-control {
                 class="btn"
                 onclick="pesanPaket('Paket Unlimited - Rp7.500.000')">
 
-                👑 Konsultasi
+                👑 Pilih Unlimited
 
             </button>
 
         </div>
-
 
     </div>
 
 
     <!-- CUSTOM BANNER -->
 
-    <div class="custom-banner">
+    <div class="banner">
 
         <div>
 
             <h3>
-                🤔 Tidak menemukan paket yang cocok?
+                🤔 Belum menemukan paket yang sesuai?
             </h3>
 
             <p>
-                Ceritakan kebutuhan website Anda.
-                Kami dapat membahas kebutuhan custom
-                sesuai project.
+                Konsultasikan kebutuhan website
+                custom Anda bersama RizkyWeb.
             </p>
 
         </div>
 
         <button
             class="btn"
-            onclick="openChat('Halo RizkyWeb, saya ingin membuat website custom. Saya ingin konsultasi mengenai kebutuhan project saya.')">
+            onclick="openChat('Halo RizkyWeb, saya ingin konsultasi mengenai website custom.')">
 
             💬 Konsultasi Custom
 
@@ -2729,144 +2641,34 @@ textarea.form-control {
 </section>
 
 
-
 <!-- =====================================================
-     PROSES PEMBUATAN
+     CONTACT
 ===================================================== -->
 
-<section id="proses">
-
-    <div class="section-heading">
-
-        <h2>
-            Proses Pembuatan Website
-        </h2>
-
-        <p>
-            Alur sederhana dari konsultasi
-            sampai website siap digunakan.
-        </p>
-
-    </div>
-
-
-    <div class="process-grid">
-
-
-        <div class="process">
-
-            <div class="process-number">
-                1
-            </div>
-
-            <h3>
-                Konsultasi
-            </h3>
-
-            <p>
-                Sampaikan kebutuhan website
-                yang ingin dibuat.
-            </p>
-
-        </div>
-
-
-        <div class="process">
-
-            <div class="process-number">
-                2
-            </div>
-
-            <h3>
-                Perancangan
-            </h3>
-
-            <p>
-                Menentukan desain, halaman
-                dan fitur website.
-            </p>
-
-        </div>
-
-
-        <div class="process">
-
-            <div class="process-number">
-                3
-            </div>
-
-            <h3>
-                Pembuatan
-            </h3>
-
-            <p>
-                Website mulai dikembangkan
-                sesuai rancangan.
-            </p>
-
-        </div>
-
-
-        <div class="process">
-
-            <div class="process-number">
-                4
-            </div>
-
-            <h3>
-                Selesai
-            </h3>
-
-            <p>
-                Website siap digunakan
-                setelah proses pengecekan.
-            </p>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     KONTAK
-===================================================== -->
-
-<section
-    class="contact-section"
-    id="kontak">
+<section class="contact" id="kontak">
 
     <h2>
-        Siap Membuat Website?
+        🚀 Siap Membuat Website?
     </h2>
 
     <p>
-        Konsultasikan kebutuhan website
-        Anda melalui WhatsApp.
+        Hubungi RizkyWeb dan konsultasikan
+        kebutuhan website Anda.
     </p>
 
     <div class="contact-number">
-
-        📞
-        <span id="nomorTampil">
-            0895 4010 6130
-        </span>
-
+        📞 0895 4010 6130
     </div>
 
     <button
         class="btn"
-        onclick="openChat('Halo RizkyWeb, saya ingin memesan jasa pembuatan website.')">
+        onclick="openChat('Halo RizkyWeb, saya ingin konsultasi mengenai jasa pembuatan website.')">
 
-        💬 Hubungi RizkyWeb
+        💬 Hubungi WhatsApp
 
     </button>
 
 </section>
-
 
 
 <!-- =====================================================
@@ -2888,20 +2690,17 @@ textarea.form-control {
 </footer>
 
 
-
 <!-- =====================================================
-     FLOATING WHATSAPP
+     WHATSAPP FLOATING
 ===================================================== -->
 
 <div
-    class="whatsapp-floating"
-    onclick="openChat('Halo RizkyWeb, saya ingin bertanya mengenai jasa pembuatan website.')"
-    title="Chat WhatsApp">
+    class="wa"
+    onclick="openChat('Halo RizkyWeb, saya ingin bertanya tentang jasa pembuatan website.')">
 
     ☎
 
 </div>
-
 
 
 <!-- =====================================================
@@ -2914,7 +2713,7 @@ textarea.form-control {
 
     <div class="modal-box">
 
-        <div class="modal-header">
+        <div class="modal-head">
 
             <h2>
                 💬 Konsultasi WhatsApp
@@ -2930,12 +2729,10 @@ textarea.form-control {
 
         </div>
 
+        <p class="modal-desc">
 
-        <p class="modal-description">
-
-            Isi data berikut. Setelah klik
-            tombol kirim, WhatsApp akan terbuka
-            dengan pesan yang sudah otomatis dibuat.
+            Isi data berikut agar pesan
+            langsung tersusun di WhatsApp.
 
         </p>
 
@@ -2948,8 +2745,8 @@ textarea.form-control {
 
             <input
                 class="form-control"
-                type="text"
                 id="nama"
+                type="text"
                 placeholder="Masukkan nama Anda">
 
         </div>
@@ -2963,7 +2760,7 @@ textarea.form-control {
 
             <select
                 class="form-control"
-                id="paketSelect">
+                id="paket">
 
                 <option value="">
                     Pilih paket
@@ -3031,7 +2828,7 @@ textarea.form-control {
             <textarea
                 class="form-control"
                 id="pesan"
-                placeholder="Contoh: Saya ingin membuat website untuk sekolah..."></textarea>
+                placeholder="Tulis kebutuhan website Anda..."></textarea>
 
         </div>
 
@@ -3049,40 +2846,22 @@ textarea.form-control {
 </div>
 
 
-
-<!-- =====================================================
-     TOAST
-===================================================== -->
+<!-- TOAST -->
 
 <div
     class="toast"
     id="toast">
 
-    Pesan berhasil disiapkan.
-
 </div>
 
 
-
 <script>
-
 
 /* =====================================================
    NOMOR WHATSAPP
 ===================================================== */
 
-/*
-   NOMOR DIBUAT TANPA + DAN TANPA 0 DI DEPAN.
-
-   Contoh:
-   089540106130
-
-   menjadi:
-   6289540106130
-*/
-
 const nomorWA = "62895401061300";
-
 
 
 /* =====================================================
@@ -3092,127 +2871,121 @@ const nomorWA = "62895401061300";
 const modal =
     document.getElementById("chatModal");
 
-const namaInput =
+const nama =
     document.getElementById("nama");
 
-const paketSelect =
-    document.getElementById("paketSelect");
+const paket =
+    document.getElementById("paket");
 
-const pesanInput =
+const pesan =
     document.getElementById("pesan");
-
 
 
 /* =====================================================
    OPEN CHAT
 ===================================================== */
 
-function openChat(pesanAwal = "") {
+function openChat(pesanAwal = ""){
 
     modal.classList.add("show");
 
-    if (pesanAwal) {
+    if(pesanAwal){
 
-        pesanInput.value =
-            pesanAwal;
+        pesan.value = pesanAwal;
 
     }
 
-    setTimeout(() => {
+    setTimeout(function(){
 
-        namaInput.focus();
+        nama.focus();
 
-    }, 200);
+    },200);
 
 }
-
 
 
 /* =====================================================
    CLOSE CHAT
 ===================================================== */
 
-function closeChat() {
+function closeChat(){
 
     modal.classList.remove("show");
 
 }
 
 
-
 /* =====================================================
    PESAN PAKET
 ===================================================== */
 
-function pesanPaket(namaPaket) {
+function pesanPaket(namaPaket){
 
     modal.classList.add("show");
 
-    paketSelect.value =
-        namaPaket;
+    paket.value = namaPaket;
 
-    pesanInput.value =
+    pesan.value =
         `Halo RizkyWeb, saya tertarik dengan ${namaPaket}. Saya ingin mendapatkan informasi lebih lanjut.`;
 
-    setTimeout(() => {
+    setTimeout(function(){
 
-        namaInput.focus();
+        nama.focus();
 
-    }, 200);
+    },200);
 
 }
-
 
 
 /* =====================================================
    KIRIM WHATSAPP
 ===================================================== */
 
-function kirimWA() {
+function kirimWA(){
 
-    const nama ="62895401061300"
-        namaInput.value.trim();
+    const namaUser =
+        nama.value.trim();
 
-    const paket =
-        paketSelect.value;
+    const paketUser =
+        paket.value;
 
-    const pesan =
-        pesanInput.value.trim();
+    const pesanUser =
+        pesan.value.trim();
 
 
-    if (!nama) {
+    if(!namaUser){
 
         showToast(
             "⚠️ Nama belum diisi."
         );
 
-        namaInput.focus();
+        nama.focus();
 
         return;
 
     }
 
 
-    if (!paket) {
+    if(!paketUser){
 
         showToast(
             "⚠️ Silakan pilih paket."
         );
 
-        paketSelect.focus();
+        paket.focus();
 
         return;
 
     }
 
 
-    if (!pesan) {
+    if(!pesanUser){
 
         showToast(
             "⚠️ Pesan belum diisi."
         );
 
-        pesanInput.focus();
+        pesan.focus();
 
         return;
 
@@ -3225,13 +2998,13 @@ function kirimWA() {
 Saya ingin konsultasi mengenai jasa pembuatan website.
 
 👤 Nama:
-${nama}
+${namaUser}
 
 📦 Paket:
-${paket}
+${paketUser}
 
 💬 Pesan:
-${pesan}
+${pesanUser}
 
 Mohon informasi selanjutnya. Terima kasih. 🙏`;
 
@@ -3245,20 +3018,14 @@ Mohon informasi selanjutnya. Terima kasih. 🙏`;
         "_blank"
     );
 
-
-    showToast(
-        "✅ WhatsApp sedang dibuka."
-    );
-
 }
-
 
 
 /* =====================================================
    TOAST
 ===================================================== */
 
-function showToast(text) {
+function showToast(text){
 
     const toast =
         document.getElementById("toast");
@@ -3268,27 +3035,24 @@ function showToast(text) {
 
     toast.classList.add("show");
 
-    setTimeout(() => {
+    setTimeout(function(){
 
         toast.classList.remove("show");
 
-    }, 2500);
+    },2500);
 
 }
 
 
-
 /* =====================================================
-   CLICK OUTSIDE MODAL
+   CLOSE CLICK OUTSIDE
 ===================================================== */
 
 window.addEventListener(
     "click",
-    function(event) {
+    function(event){
 
-        if (
-            event.target === modal
-        ) {
+        if(event.target === modal){
 
             closeChat();
 
@@ -3298,18 +3062,15 @@ window.addEventListener(
 );
 
 
-
 /* =====================================================
-   ESC CLOSE MODAL
+   ESC
 ===================================================== */
 
 document.addEventListener(
     "keydown",
-    function(event) {
+    function(event){
 
-        if (
-            event.key === "Escape"
-        ) {
+        if(event.key === "Escape"){
 
             closeChat();
 
@@ -3319,9 +3080,8 @@ document.addEventListener(
 );
 
 
-
 /* =====================================================
-   3D LAPTOP MOUSE EFFECT
+   3D LAPTOP MOUSE
 ===================================================== */
 
 const hero3D =
@@ -3331,18 +3091,14 @@ const laptop =
     document.querySelector(".laptop");
 
 
-if (
-    hero3D &&
-    laptop
-) {
+if(hero3D && laptop){
 
     hero3D.addEventListener(
         "mousemove",
-        function(event) {
+        function(event){
 
             const rect =
                 hero3D.getBoundingClientRect();
-
 
             const x =
                 event.clientX -
@@ -3352,13 +3108,11 @@ if (
                 event.clientY -
                 rect.top;
 
-
             const centerX =
                 rect.width / 2;
 
             const centerY =
                 rect.height / 2;
-
 
             const rotateY =
                 (x - centerX) / 18;
@@ -3381,7 +3135,7 @@ if (
 
     hero3D.addEventListener(
         "mouseleave",
-        function() {
+        function(){
 
             laptop.style.animation =
                 "laptopFloat 4.5s ease-in-out infinite";
@@ -3392,25 +3146,38 @@ if (
 }
 
 
-
 /* =====================================================
-   3D CARD MOUSE EFFECT
+   CARD 3D EFFECT
 ===================================================== */
 
-const cards =
-    document.querySelectorAll(".card");
-
-
-cards.forEach(
-    function(card) {
+document
+    .querySelectorAll(".card")
+    .forEach(function(card){
 
         card.addEventListener(
             "mousemove",
-            function(event) {
+            function(event){
 
-                if (
-                    window.innerWidth < 850
-                ) {
+                if(window.innerWidth < 850){
+
+                    return;
+
+                }
+
+                /*
+                    Jangan override transform
+                    kartu Premium & Unlimited
+                    terlalu jauh.
+                */
+
+                if(
+                    card.classList.contains(
+                        "premium-card"
+                    ) ||
+                    card.classList.contains(
+                        "unlimited-card"
+                    )
+                ){
 
                     return;
 
@@ -3420,7 +3187,6 @@ cards.forEach(
                 const rect =
                     card.getBoundingClientRect();
 
-
                 const x =
                     event.clientX -
                     rect.left;
@@ -3429,13 +3195,11 @@ cards.forEach(
                     event.clientY -
                     rect.top;
 
-
                 const centerX =
                     rect.width / 2;
 
                 const centerY =
                     rect.height / 2;
-
 
                 const rotateX =
                     (centerY - y) / 25;
@@ -3456,71 +3220,30 @@ cards.forEach(
 
         card.addEventListener(
             "mouseleave",
-            function() {
+            function(){
 
-                card.style.transform =
-                    "";
+                if(
+                    card.classList.contains(
+                        "premium-card"
+                    ) ||
+                    card.classList.contains(
+                        "unlimited-card"
+                    )
+                ){
+
+                    return;
+
+                }
+
+                card.style.transform = "";
 
             }
         );
 
-    }
-);
-
-
-
-/* =====================================================
-   SCROLL REVEAL
-===================================================== */
-
-const revealElements =
-    document.querySelectorAll(
-        ".card, .process, .custom-banner"
-    );
-
-
-const observer =
-    new IntersectionObserver(
-        function(entries) {
-
-            entries.forEach(
-                function(entry) {
-
-                    if (
-                        entry.isIntersecting
-                    ) {
-
-                        entry.target.style.opacity =
-                            "1";
-
-                        entry.target.style.transform =
-                            "";
-
-                    }
-
-                }
-            );
-
-        },
-        {
-            threshold: .1
-        }
-    );
-
-
-revealElements.forEach(
-    function(element) {
-
-        element.style.opacity =
-            "1";
-
-        observer.observe(element);
-
-    }
-);
-
+    });
 
 </script>
 
 </body>
 </html>
+```
